@@ -1,0 +1,115 @@
+# Project Related
+
+## tell me a project that you are most excited
+
+**1. Briefly Describe the Project:**
+
+“We worked on an optimization project where we initially provided a fixed user bid for all targeted users. Our team, consisting of two data scientists and a client specialist, identified that treating all users equally might not be the most efficient way to spend our ad budget.”
+
+**2. Explain the Problem:**
+
+“We realized that spending the same amount on every user wasn't maximizing the return on investment. High-value customers deserved more ad spend, while lower-value ones should receive less. The goal was to allocate our ad budget more strategically.”
+
+- my role is gather data for the predictive modeling and estimating the user values based on their past purchase behavior
+
+- other data scientist was responsible for gathering return path data, and sending the estimated user bids to activation platform
+
+**3. Describe Your Approach:**
+
+“To address this, we built a predictive model using regression to estimate each customer's value. We then used these estimated values to customize user bids. High-value customers received higher bids, while low-value ones got lower bids.”
+
+**4. Highlight the Implementation:**
+
+“We implemented this customized bidding strategy and ran an A/B test. One group used the fixed bid strategy, and the other used our new customized bidding strategy.”
+
+**5. Share the Results:**
+
+“The results were impressive — the customized bidding strategy led to a 15% increase in conversion rates and a 10% reduction in costs.”
+
+**6. Reflect on Your Role and the Impact:**
+
+“As a data scientist on the project, I was deeply involved in developing the predictive model and setting up the A/B test. This project taught me a lot about using data-driven approaches to optimize marketing strategies, and I’m proud of the positive impact we achieved.”
+
+
+### What was your role?
+
+My role was to gather and preprocess data for the predictive model. I focused on estimating user values by analyzing their past purchase behavior. This involved cleaning and transforming large datasets, identifying key features that could predict customer value, and ensuring the data was ready for our regression model. I also contributed to refining the model’s parameters to improve its accuracy. This work was crucial in allowing us to segment users effectively and apply the customized bidding strategy that ultimately led to better outcomes.
+
+### how do you communicate your results with manager
+
+Here's a way to frame your response:
+
+**How did you communicate the results to the client or managers, and did you have to convince them?**  
+
+To communicate the results, I prepared a concise presentation that highlighted the key metrics from our A/B test, such as the 15% higher conversion rate and 10% lower cost with the customized bids. We used visualizations, like bar charts and line graphs, to clearly show the differences between the fixed bid strategy and the customized approach.  
+
+We also provided a deeper dive into the data, explaining how our predictive model identified high-value customers and why reallocating the ad spend led to these improved results.  
+
+There was some initial skepticism from stakeholders about changing the bidding strategy, so we focused on demonstrating the statistical significance of the results and the potential long-term impact on ROI. By emphasizing the data-driven approach and the clear benefits, we successfully convinced the client and managers to adopt the new strategy.
+
+Here’s a simplified way to answer how you convinced your manager that the A/B test approach would work:
+
+### How did you convince your manager that it would work?
+
+**Context:** We were implementing a customized bidding strategy based on a predictive model and planned to test it through an A/B test. There was some skepticism about whether this approach would be effective.
+
+**Action:** I gathered data and research to support the effectiveness of using customized bids. I created a detailed plan outlining how the predictive model would work and its potential benefits. I also presented a clear, step-by-step approach for the A/B test, including how we would measure success and mitigate risks.
+
+To further convince my manager, I highlighted similar successful case studies and demonstrated how our approach could address specific business needs. I also outlined potential risks and how we planned to manage them.
+
+**Outcome:** My manager was convinced by the thorough plan and supporting evidence. The A/B test was approved, and the results showed a 15% increase in conversion rates and a 10% reduction in cost, validating the effectiveness of our customized bidding strategy.
+
+
+
+## How do you convince a stakeholder that your solution works?
+
+
+- I start by ensuring the solution is backed by solid data and analytics. 
+
+- I present the problem, the proposed solution, and the expected impact in clear terms. 
+
+- This involves using visualizations like charts and graphs to make complex data more accessible and focusing on key performance indicators that matter to the stakeholder, such as conversion rates, cost savings, or return on investment.
+
+- I also explain the methodology behind the solution, highlighting why it's the best approach, and address any potential concerns upfront.
+
+- To build confidence, I share results from A/B tests, pilot studies, or simulations that demonstrate the solution's effectiveness. 
+
+- provide scenarios that show the solution's performance under different conditions.
+
+Ultimately, I focus on aligning my solution with their business goals, demonstrating how it will help achieve those objectives more efficiently or effectively."
+
+
+
+## Tell me one project that wasn’t going well, but you managed to turn it around.
+
+**Context:** We were analyzing transaction data for a market research project, but our findings didn’t align with US market trends. I suspected that our data might be biased and not capturing all transactions of the sample id set.
+
+**Challenge:** The data appeared to be incomplete, leading to inaccurate and inconsistent results across different categories."
+
+**Action:** I investigated the issue and found that the datasets were indeed biased. I compared our data with statistics from a similar category and identified systematic bias across all categories. I used this information as a benchmark to correct the bias in our data."
+
+**Outcome:** By adjusting for the bias, our analysis became more accurate and aligned with market trends. This improvement led to more reliable insights and successfully turned the project around, providing valuable and actionable results."
+
+
+
+
+
+
+## tell me about a time where you find a bad/unexpected result how did you commuicate with your manager
+
+**Situation:**  
+In my previous role as a Senior Data Scientist, I was working on a predictive model to estimate customer lifetime value (CLV) for a marketing campaign. During the model validation phase, I discovered that the model was underperforming, with accuracy far below the expected threshold. This was unexpected because the initial exploratory data analysis showed promising correlations.
+
+**Task:**  
+My task was to identify the root cause of the poor model performance, determine whether the issue was with the data, the feature engineering, or the model itself, and then communicate these findings to my manager in a clear and constructive manner.
+
+**Action:**  
+I started by re-examining the data preprocessing steps, including data cleaning, feature selection, and transformations, to ensure there were no errors. I also conducted a deep dive into the distribution of key features and found that certain variables had a high degree of multicollinearity, which was likely affecting the model's predictive power. Additionally, I ran sensitivity analyses to determine which features were contributing the most to the errors. 
+
+Once I had a solid understanding of the issues, I prepared a report summarizing my findings, including visualizations to highlight the problematic areas. I scheduled a meeting with my manager and presented the data, explaining the potential causes for the model's poor performance and suggesting alternative approaches, such as feature reduction techniques or trying different algorithms that might handle multicollinearity better.
+
+**Result:**  
+My manager appreciated the thoroughness of my analysis and the proactive approach I took to address the issue. We decided to implement one of the alternative approaches I suggested, which led to a significant improvement in the model's accuracy. This experience reinforced the importance of thorough validation and open communication in delivering successful data science projects.
+
+
+

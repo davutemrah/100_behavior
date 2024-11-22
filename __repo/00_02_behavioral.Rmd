@@ -1,0 +1,74 @@
+# Behavioral Questions
+
+be genuine
+
+be prepared
+
+try to format answers - STAR
+
+Situation: Briefly describe the context or background of the situation.
+
+Task: Clearly explain what your responsibility or objective was.
+
+Action: Detail the specific steps you took to handle the task or situation.
+
+Result: Share the outcome, emphasizing what you achieved and learned.
+
+## General Tips
+
+Here are some tips to help you stay focused during your interviews:
+
+1. **Pause and Listen Fully**: Make sure to let the interviewer finish their question before you start answering. It helps to take a small pause to gather your thoughts.
+
+2. **Practice Brevity**: Try to keep your answers concise. Aim for 2-3 sentences to cover each point, sticking to the most critical information.
+
+3. **Use a Structure**: Use the STAR method (Situation, Task, Action, Result) to keep your answers organized. This can help you stay on track and avoid over-explaining.
+
+4. **Mind Your Pacing**: Speak slowly and clearly. This can help prevent rushing through details and make your points easier to follow.
+
+5. **Check for Understanding**: After your response, ask, "Does that answer your question?" This gives the interviewer a chance to clarify or move on, keeping the conversation balanced.
+
+
+
+## What are your strengths?
+
+--Highlight what makes you unique and how this strength will benefit the company 
+
+
+My strengths are being a quick learner and a dedicated worker. I have strong attention to detail, which helps me deliver high-quality work. I’m passionate about data, so I enjoy learning new tools and concepts to stay updated in my field.
+
+I am committed to my work, which helps me handle complex projects and meet deadlines. I’m always eager to learn and grow, which helps me adapt to new challenges. This combination of dedication, attention to detail, and love for learning makes me a valuable team member.
+
+## What are your weakness?
+
+One of my weaknesses is being too detail-oriented, which sometimes slows me down with tight deadlines. I’m working on balancing detail with efficiency.
+
+Also, as an introvert, I find it challenging to speak up in large groups. To improve, I’ve been focusing on enhancing my communication skills and participating more in team discussions.
+
+
+## Why switched from Academia to Industry
+
+I switched from academia to industry because I wanted to use my analytical and research skills in a real-world setting. 
+
+In academia, I learned a lot about data science, but I was excited to see how my work could directly impact business results. 
+
+Working in industry lets me collaborate with different teams, tackle complex problems, and adapt to new challenges, which fits my goal of making a real difference with data insights.
+
+
+## Why should we hire you?
+
+You should hire me because I have a strong enthusiasm for learning, dedication, and attention to detail. I’m always eager to learn new skills and stay updated with the latest in data science.
+
+I am committed and hardworking, handling complex projects effectively and meeting deadlines without sacrificing quality. My attention to detail helps me deliver high-quality work and catch potential issues early.
+
+My passion for data drives me to find innovative solutions and use data to make strategic decisions. This mix of skills and dedication makes me a valuable addition to your team, as I can help achieve your goals with my expertise and drive for improvement.
+
+
+## How do you handle pressure?
+
+I handle pressure by staying calm, focused, and organized. I prioritize tasks based on urgency and importance, breaking down complex problems into smaller, manageable parts. 
+
+I find that maintaining a structured approach helps me stay on track and reduces stress.
+
+For example, when faced with tight deadlines or unexpected challenges, I communicate openly with my team and stakeholders to set clear expectations. I also make sure to take short breaks to recharge, which helps me stay productive and think more clearly. 
+

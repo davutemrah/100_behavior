@@ -1,0 +1,29 @@
+# Experiences
+
+## Amazon Sr.Economist
+
+Tell me about a time when you did not meet a deadline
+
+In ab test, how do you communicate significance level change to non-technicals? 
+
+Amazon started a delivery program can deliver in a day. This is implemented in 20-30 cities. 
+
+-	How do you evaluate? Outcomes?
+
+-	What type of analysis?
+
+-	In synthetic control how do you calculate weigths?
+
+-	How do you make sure this is good?
+
+-	What if leadership says implement his program in big cities?
+
+-	What if leadership want to do it within east and west coast?
+
+-	How do you determine size, effect size, significance?
+
+-	How do you communicate 10-15% significance to non-technicals
+-	
+
+
+

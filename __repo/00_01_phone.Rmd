@@ -1,0 +1,129 @@
+# Phone Screening Call
+
+
+## About DS
+
+With a background spanning Data science and Machine learning, I enjoy solving complex business problems.
+
+comprehensive problem solver with hands-on experience in the application of advanced statistical techniques and tools, model building and insight generation. Proven ability to connect data with business outcomes. 5+ years of work experience in Data Science.
+
+
+## Tell me about yourself
+
+"Thank you for this opportunity. I’m excited to be here and appreciate your time.
+
+I am a dedicated professional with over 5 years of hands-on experience in data science and economic research, with a Ph.D. in Economics from the University of Kansas. My expertise spans across statistics, econometrics, machine learning, and causal models.
+
+I am proficient in several programming languages, including R, Python, Spark, SQL, and STATA, and have extensive experience working with big data cloud platforms like Databricks and AWS. 
+
+I specialize in causal inference methods, such as Difference-in-Differences, Instrumental Variables, Synthetic Control, Regression Discontinuity, Propensity Score Matching, and Inverse Probability Weighting (IPW).
+
+In my current role as Associate Director of Marketing Sciences at Horizon Media, I have:
+
+- Leveraged big data platforms to analyze audience demographics and consumer behavior, driving strategic marketing decisions that resulted in a 15% increase in customer conversion rates and campaign effectiveness.
+
+- Developed and deployed predictive models, including lifetime value, churn, and look-alike models, optimizing marketing spend by 10%.
+
+- Applied advanced causal modeling techniques, such as Difference-in-Differences and Propensity Score Matching, to evaluate campaign effectiveness with greater accuracy.
+
+- Engineered high-performance scripts for generating people-level balancing weights and balanced random samples, processing datasets of over 100 million observations in seconds. This innovation reduced processing time and cost by 95%, eliminating the need for external data purchases.
+
+Overall, my combination of academic achievements, technical skills, and practical experience enables me to bring valuable insights and contribute effectively to data-driven decision-making processes."
+
+
+## Relocation: 
+
+I am open to relocating, but I would need to consider my family's needs in the process. I would appreciate more information on the support provided for families during the relocation.
+
+
+## Timeline to start:
+
+I am very interested in this role and eager to join your team. I am currently employed and would need to give my employer two weeks' notice. Is this timeline acceptable to you?	
+
+## Salary: 
+
+- put 0 or 1 or lowest possible number in the job applications
+
+- I'd like to ensure this is a mutual fit and discuss compensation later.
+
+**Handling Salary Discussions with Recruiters**
+
+Recruiters often anchor candidates at a lower salary rate early in the hiring process to gauge their flexibility. To counter this:
+
+**Stay Calm:** Don’t feel pressured to commit to a lower rate.
+
+**Respond Strategically:** 
+
+"Thank you for sharing. Based on similar roles, this range seems relatively low, and I’d be looking for a bit more. If that’s a deal-breaker, let me know, but I’d be happy to discuss next steps if there’s room to explore."
+
+**Pace the Conversation:** Asking about next steps shows interest without locking you into a specific rate.
+
+**Understand Recruiter Tactics:** Pushback may just be a negotiation tactic. Often, the recruiter has more flexibility than they imply, and the final decision likely doesn’t rest with them alone.
+
+
+a.	Based on my research and considering my experience and skills, I’m looking for a salary in the range of $160K to $200K that can be tailored as I learn more about the position and responsibilities.
+
+
+b. I have done some research on industry standards for this role and given my background and experience, I am looking for a salary in the range of $160K to $200K. However, I am open to discussing this further based on the overall compensation package and growth opportunities at XXXX.
+
+
+c. At this stage, I am more focused on understanding the role and how I can contribute to XXXX. I'd prefer to discuss salary once we have both determined that I am a good fit for the position and the company. I am confident that we can come to a mutually beneficial agreement when the time comes.
+
+## Why now? you seem to be doing great in your current position.
+
+I’m genuinely grateful for the work I've done in my current role, especially the opportunity to work on impactful projects in marketing science. 
+
+Over time, I’ve built strong skills in data science and developed a deeper understanding of how to derive insights for business strategy. Now, I'm seeking a new role to expand my expertise in areas like **[mention any specific interest relevant to the role, e.g., real-time data applications, A/B testing, or customer analytics]** and take on larger responsibilities within a new industry setting.
+
+This opportunity with **Tovala** aligns perfectly with my goals because it combines technical innovation with customer-centric insights, areas I'm passionate about. I’m excited to bring what I’ve learned to a new team and to continue challenging myself in ways that drive business impact.
+
+
+
+## How does this challenge look like
+
+When I say I’m looking for new challenges, I’m referring to opportunities that push me to broaden my technical skills and strategic thinking. 
+
+For example, I'm interested in working on projects with more complex, real-time data pipelines, which would allow me to build models that continuously update based on new information. 
+
+I also want to be more involved in designing A/B tests from scratch, defining key metrics, and driving insights that directly inform decision-making.
+
+Additionally, I’m drawn to working cross-functionally with product and engineering teams, where I can contribute to product development from a data science perspective. 
+
+Overall, I’m excited about challenges that deepen my expertise while letting me have a more direct impact on strategic initiatives within the business.
+
+
+## What are you looking for specifaclly?
+
+I’m primarily interested in a role where I can leverage my data science expertise hands-on, yet also contribute at a strategic level, which aligns well with a senior data scientist or a technical lead position. 
+
+In an ideal role, I'd be heavily involved in end-to-end model development and A/B testing design while contributing insights that directly impact product and business strategies.
+
+That said, I am open to a role with team leadership aspects if it involves mentorship or guiding junior team members on projects, as I find that knowledge-sharing and skill-building are rewarding aspects of working in data science. 
+
+So, I’m looking for a position that offers a strong technical focus with opportunities for broader influence on project direction and strategic decisions.
+
+## what do you want to do tactically?
+
+Thank you for asking—I think it’s very helpful to clarify. Tactically, I’m looking to work in a role where I can be deeply engaged in hands-on data science, focused on areas like predictive modeling, real-time data integration, and developing customer-focused insights. 
+
+I enjoy projects where I can take models from concept to deployment, ensuring they align closely with business needs and deliver measurable impact.
+
+In terms of company size, I am drawn to the dynamic environments of mid-sized companies or growing startups. These settings often allow me to contribute across different areas, which I find both challenging and rewarding. At the same time, I’m comfortable adapting to established workflows and larger teams if that’s needed.
+
+I see myself contributing as a senior or lead data scientist, where I can drive impactful projects but am also open to mentoring junior team members, supporting collaborative work, and helping shape our approach to data strategy and analytics. Overall, my goal is to focus on technically challenging, strategically aligned projects in a setting that’s collaborative and growth-focused.
+
+
+## Why are you leaving your current role? 
+
+I have enjoyed my time in my current position, where I've developed strong hands-on experience in machine learning and post-campaign analysis and contributed to several successful projects.
+
+However, I've reached a point where I'm ready for new challenges and opportunities that will allow me to grow further professionally and apply my skills in new ways.
+
+
+## Why do you want to work here?
+
+This role is a perfect fit for my background and interests, as it leverages my expertise in data science and my experience in driving insights through data.
+
+I am particularly drawn to [COMPANY]'s innovative and data-driven approach, which aligns with my passion for using data to inform strategic decisions.
+
+I am excited about the opportunity to contribute to the continued success of [COMPANY] and help drive impactful results.
