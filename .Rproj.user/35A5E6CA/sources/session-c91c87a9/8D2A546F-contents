@@ -1,7 +1,0 @@
-book_filename: "Behavioral Interview"
-language:
-  ui:
-    chapter_name: "Chapter "
-delete_merged_file: true
-rmd_subdir: true
-output_dir: "docs"
