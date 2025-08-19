@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 ADP | Interview Prep</title>
+  <meta name="description" content="This is a collection of notes from open sources" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 ADP | Interview Prep" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a collection of notes from open sources" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 ADP | Interview Prep" />
+  
+  <meta name="twitter:description" content="This is a collection of notes from open sources" />
+  
+
+<meta name="author" content="DEA" />
+
+
+<meta name="date" content="2025-08-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="zoro-data-scientist-interview-2024.html"/>
+<link rel="next" href="liveramp---sr.-data-scientist.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Behavioral Interview Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="project-summaries.html"><a href="project-summaries.html"><i class="fa fa-check"></i><b>1</b> Project summaries</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="project-summaries.html"><a href="project-summaries.html#academic-projects-at-ipsr"><i class="fa fa-check"></i><b>1.1</b> Academic projects at IPSR</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="project-summaries.html"><a href="project-summaries.html#tanf-project"><i class="fa fa-check"></i><b>1.1.1</b> TANF Project:</a></li>
+<li class="chapter" data-level="1.1.2" data-path="project-summaries.html"><a href="project-summaries.html#innovation-capacity-project"><i class="fa fa-check"></i><b>1.1.2</b> Innovation Capacity project:</a></li>
+<li class="chapter" data-level="1.1.3" data-path="project-summaries.html"><a href="project-summaries.html#medicaid-expansion"><i class="fa fa-check"></i><b>1.1.3</b> Medicaid expansion:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="phone-screening-call.html"><a href="phone-screening-call.html"><i class="fa fa-check"></i><b>2</b> Phone Screening Call</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="phone-screening-call.html"><a href="phone-screening-call.html#about-ds"><i class="fa fa-check"></i><b>2.1</b> About DS</a></li>
+<li class="chapter" data-level="2.2" data-path="phone-screening-call.html"><a href="phone-screening-call.html#tell-me-about-yourself"><i class="fa fa-check"></i><b>2.2</b> Tell me about yourself</a></li>
+<li class="chapter" data-level="2.3" data-path="phone-screening-call.html"><a href="phone-screening-call.html#relocation"><i class="fa fa-check"></i><b>2.3</b> Relocation:</a></li>
+<li class="chapter" data-level="2.4" data-path="phone-screening-call.html"><a href="phone-screening-call.html#timeline-to-start"><i class="fa fa-check"></i><b>2.4</b> Timeline to start:</a></li>
+<li class="chapter" data-level="2.5" data-path="phone-screening-call.html"><a href="phone-screening-call.html#salary"><i class="fa fa-check"></i><b>2.5</b> Salary:</a></li>
+<li class="chapter" data-level="2.6" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-now-you-seem-to-be-doing-great-in-your-current-position."><i class="fa fa-check"></i><b>2.6</b> Why now? you seem to be doing great in your current position.</a></li>
+<li class="chapter" data-level="2.7" data-path="phone-screening-call.html"><a href="phone-screening-call.html#how-does-this-challenge-look-like"><i class="fa fa-check"></i><b>2.7</b> How does this challenge look like</a></li>
+<li class="chapter" data-level="2.8" data-path="phone-screening-call.html"><a href="phone-screening-call.html#what-are-you-looking-for-specifaclly"><i class="fa fa-check"></i><b>2.8</b> What are you looking for specifaclly?</a></li>
+<li class="chapter" data-level="2.9" data-path="phone-screening-call.html"><a href="phone-screening-call.html#what-do-you-want-to-do-tactically"><i class="fa fa-check"></i><b>2.9</b> what do you want to do tactically?</a></li>
+<li class="chapter" data-level="2.10" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-are-you-leaving-your-current-role"><i class="fa fa-check"></i><b>2.10</b> Why are you leaving your current role?</a></li>
+<li class="chapter" data-level="2.11" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-do-you-want-to-work-here"><i class="fa fa-check"></i><b>2.11</b> Why do you want to work here?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="behavioral-questions.html"><a href="behavioral-questions.html"><i class="fa fa-check"></i><b>3</b> Behavioral Questions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-are-your-strengths"><i class="fa fa-check"></i><b>3.1</b> What are your strengths?</a></li>
+<li class="chapter" data-level="3.2" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-are-your-weakness"><i class="fa fa-check"></i><b>3.2</b> What are your weakness?</a></li>
+<li class="chapter" data-level="3.3" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-switched-from-academia-to-industry"><i class="fa fa-check"></i><b>3.3</b> Why switched from Academia to Industry</a></li>
+<li class="chapter" data-level="3.4" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-should-we-hire-you"><i class="fa fa-check"></i><b>3.4</b> Why should we hire you?</a></li>
+<li class="chapter" data-level="3.5" data-path="behavioral-questions.html"><a href="behavioral-questions.html#how-do-you-handle-pressure"><i class="fa fa-check"></i><b>3.5</b> How do you handle pressure?</a></li>
+<li class="chapter" data-level="3.6" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-are-you-applying-for-this-position"><i class="fa fa-check"></i><b>3.6</b> Why are you applying for this position:</a></li>
+<li class="chapter" data-level="3.7" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-skills-are-you-bringing"><i class="fa fa-check"></i><b>3.7</b> What skills are you bringing</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="work-related.html"><a href="work-related.html"><i class="fa fa-check"></i><b>4</b> Work Related</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="work-related.html"><a href="work-related.html#tell-me-about-a-time-when-you-devised-a-simple-solution-to-a-complex-problem."><i class="fa fa-check"></i><b>4.1</b> Tell me about a time when you devised a simple solution to a complex problem.</a></li>
+<li class="chapter" data-level="4.2" data-path="work-related.html"><a href="work-related.html#how-do-you-resolve-conflicts-with-colleagues"><i class="fa fa-check"></i><b>4.2</b> How do you resolve conflicts with colleagues?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="most-proud-project-influencing-adoption-of-balancing-weights.html"><a href="most-proud-project-influencing-adoption-of-balancing-weights.html"><i class="fa fa-check"></i><b>5</b> Most Proud Project – Influencing Adoption of Balancing Weights</a></li>
+<li class="chapter" data-level="6" data-path="amazon-positions.html"><a href="amazon-positions.html"><i class="fa fa-check"></i><b>6</b> Amazon Positions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="amazon-positions.html"><a href="amazon-positions.html#economics-at-amazon"><i class="fa fa-check"></i><b>6.1</b> Economics at Amazon</a></li>
+<li class="chapter" data-level="6.2" data-path="amazon-positions.html"><a href="amazon-positions.html#amazon-leadership-principles"><i class="fa fa-check"></i><b>6.2</b> Amazon Leadership Principles</a></li>
+<li class="chapter" data-level="6.3" data-path="amazon-positions.html"><a href="amazon-positions.html#email-from-amazon"><i class="fa fa-check"></i><b>6.3</b> Email from Amazon</a></li>
+<li class="chapter" data-level="6.4" data-path="amazon-positions.html"><a href="amazon-positions.html#star-format"><i class="fa fa-check"></i><b>6.4</b> STAR format</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html"><i class="fa fa-check"></i><b>7</b> Amazon Prep Stories</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#sample-questions"><i class="fa fa-check"></i><b>7.1</b> Sample Questions</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust"><i class="fa fa-check"></i><b>7.1.1</b> <strong>Earn Trust</strong></a></li>
+<li class="chapter" data-level="7.1.2" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership"><i class="fa fa-check"></i><b>7.1.2</b> <strong>Ownership</strong></a></li>
+<li class="chapter" data-level="7.1.3" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results"><i class="fa fa-check"></i><b>7.1.3</b> <strong>Deliver Results</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust---tell-me-about-a-time-you-failed-and-how-you-handled-it."><i class="fa fa-check"></i><b>7.2</b> Earn Trust - Tell me about a time you failed and how you handled it.</a></li>
+<li class="chapter" data-level="7.3" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust---describe-a-time-you-influenced-a-group-despite-resistance."><i class="fa fa-check"></i><b>7.3</b> Earn Trust - Describe a time you influenced a group despite resistance.</a></li>
+<li class="chapter" data-level="7.4" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership-mastercard-report-redesign"><i class="fa fa-check"></i><b>7.4</b> Ownership – Mastercard Report Redesign</a></li>
+<li class="chapter" data-level="7.5" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership---describe-a-time-you-took-the-lead-on-a-project"><i class="fa fa-check"></i><b>7.5</b> Ownership - Describe a time you took the lead on a project</a></li>
+<li class="chapter" data-level="7.6" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results-blu-vs.-non-blu-analysis"><i class="fa fa-check"></i><b>7.6</b> Deliver Results – Blu vs. Non-Blu Analysis</a></li>
+<li class="chapter" data-level="7.7" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results---how-have-you-leveraged-data-to-develop-a-strategy"><i class="fa fa-check"></i><b>7.7</b> Deliver results - How have you leveraged data to develop a strategy?</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="general-tips-for-big-companies.html"><a href="general-tips-for-big-companies.html"><i class="fa fa-check"></i><b>8</b> General Tips for Big Companies</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="general-tips-for-big-companies.html"><a href="general-tips-for-big-companies.html#walmart"><i class="fa fa-check"></i><b>8.1</b> Walmart</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="potential-questions.html"><a href="potential-questions.html"><i class="fa fa-check"></i><b>9</b> Potential Questions</a></li>
+<li class="chapter" data-level="10" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html"><i class="fa fa-check"></i><b>10</b> Zoro – Data Scientist Interview (2024)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#feedback-from-interview"><i class="fa fa-check"></i><b>10.1</b> Feedback from Interview</a></li>
+<li class="chapter" data-level="10.2" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#behavioral-questions-asked"><i class="fa fa-check"></i><b>10.2</b> Behavioral Questions Asked</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#walk-me-through-your-resume-focusing-on-data-science."><i class="fa fa-check"></i><b>10.2.1</b> Walk me through your resume, focusing on data science.</a></li>
+<li class="chapter" data-level="10.2.2" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#model-related-questions"><i class="fa fa-check"></i><b>10.2.2</b> Model Related Questions:</a></li>
+<li class="chapter" data-level="10.2.3" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#how-do-you-overcome-overfitting-1"><i class="fa fa-check"></i><b>10.2.3</b> <strong>How do you overcome overfitting?</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="adp.html"><a href="adp.html"><i class="fa fa-check"></i><b>11</b> ADP</a>
+<ul>
+<li class="chapter" data-level="11.0.1" data-path="adp.html"><a href="adp.html#first-round"><i class="fa fa-check"></i><b>11.0.1</b> First Round</a></li>
+<li class="chapter" data-level="11.0.2" data-path="adp.html"><a href="adp.html#third-round-with-two-directors"><i class="fa fa-check"></i><b>11.0.2</b> Third Round with two Directors</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html"><i class="fa fa-check"></i><b>12</b> LiveRamp - Sr. Data Scientist</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html#first-round-with-hiring-manager"><i class="fa fa-check"></i><b>12.0.1</b> First Round with Hiring Manager</a></li>
+<li class="chapter" data-level="12.0.2" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html#second-round"><i class="fa fa-check"></i><b>12.0.2</b> Second Round</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="experiences.html"><a href="experiences.html"><i class="fa fa-check"></i><b>13</b> Experiences</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="experiences.html"><a href="experiences.html#amazon-sr.economist"><i class="fa fa-check"></i><b>13.1</b> Amazon Sr.Economist</a></li>
+<li class="chapter" data-level="13.2" data-path="experiences.html"><a href="experiences.html#amazon-economist-ii"><i class="fa fa-check"></i><b>13.2</b> Amazon Economist II</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="experiences.html"><a href="experiences.html#phone-screening"><i class="fa fa-check"></i><b>13.2.1</b> Phone Screening</a></li>
+<li class="chapter" data-level="13.2.2" data-path="experiences.html"><a href="experiences.html#leadership-principle-portion"><i class="fa fa-check"></i><b>13.2.2</b> Leadership Principle Portion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="mockup.html"><a href="mockup.html"><i class="fa fa-check"></i><b>14</b> mockup</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="mockup.html"><a href="mockup.html#walk-us-through-how-you-approached-churn-modeling-for-a-client."><i class="fa fa-check"></i><b>14.1</b> Walk us through how you approached churn modeling for a client.</a></li>
+<li class="chapter" data-level="14.2" data-path="mockup.html"><a href="mockup.html#how-do-you-select-features-when-you-have-400-binary-variables"><i class="fa fa-check"></i><b>14.2</b> How do you select features when you have 400+ binary variables?</a></li>
+<li class="chapter" data-level="14.3" data-path="mockup.html"><a href="mockup.html#have-you-dealt-with-a-stakeholder-who-didnt-trust-your-model-output-what-did-you-do"><i class="fa fa-check"></i><b>14.3</b> Have you dealt with a stakeholder who didn’t trust your model output? What did you do?</a></li>
+<li class="chapter" data-level="14.4" data-path="mockup.html"><a href="mockup.html#imagine-a-model-is-highly-accurate-but-business-stakeholders-dont-understand-it-how-do-you-bridge-that-gap"><i class="fa fa-check"></i><b>14.4</b> Imagine a model is highly accurate but business stakeholders don’t understand it — how do you bridge that gap?</a></li>
+<li class="chapter" data-level="14.5" data-path="mockup.html"><a href="mockup.html#how-would-you-design-a-project-to-measure-the-lift-of-a-pricing-model-across-different-client-segments"><i class="fa fa-check"></i><b>14.5</b> How would you design a project to measure the lift of a pricing model across different client segments?”**</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="root.html"><a href="root.html"><i class="fa fa-check"></i><b>15</b> Root.com</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="root.html"><a href="root.html#question"><i class="fa fa-check"></i><b>15.0.1</b> Question:</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="liveramp-finals.html"><a href="liveramp-finals.html"><i class="fa fa-check"></i><b>16</b> liveramp Finals</a></li>
+<li class="divider"></li>
+<li><a href="https://davutemrah.github.io" target="blank">Back to Home Page</li>
+<li><a href="https://davutemrah.github.io/notebooks/" target="blank">Back to Collections</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interview Prep</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="adp" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> ADP<a href="adp.html#adp" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="first-round" class="section level3 hasAnchor" number="11.0.1">
+<h3><span class="header-section-number">11.0.1</span> First Round<a href="adp.html#first-round" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>ADP (with Kate Lindsay, Manager of Data Science)</p>
+<p>Head of Data Science, Data Engineering, Data Ops &amp; Management (HRO Data &amp; Analytics)</p>
+<ul>
+<li><p><strong>She’s responsible for multiple data functions</strong>, which may signal a cross-functional team environment.</p></li>
+<li><p><strong>Values hands-on project discussion</strong> – wanted to <em>learn deeply about my experience and applications</em> of data science.</p></li>
+<li><p><strong>Open-ended intro prompt</strong> – important to <em>tailor intro to highlight relevant strengths and standout projects</em>.</p></li>
+</ul>
+<p>Thank you so much for taking the time and giving me this opportunity to speak with you.</p>
+<p>I’m a hands-on data scientist with over five years of experience across academic and industry settings, focusing on the economic and machine learning perspectives of data science.</p>
+<p>I hold a Ph.D. in Economics, with a specialization in econometric and microeconometric modeling. I also completed a one-year postdoctoral research position at the University of Kansas, where I worked on policy-driven research projects. After academia, I transitioned into the industry and have been working in the marketing science domain for the past three years.</p>
+<p>In my current role, I analyze consumer behavior using diverse data sources including web search data, location-based data, transactional data, and TV viewership data. I apply both supervised learning techniques—such as churn prediction, similarity modeling, and lookalike modeling—as well as unsupervised methods for customer segmentation and persona development.</p>
+<p>I also have expertise in causal inference techniques, including difference-in-differences and propensity score matching, to evaluate marketing effectiveness. One area I enjoy is integrating return path data, population data, and first-party purchase data to study how media exposure influences consumer behavior.</p>
+<p>Additionally, I’ve developed scalable scripts—especially in SQL and Python—to mimic the functionality of balancing-weight libraries like those in R, enabling them to run efficiently on large datasets with millions of observations, where traditional methods fall short.</p>
+<p>In short, I bring a mix of econometrics, machine learning, and scalable engineering approaches to help businesses make data-driven marketing decisions.</p>
+<div id="describe-a-data-science-project-you-are-most-proud-of-the-problem-the-project-aimed-to-solve-the-methods-used-the-outcomeresults-of-the-project" class="section level4 hasAnchor" number="11.0.1.1">
+<h4><span class="header-section-number">11.0.1.1</span> Describe a data science project you are most proud of: The problem the project aimed to solve, The methods used, The outcome/results of the project<a href="adp.html#describe-a-data-science-project-you-are-most-proud-of-the-problem-the-project-aimed-to-solve-the-methods-used-the-outcomeresults-of-the-project" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="project-highlight-value-based-bidding-algorithm" class="section level5 hasAnchor" number="11.0.1.1.1">
+<h5><span class="header-section-number">11.0.1.1.1</span> 📊 Project Highlight – Value-Based Bidding Algorithm<a href="adp.html#project-highlight-value-based-bidding-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Context</strong>:
+In a marketing campaign, all users were previously treated equally with the same budget allocation (e.g., $10 per user), regardless of their likelihood to convert or spend.</p>
+<p><strong>Problem</strong>:
+The uniform budget approach didn’t account for user differences in potential value, possibly leading to inefficient spending.</p>
+<p><strong>Solution</strong>:
+Developed a <strong>customized, value-based bidding algorithm</strong>:</p>
+<ul>
+<li><p>Estimated each user’s <strong>customer lifetime value (CLV)</strong> using past purchase history.</p></li>
+<li><p>Assigned <strong>personalized user budgets</strong> based on expected value:</p>
+<ul>
+<li>Lower expected value → lower budget</li>
+<li>Higher expected value → higher budget</li>
+</ul></li>
+</ul>
+<p><strong>Method</strong>:</p>
+<ul>
+<li><p>Designed and implemented an <strong>A/B test</strong>:</p>
+<ul>
+<li><p><strong>Control group</strong>: flat, equal-budget treatment</p></li>
+<li><p><strong>Test group</strong>: value-based personalized bidding</p></li>
+</ul></li>
+</ul>
+<p><strong>Outcome</strong>:</p>
+<ul>
+<li><p>The value-based bidding group showed <strong>higher conversion rates</strong> and <strong>better return on ad spend (ROAS)</strong>.</p></li>
+<li><p>The project was successful, <strong>measurable</strong>, and <strong>high-impact</strong>.</p></li>
+</ul>
+<p><strong>Additional Note</strong>:</p>
+<ul>
+<li>Emphasized your enjoyment and skill in <strong>causal inference</strong> and <strong>campaign lift analysis</strong>, which were used to validate the results.</li>
+</ul>
+</div>
+</div>
+<div id="can-you-speak-a-little-bit-about-how-you-deployed-a-model-whether-its-the-example-you-just-walked-through-or-another-one-what-systems-are-you-using-and-how-do-you-deliver-the-results-to-the-end-user" class="section level4 hasAnchor" number="11.0.1.2">
+<h4><span class="header-section-number">11.0.1.2</span> Can you speak a little bit about how you deployed a model? Whether it’s the example you just walked through or another one — what systems are you using, and how do you deliver the results to the end user?<a href="adp.html#can-you-speak-a-little-bit-about-how-you-deployed-a-model-whether-its-the-example-you-just-walked-through-or-another-one-what-systems-are-you-using-and-how-do-you-deliver-the-results-to-the-end-user" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sure. For the value-based bidding project, we worked with The Trade Desk. After estimating the model predictions for user-level bids, we had to follow The Trade Desk’s specific data formatting and submission rules to push the data into their platform.</p>
+<p>More generally, in our day-to-day workflow, we use tools like Snowflake and Databricks. Once a model reaches a stable and mature state, I typically deploy it within the Databricks environment. The outputs are then used to refresh our audience segments on a quarterly basis, ensuring that targeting is aligned with the most recent model predictions.</p>
+</div>
+<div id="can-you-speak-a-little-bit-about-the-team-you-currently-work-with-is-it-just-you-are-there-other-data-scientists-or-data-engineers-whats-the-makeup-of-that-group" class="section level4 hasAnchor" number="11.0.1.3">
+<h4><span class="header-section-number">11.0.1.3</span> Can you speak a little bit about the team you currently work with? Is it just you? Are there other data scientists or data engineers? What’s the makeup of that group?<a href="adp.html#can-you-speak-a-little-bit-about-the-team-you-currently-work-with-is-it-just-you-are-there-other-data-scientists-or-data-engineers-whats-the-makeup-of-that-group" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sure. I’m part of a Marketing Science team within an agency, which includes around 20 data scientists in total. However, our structure is client-based, so we typically work independently to support specific client accounts.</p>
+<p>For example, I currently support two different clients, and while I am the only data scientist assigned to those accounts, I collaborate closely with a small team that usually includes business owners, account managers, and data solution stakeholders—around five people total per account.</p>
+<p>My focus is on hands-on modeling, data analysis, and execution, while client communication and strategic interpretation of the work are usually led by the business owners or account leads.</p>
+<p><strong>they dont deploy models</strong></p>
+<p><strong>they work with data engineers, clean, prep, premodel, deploy model etc</strong></p>
+</div>
+<div id="can-you-talk-through-a-time-when-you-had-to-deliver-an-analysis-or-outcome-that-conflicted-with-a-stakeholders-expectations-how-did-you-handle-that" class="section level4 hasAnchor" number="11.0.1.4">
+<h4><span class="header-section-number">11.0.1.4</span> Can you talk through a time when you had to deliver an analysis or outcome that conflicted with a stakeholder’s expectations? How did you handle that?<a href="adp.html#can-you-talk-through-a-time-when-you-had-to-deliver-an-analysis-or-outcome-that-conflicted-with-a-stakeholders-expectations-how-did-you-handle-that" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, this definitely happens, and I think it really comes down to clear communication and collaborative validation.</p>
+<p>When I deliver results that differ from what a stakeholder expected, my first step is to review the analysis thoroughly—double-check the code, data transformations, and assumptions to ensure there’s no technical error on my side. I also try to understand what expectations the stakeholder had and why they may have interpreted the data differently.</p>
+<p>In these situations, I often conduct a sensitivity analysis or robustness checks to confirm that the findings are solid. Once I’m confident in the results, I work to bring the stakeholders into the process—discussing why the outcome might differ from their intuition and what factors in the data might explain the discrepancy.</p>
+<p>For example, I work with a retail furniture company where recent macroeconomic changes, such as those following a national election, affected consumer behavior. Stakeholders had strong expectations based on last year’s trends, but those patterns didn’t hold this year. We had to rethink our audience creation strategy to reflect new economic realities, rather than relying solely on past behavior.</p>
+<p>So, in short, I try to balance the technical findings with the business context and stakeholder insights, knowing that their perspective often includes valuable domain knowledge I might not initially see in the data alone.</p>
+<p><strong>GOOD</strong></p>
+<ul>
+<li><p>Collaborative mindset – You emphasized communication and validation, which are key when managing expectation gaps.</p></li>
+<li><p>Technical caution – You mentioned rechecking your code and doing sensitivity analysis, showing scientific thinking and integrity.</p></li>
+<li><p>Respect for stakeholder expertise – You acknowledged their viewpoint and gave a real-world example (e.g., macroeconomic shifts post-election), which shows business awareness.</p></li>
+<li><p>Adaptability – You described adjusting audience strategies due to changing conditions, which reflects flexibility and contextual reasoning.</p></li>
+</ul>
+<p><strong>🔧 Areas to Improve</strong></p>
+<ul>
+<li><p>Structure – The original answer was a bit disorganized and repetitive, with filler phrases like “yeah,” “I guess,” and circular thoughts that distracted from the key message.</p></li>
+<li><p>Confidence – Phrases like “maybe,” “I think,” or “let me think” made it sound unsure at times. A more assertive tone (“Here’s what I usually do…”) builds credibility.</p></li>
+<li><p>Focus – Initially, you didn’t give a concrete example right away. Starting with the retail furniture case could anchor the listener before diving into your thought process.</p></li>
+</ul>
+</div>
+<div id="what-interested-you-most-about-the-job-posting-and-why-did-you-choose-to-apply" class="section level4 hasAnchor" number="11.0.1.5">
+<h4><span class="header-section-number">11.0.1.5</span> What interested you most about the job posting, and why did you choose to apply?<a href="adp.html#what-interested-you-most-about-the-job-posting-and-why-did-you-choose-to-apply" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Great question. I’ve been working remotely for the past three years at my current company, which is based in New York. It was my first industry role after academia, and I’ve gained a lot of hands-on experience there—particularly in applied data science for marketing.</p>
+<p>What stood out to me about this opportunity at ADP is, first, the Chicago location. I’m based here, so the possibility of a hybrid setup really appealed to me. Second, ADP’s scale and reputation were a major draw. It’s a large, well-established company, and I see that as a strong platform for career growth and long-term learning.</p>
+<p>I’m also interested in working in a new domain where I can apply what I’ve learned in marketing science but also expand into broader data science applications. So, overall, the role felt like a natural next step for both professional development and alignment with where I want to grow.</p>
+</div>
+<div id="what-questions-do-you-have-for-me-what-can-i-help-you-understand" class="section level4 hasAnchor" number="11.0.1.6">
+<h4><span class="header-section-number">11.0.1.6</span> What questions do you have for me? What can I help you understand?<a href="adp.html#what-questions-do-you-have-for-me-what-can-i-help-you-understand" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Thanks—yes, I’ve discussed some of this with the recruiter, but I’d love to get your perspective. I understand this is a Lead Data Scientist position and an individual contributor role within a team of around seven data scientists, reporting to you.</p>
+<p>I’d like to better understand how the team fits within the larger organization. Specifically:</p>
+<ul>
+<li><p>How is work prioritized or aligned with business goals?</p></li>
+<li><p>Are you structured more like an internal consulting function, or do you work directly with internal business units?</p></li>
+<li><p>Do you operate more like an internal product/analytics team, or are there client-facing components?</p></li>
+<li><p>Coming from an agency setting, I’m used to supporting external clients directly, often as the only data scientist on the account, working closely with non-technical marketing stakeholders. So, I’d love to get a sense of how cross-functional collaboration looks in your team—especially around communication with business partners or product owners.</p></li>
+</ul>
+<p><strong>ADP – Data Science Team Overview (Manager’s Response)</strong></p>
+<p><strong>Business Unit Context:</strong></p>
+<ul>
+<li><p>The role sits within ADP’s <strong>Human Resources Outsourcing (HRO)</strong> business unit.</p></li>
+<li><p>HRO provides <strong>technology + services</strong>. For example, not just payroll software, but also payroll associates who manage it for clients.</p></li>
+<li><p>Two subunits:</p>
+<ul>
+<li><p><strong>Total Source (PEO)</strong> – Full-service HR outsourcing (payroll, benefits, workers’ comp, recruiting, etc.).</p></li>
+<li><p><strong>Comprehensive Services</strong> – Modular services (e.g., payroll <em>or</em> benefits), where clients choose specific functions.</p></li>
+</ul></li>
+</ul>
+<p><strong>Team &amp; Role Setup:</strong></p>
+<ul>
+<li><p>The data science team supports <strong>internal stakeholders</strong>, not external clients.</p></li>
+<li><p>The team focuses on enabling better <strong>decision-making and operations</strong> within the HRO business unit.</p></li>
+<li><p>Currently <strong>7 data scientists</strong>; this role would be the <strong>8th</strong>, reporting directly to <strong>Kate Lindsay</strong>.</p></li>
+<li><p>Team collaborates with:</p>
+<ul>
+<li><p><strong>Data engineers</strong></p></li>
+<li><p><strong>Business intelligence analysts</strong></p></li>
+<li><p><strong>Product managers</strong> (who lead agile/scrum processes)</p></li>
+</ul></li>
+</ul>
+<p><strong>Key Focus Areas &amp; Projects:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Pricing Optimization:</strong></p>
+<ul>
+<li>Models to recommend appropriate annual price increases for clients, based on service usage and churn risk.</li>
+</ul></li>
+<li><p><strong>Churn Prediction:</strong></p>
+<ul>
+<li>Identifying clients at high risk of leaving, so the team can proactively retain them.</li>
+</ul></li>
+<li><p><strong>Benefits Participation Forecasting:</strong></p>
+<ul>
+<li><p>Predicting employee enrollment in health plans.</p></li>
+<li><p>Higher participation is tied to client satisfaction and retention.</p></li>
+</ul></li>
+<li><p><strong>Workload Balancing (WorkPod Project):</strong></p>
+<ul>
+<li>Monitoring workloads of client service associates to ensure fair and efficient allocation across clients.</li>
+</ul></li>
+</ol>
+<p><strong>Team Dynamics:</strong></p>
+<ul>
+<li><p>Data scientists work <strong>independently</strong> or sometimes in small collaborative groups (e.g., splitting models on a single pricing project).</p></li>
+<li><p>Work is embedded within <strong>cross-functional teams</strong>, each oriented around a product or business problem.</p></li>
+</ul>
+<p>She explained that most of their data is internal, coming from ADP’s own systems and client interactions. However, for specific areas like workers’ compensation insurance, they do integrate some third-party data.</p>
+<p>In the case of workers’ comp:</p>
+<ul>
+<li><p>A claim can evolve in unpredictable ways—doctor’s bills, salary replacement, legal involvement, etc.</p></li>
+<li><p>To forecast how claims may develop, they partner with external vendors who provide projections based on their expertise and datasets.</p></li>
+<li><p>These projections help them manage risk and plan for the potential financial impact of claims.</p></li>
+<li><p>So while the majority of their analytics work is based on first-party data, third-party data supplements the modeling in high-stakes or uncertain areas like insurance claims.</p></li>
+</ul>
+</div>
+<div id="genai-at-dp" class="section level4 hasAnchor" number="11.0.1.7">
+<h4><span class="header-section-number">11.0.1.7</span> GenAI at DP<a href="adp.html#genai-at-dp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>They <strong>haven’t deployed GenAI models to production yet</strong> within her team, but <strong>have explored</strong> its potential in a couple of key areas:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Feature Creation from Unstructured Text</strong></p>
+<ul>
+<li>Associates enter free-text notes on client interactions.</li>
+<li>They explored using GenAI to <strong>analyze these notes</strong> and infer client sensitivities (e.g., price vs. service-driven concerns).</li>
+</ul></li>
+<li><p><strong>Enhanced Context for Retention Models</strong></p>
+<ul>
+<li>For clients flagged as high churn risk, they experimented with GenAI-generated <strong>summaries to help internal users</strong> understand context and potential next steps.</li>
+</ul></li>
+</ol>
+<p>Additionally:</p>
+<ul>
+<li><strong>Other teams at ADP are actively focused on GenAI</strong>.</li>
+<li>Her team sometimes <strong>partners with them</strong> to learn from their innovations and <strong>integrate relevant solutions</strong> where it makes sense.</li>
+</ul>
+<p>So, while it’s still <strong>early-stage in their specific unit</strong>, GenAI is a <strong>growing area of interest and experimentation</strong> across the company.</p>
+</div>
+<div id="your-observation" class="section level4 hasAnchor" number="11.0.1.8">
+<h4><span class="header-section-number">11.0.1.8</span> 🧠 Your Observation:<a href="adp.html#your-observation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This last part of the conversation revealed some important context about one of their internal-facing data science initiatives. Here’s a quick summary and reflection on your question and her response:</p>
+<p>You asked whether the last project she mentioned—about managing associate workload—was more like <em>people analytics</em>, since it involved understanding if employees are getting overwhelmed.</p>
+<p><strong>👍 This was a smart observation</strong>—you noticed a shift in focus from external client analytics to internal workforce insights.</p>
+<div id="her-response-summary" class="section level5 hasAnchor" number="11.0.1.8.1">
+<h5><span class="header-section-number">11.0.1.8.1</span> 👩‍💼 Her Response Summary:<a href="adp.html#her-response-summary" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><p><strong>It’s not quite people analytics or workforce optimization</strong> in the traditional sense.</p></li>
+<li><p>The goal is to <strong>measure work units consistently</strong> using internal data (e.g., Salesforce cases).</p></li>
+<li><p>Since no two cases are the same, they worked on defining:</p>
+<ul>
+<li>What counts as a <strong>unit of work</strong></li>
+<li>How much <strong>time/effort</strong> it typically takes</li>
+<li>How to <strong>measure and aggregate workload</strong></li>
+</ul></li>
+<li><p>The ultimate use is <strong>decision support</strong>:</p>
+<ul>
+<li>For example, helping leadership decide where to allocate new hires to <strong>balance workloads</strong> across teams.</li>
+</ul></li>
+</ul>
+</div>
+<div id="why-this-matters-for-you" class="section level5 hasAnchor" number="11.0.1.8.2">
+<h5><span class="header-section-number">11.0.1.8.2</span> Why This Matters for You:<a href="adp.html#why-this-matters-for-you" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>If you join their team:</p>
+<ul>
+<li><p>You’ll work on a diverse range of problems—from <strong>churn modeling</strong> to <strong>workload quantification</strong>.</p></li>
+<li><p>You’ll need to <strong>think creatively about data structure and definitions</strong>, especially in operational contexts that don’t have standardized metrics.</p></li>
+<li><p>Communication will be key since you’re translating unstructured or noisy inputs (like Salesforce activity logs) into actionable insights.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="third-round-with-two-directors" class="section level3 hasAnchor" number="11.0.2">
+<h3><span class="header-section-number">11.0.2</span> Third Round with two Directors<a href="adp.html#third-round-with-two-directors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="what-is-the-project-or-the-deliverable-that-youre-most-proud-of" class="section level4 hasAnchor" number="11.0.2.1">
+<h4><span class="header-section-number">11.0.2.1</span> what is the project or the deliverable that you’re most proud of?<a href="adp.html#what-is-the-project-or-the-deliverable-that-youre-most-proud-of" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Project You’re Most Proud Of: Propensity + Spend Estimation + Clustering for Targeting Strategy</p>
+<p><strong>S – Situation:</strong></p>
+<p>A retail client was investing heavily in upper-funnel marketing but lacked a way to prioritize media toward consumers most likely to drive net-new revenue. Their goal was not just to increase conversions but to acquire net-new customers who would bring in meaningful future spend.</p>
+<p><strong>T – Task:</strong></p>
+<p>I was tasked with designing a data science pipeline that could:</p>
+<p>Identify high-propensity net-new customers,</p>
+<p>Estimate their future spend value, and</p>
+<p>Segment them into actionable tiers to guide media targeting and budget allocation.</p>
+<p><strong>A – Action:</strong></p>
+<ul>
+<li><p>I started by building a propensity model to predict the likelihood of conversion for net-new users only, using features from demographic data, behavioral signals, and geographic location.</p></li>
+<li><p>For those with high purchase propensity, I layered on a spend regression model to forecast expected revenue per user.</p></li>
+<li><p>Then, I multiplied propensity × expected spend to derive expected value per ID.</p></li>
+<li><p>Finally, I applied K-means clustering to group users into value-based segments (e.g., high-expected revenue vs. mid- and low tiers).</p></li>
+<li><p>These clusters informed bid strategy, creative investment, and audience prioritization in activation platforms (e.g., heavier bids and premium creative for the top-tier segments).</p></li>
+</ul>
+<p><strong>R – Result:</strong></p>
+<ul>
+<li><p>This segmentation framework helped shift marketing investment toward high-value net-new customers, rather than broadly targeting all high-propensity IDs.</p></li>
+<li><p>The client saw a 20–25% lift in ROAS and a measurable increase in net-new customer count during the campaign period.</p></li>
+<li><p>The method was adopted as a audience framework for future campaigns, reinforcing the connection between model outputs and strategic execution.</p></li>
+</ul>
+<p><strong>I’m especially proud of this project because it didn’t just predict who would buy — it helped the client predict who mattered most for net-new revenue growth, and operationalize that insight through smarter media decisions.</strong></p>
+</div>
+<div id="after-youve-built-a-model-that-works-how-do-you-keep-it-working-over-time" class="section level4 hasAnchor" number="11.0.2.2">
+<h4><span class="header-section-number">11.0.2.2</span> After you’ve built a model that works, how do you keep it working over time?<a href="adp.html#after-youve-built-a-model-that-works-how-do-you-keep-it-working-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Even if you haven’t directly owned full MLOps infrastructure, you can still give a strong answer by framing your experience around monitoring, retraining, and collaborating with engineers—while signaling you’re eager to go deeper into formal MLOps.</strong></p>
+<p>Even if you haven’t directly owned full MLOps infrastructure, you can still give a strong answer by framing your experience around <strong>monitoring</strong>, <strong>retraining</strong>, and <strong>collaborating with engineers</strong>—while signaling you’re eager to go deeper into formal MLOps.</p>
+<p>Here’s how to respond <strong>based on your experience</strong> with some smart framing:</p>
+<p><strong>Start with What You’ve Done:</strong></p>
+<p>In my recent roles, I’ve primarily focused on developing and evaluating predictive models that directly inform marketing strategies—for example, lookalike targeting, lift analysis, spend prediction, or customer clustering. While I haven’t owned end-to-end deployment pipelines, I’ve been closely involved in the post-model launch stage, especially in terms of monitoring and evaluating ongoing performance.</p>
+<p>Then give a <strong>concrete example</strong>, such as:</p>
+<p>For a repeat purchase prediction model, I set up ongoing tracking for feature drift and monitored how model precision/recall changed over time as we acquired new customers or updated creative strategies. We scheduled re-evaluation every X weeks and flagged meaningful changes in input distribution—for instance, a sudden shift in channel mix or category engagement—which might require retraining.</p>
+<p><strong>Show You Understand What Maintenance Involves:</strong></p>
+<p>From a maintenance perspective, I’ve learned it’s critical to define success metrics up front—whether it’s conversion lift, revenue, or classification accuracy—and make those metrics part of a regular performance review cadence.</p>
+<p>I’ve worked on documenting feature assumptions, saving training data snapshots, and validating that <strong>scoring environments match training logic</strong>—even when model code gets handed off to an engineering team.”</p>
+<p><strong>Describe Deployment &amp; Collaboration:</strong></p>
+<p>While I haven’t deployed models into production pipelines directly via tools like MLflow or Vertex AI, I’ve collaborated with engineers and product managers to translate models into <strong>production-ready scoring logic</strong>, including writing SQL/Python scripts for batch scoring or API handoff. I’ve also tested outputs and helped debug scoring mismatches after handoff.</p>
+<p><strong>Optional Ending to Show Growth Mindset:</strong></p>
+<p>I’m currently learning more about formal MLOps practices—CI/CD for models, monitoring tools, model registries—because I see how important it is to scale impact and keep models trustworthy in the long run.”</p>
+<p><strong>TL;DR Key Talking Points:</strong></p>
+<p>You can build your answer around these themes:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Monitoring</strong> – You’ve tracked model performance post-launch (drift, KPIs).</li>
+<li><strong>Retraining cadence</strong> – You’ve been involved in planning or suggesting when and why to retrain.</li>
+<li><strong>Collaboration</strong> – You’ve worked with engineers to translate models into production use.</li>
+<li><strong>Documentation &amp; validation</strong> – You understand the importance of reproducibility and matching training vs. scoring logic.</li>
+<li><strong>Learning mindset</strong> – You’re building toward deeper MLOps integration.</li>
+</ol>
+</div>
+<div id="im-curious-about-your-experience-with-llms.-can-you-walk-through-that-projectwhat-was-the-problem-what-did-you-build-and-what-was-the-impact" class="section level4 hasAnchor" number="11.0.2.3">
+<h4><span class="header-section-number">11.0.2.3</span> I’m curious about your experience with LLMs. Can you walk through that project—what was the problem, what did you build, and what was the impact?<a href="adp.html#im-curious-about-your-experience-with-llms.-can-you-walk-through-that-projectwhat-was-the-problem-what-did-you-build-and-what-was-the-impact" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I started using LLMs about a year ago for a project I’m still maintaining. The core problem was that our demographic profile reports—though rich in data—were difficult to interpret, especially for non-technical stakeholders. These reports include over 45 Excel tabs per audience segment, covering everything from household composition, income, auto ownership, interests, and financial attributes, along with visualizations and comparative metrics.</p>
+<p>While powerful, the reports were overwhelming to digest, especially when comparing multiple audience segments or benchmarking them against the general U.S. population. So, I built an automated LLM-powered workflow that summarizes the key insights for each segment.</p>
+<p>Here’s how it works: team members define a segment name in Snowflake, and the automated pipeline pulls all the demographic and behavioral data, runs profiling logic, and generates the full Excel report. Then, the LLM API is used to interpret the summary statistics and generate a concise, one-page natural language insight report. The output is tailored based on the segment’s business context—e.g., if it’s an e-commerce or furniture company, the LLM interprets results in a relevant tone.</p>
+<p>This solution has been a huge time-saver and adoption booster. Instead of digging through 45 sheets, non-technical users—like business solutions experts and client-facing teams—can quickly grasp how a segment over- or under-indexes across key attributes. It bridges the gap between deep data and clear, actionable insight.
+Ultimately, this tool helps business decision-makers more easily understand their target audiences and make faster, more informed choices about campaign strategies, personalization, or segment prioritization.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="zoro-data-scientist-interview-2024.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="liveramp---sr.-data-scientist.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Behavioral Interview.pdf", "Behavioral Interview.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Phone Screening Call | Interview Prep</title>
+  <title>Chapter 14 mockup | Interview Prep</title>
   <meta name="description" content="This is a collection of notes from open sources" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Phone Screening Call | Interview Prep" />
+  <meta property="og:title" content="Chapter 14 mockup | Interview Prep" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a collection of notes from open sources" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Phone Screening Call | Interview Prep" />
+  <meta name="twitter:title" content="Chapter 14 mockup | Interview Prep" />
   
   <meta name="twitter:description" content="This is a collection of notes from open sources" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="project-summaries.html"/>
-<link rel="next" href="behavioral-questions.html"/>
+<link rel="prev" href="experiences.html"/>
+<link rel="next" href="root.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -270,93 +270,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="phone-screening-call" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Phone Screening Call<a href="phone-screening-call.html#phone-screening-call" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="about-ds" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> About DS<a href="phone-screening-call.html#about-ds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>With a background spanning Data science and Machine learning, I enjoy solving complex business problems.</p>
-<p>comprehensive problem solver with hands-on experience in the application of advanced statistical techniques and tools, model building and insight generation. Proven ability to connect data with business outcomes. 5+ years of work experience in Data Science.</p>
+<div id="mockup" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> mockup<a href="mockup.html#mockup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="walk-us-through-how-you-approached-churn-modeling-for-a-client." class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> Walk us through how you approached churn modeling for a client.<a href="mockup.html#walk-us-through-how-you-approached-churn-modeling-for-a-client." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sure. For a large retail furniture client, we were asked to build a churn model to predict which customers were unlikely to return for another purchase within 6 months.</p>
+<p>We began by defining churn using a rolling window approach, since furniture purchases are infrequent. We labeled customers as churned if they had no purchase activity within 180 days of their last transaction.</p>
+<p>I engineered features from both transactional history (like recency, frequency, and product category mix) and from media exposure data to understand marketing interactions. We also included demographics, payment type, and delivery speed.</p>
+<p>After comparing several models — including logistic regression, GBT, and XGBoost — XGBoost performed best, with an AUC of 0.82. To interpret results, I used SHAP values to identify key drivers like recency, transaction amount, and exposure to certain media channels.</p>
+<p>The final output was a score that fed into marketing’s CRM tool, allowing personalized winback campaigns. Over 3 months, the campaign based on our scores drove a 12% improvement in repeat rates vs. the control group.</p>
 </div>
-<div id="tell-me-about-yourself" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Tell me about yourself<a href="phone-screening-call.html#tell-me-about-yourself" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“Thank you for this opportunity. I’m excited to be here and appreciate your time.</p>
-<p>I am a dedicated professional with over 5 years of hands-on experience in data science and economic research, with a Ph.D. in Economics from the University of Kansas. My expertise spans across statistics, econometrics, machine learning, and causal models.</p>
-<p>I am proficient in several programming languages, including R, Python, Spark, SQL, and STATA, and have extensive experience working with big data cloud platforms like Databricks and AWS.</p>
-<p>I specialize in causal inference methods, such as Difference-in-Differences, Instrumental Variables, Synthetic Control, Regression Discontinuity, Propensity Score Matching, and Inverse Probability Weighting (IPW).</p>
-<p>In my current role as Associate Director of Marketing Sciences at Horizon Media, I have:</p>
-<ul>
-<li><p>Leveraged big data platforms to analyze audience demographics and consumer behavior, driving strategic marketing decisions that resulted in a 15% increase in customer conversion rates and campaign effectiveness.</p></li>
-<li><p>Developed and deployed predictive models, including lifetime value, churn, and look-alike models, optimizing marketing spend by 10%.</p></li>
-<li><p>Applied advanced causal modeling techniques, such as Difference-in-Differences and Propensity Score Matching, to evaluate campaign effectiveness with greater accuracy.</p></li>
-<li><p>Engineered high-performance scripts for generating people-level balancing weights and balanced random samples, processing datasets of over 100 million observations in seconds. This innovation reduced processing time and cost by 95%, eliminating the need for external data purchases.</p></li>
-</ul>
-<p>Overall, my combination of academic achievements, technical skills, and practical experience enables me to bring valuable insights and contribute effectively to data-driven decision-making processes.”</p>
+<div id="how-do-you-select-features-when-you-have-400-binary-variables" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> How do you select features when you have 400+ binary variables?<a href="mockup.html#how-do-you-select-features-when-you-have-400-binary-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I’ve dealt with this exact situation — in one project, we had 400 binary features representing purchase behavior and segment tags.</p>
+<p>My process starts with <strong>domain understanding</strong>: grouping features into thematic categories like furniture type, room category, or lifestyle signal, to detect redundancy.</p>
+<p>Next, I check <strong>sparsity and variance filters</strong> — removing features with extremely low variance or near-zero frequency.</p>
+<p>I also calculate <strong>correlation matrices</strong> to detect highly collinear features.</p>
+<p>Then I use <strong>model-based importance</strong> — especially with tree models like XGBoost — to narrow down top features. SHAP values help validate which features contribute most across observations.</p>
+<p>Finally, I may apply <strong>dimensionality reduction</strong> (e.g., PCA) if needed, but prefer interpretable subsets unless performance truly demands it.</p>
+<p>This process gives me a good balance of performance, interpretability, and generalizability.</p>
 </div>
-<div id="relocation" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Relocation:<a href="phone-screening-call.html#relocation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I am open to relocating, but I would need to consider my family’s needs in the process. I would appreciate more information on the support provided for families during the relocation.</p>
+<div id="have-you-dealt-with-a-stakeholder-who-didnt-trust-your-model-output-what-did-you-do" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Have you dealt with a stakeholder who didn’t trust your model output? What did you do?<a href="mockup.html#have-you-dealt-with-a-stakeholder-who-didnt-trust-your-model-output-what-did-you-do" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Yes — this happened during a repeat purchase prediction project. The marketing team was skeptical because some high-value customers were being scored low.</p>
+<p>I set up a session to walk them through the modeling process and explain key features. Using SHAP, I showed how recent inactivity or smaller purchases could explain the low scores — even for past big spenders.</p>
+<p>To build confidence, we ran a pilot A/B test using the scores for targeting. I also built simple decision tree summaries to illustrate customer profiles in plain language.</p>
+<p>After the pilot showed a measurable lift in targeting efficiency, the team became more comfortable and we integrated the model into their audience selection workflow.</p>
+<p>I learned that <strong>transparency + small wins</strong> are key to building stakeholder trust.</p>
 </div>
-<div id="timeline-to-start" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Timeline to start:<a href="phone-screening-call.html#timeline-to-start" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I am very interested in this role and eager to join your team. I am currently employed and would need to give my employer two weeks’ notice. Is this timeline acceptable to you?</p>
-</div>
-<div id="salary" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Salary:<a href="phone-screening-call.html#salary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>put 0 or 1 or lowest possible number in the job applications</p></li>
-<li><p>I’d like to ensure this is a mutual fit and discuss compensation later.</p></li>
-</ul>
-<p><strong>Handling Salary Discussions with Recruiters</strong></p>
-<p>Recruiters often anchor candidates at a lower salary rate early in the hiring process to gauge their flexibility. To counter this:</p>
-<p><strong>Stay Calm:</strong> Don’t feel pressured to commit to a lower rate.</p>
-<p><strong>Respond Strategically:</strong></p>
-<p>“Thank you for sharing. Based on similar roles, this range seems relatively low, and I’d be looking for a bit more. If that’s a deal-breaker, let me know, but I’d be happy to discuss next steps if there’s room to explore.”</p>
-<p><strong>Pace the Conversation:</strong> Asking about next steps shows interest without locking you into a specific rate.</p>
-<p><strong>Understand Recruiter Tactics:</strong> Pushback may just be a negotiation tactic. Often, the recruiter has more flexibility than they imply, and the final decision likely doesn’t rest with them alone.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Based on my research and considering my experience and skills, I’m looking for a salary in the range of $160K to $200K that can be tailored as I learn more about the position and responsibilities.</p></li>
-<li><p>I have done some research on industry standards for this role and given my background and experience, I am looking for a salary in the range of $160K to $200K. However, I am open to discussing this further based on the overall compensation package and growth opportunities at XXXX.</p></li>
-<li><p>At this stage, I am more focused on understanding the role and how I can contribute to XXXX. I’d prefer to discuss salary once we have both determined that I am a good fit for the position and the company. I am confident that we can come to a mutually beneficial agreement when the time comes.</p></li>
+<div id="imagine-a-model-is-highly-accurate-but-business-stakeholders-dont-understand-it-how-do-you-bridge-that-gap" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> Imagine a model is highly accurate but business stakeholders don’t understand it — how do you bridge that gap?<a href="mockup.html#imagine-a-model-is-highly-accurate-but-business-stakeholders-dont-understand-it-how-do-you-bridge-that-gap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I believe a model isn’t useful unless it’s trusted and actionable. In one case, I had an XGBoost model with great metrics, but the stakeholders were overwhelmed by the complexity.</p>
+<p>So I translated it into two versions:</p>
+<ol style="list-style-type: decimal">
+<li><p>A simplified logistic regression with top 5 features to show directional effects.</p></li>
+<li><p>SHAP-based visuals showing how individual features affected predictions for actual customers.</p></li>
 </ol>
+<p>Then I tied predictions to personas they understood — for example, “this group of long-term buyers recently disengaged,” rather than “cluster ID 4.”</p>
+<p>This combination of technical fidelity + plain language helped them trust the results. I’ve found that <strong>mapping outputs to business concepts</strong> makes the model feel more like a decision support tool than a black box.</p>
 </div>
-<div id="why-now-you-seem-to-be-doing-great-in-your-current-position." class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Why now? you seem to be doing great in your current position.<a href="phone-screening-call.html#why-now-you-seem-to-be-doing-great-in-your-current-position." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I’m genuinely grateful for the work I’ve done in my current role, especially the opportunity to work on impactful projects in marketing science.</p>
-<p>Over time, I’ve built strong skills in data science and developed a deeper understanding of how to derive insights for business strategy. Now, I’m seeking a new role to expand my expertise in areas like <strong>[mention any specific interest relevant to the role, e.g., real-time data applications, A/B testing, or customer analytics]</strong> and take on larger responsibilities within a new industry setting.</p>
-<p>This opportunity with <strong>Tovala</strong> aligns perfectly with my goals because it combines technical innovation with customer-centric insights, areas I’m passionate about. I’m excited to bring what I’ve learned to a new team and to continue challenging myself in ways that drive business impact.</p>
-</div>
-<div id="how-does-this-challenge-look-like" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> How does this challenge look like<a href="phone-screening-call.html#how-does-this-challenge-look-like" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When I say I’m looking for new challenges, I’m referring to opportunities that push me to broaden my technical skills and strategic thinking.</p>
-<p>For example, I’m interested in working on projects with more complex, real-time data pipelines, which would allow me to build models that continuously update based on new information.</p>
-<p>I also want to be more involved in designing A/B tests from scratch, defining key metrics, and driving insights that directly inform decision-making.</p>
-<p>Additionally, I’m drawn to working cross-functionally with product and engineering teams, where I can contribute to product development from a data science perspective.</p>
-<p>Overall, I’m excited about challenges that deepen my expertise while letting me have a more direct impact on strategic initiatives within the business.</p>
-</div>
-<div id="what-are-you-looking-for-specifaclly" class="section level2 hasAnchor" number="2.8">
-<h2><span class="header-section-number">2.8</span> What are you looking for specifaclly?<a href="phone-screening-call.html#what-are-you-looking-for-specifaclly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I’m primarily interested in a role where I can leverage my data science expertise hands-on, yet also contribute at a strategic level, which aligns well with a senior data scientist or a technical lead position.</p>
-<p>In an ideal role, I’d be heavily involved in end-to-end model development and A/B testing design while contributing insights that directly impact product and business strategies.</p>
-<p>That said, I am open to a role with team leadership aspects if it involves mentorship or guiding junior team members on projects, as I find that knowledge-sharing and skill-building are rewarding aspects of working in data science.</p>
-<p>So, I’m looking for a position that offers a strong technical focus with opportunities for broader influence on project direction and strategic decisions.</p>
-</div>
-<div id="what-do-you-want-to-do-tactically" class="section level2 hasAnchor" number="2.9">
-<h2><span class="header-section-number">2.9</span> what do you want to do tactically?<a href="phone-screening-call.html#what-do-you-want-to-do-tactically" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thank you for asking—I think it’s very helpful to clarify. Tactically, I’m looking to work in a role where I can be deeply engaged in hands-on data science, focused on areas like predictive modeling, real-time data integration, and developing customer-focused insights.</p>
-<p>I enjoy projects where I can take models from concept to deployment, ensuring they align closely with business needs and deliver measurable impact.</p>
-<p>In terms of company size, I am drawn to the dynamic environments of mid-sized companies or growing startups. These settings often allow me to contribute across different areas, which I find both challenging and rewarding. At the same time, I’m comfortable adapting to established workflows and larger teams if that’s needed.</p>
-<p>I see myself contributing as a senior or lead data scientist, where I can drive impactful projects but am also open to mentoring junior team members, supporting collaborative work, and helping shape our approach to data strategy and analytics. Overall, my goal is to focus on technically challenging, strategically aligned projects in a setting that’s collaborative and growth-focused.</p>
-</div>
-<div id="why-are-you-leaving-your-current-role" class="section level2 hasAnchor" number="2.10">
-<h2><span class="header-section-number">2.10</span> Why are you leaving your current role?<a href="phone-screening-call.html#why-are-you-leaving-your-current-role" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I have enjoyed my time in my current position, where I’ve developed strong hands-on experience in machine learning and post-campaign analysis and contributed to several successful projects.</p>
-<p>However, I’ve reached a point where I’m ready for new challenges and opportunities that will allow me to grow further professionally and apply my skills in new ways.</p>
-</div>
-<div id="why-do-you-want-to-work-here" class="section level2 hasAnchor" number="2.11">
-<h2><span class="header-section-number">2.11</span> Why do you want to work here?<a href="phone-screening-call.html#why-do-you-want-to-work-here" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This role is a perfect fit for my background and interests, as it leverages my expertise in data science and my experience in driving insights through data.</p>
-<p>I am particularly drawn to [COMPANY]’s innovative and data-driven approach, which aligns with my passion for using data to inform strategic decisions.</p>
-<p>I am excited about the opportunity to contribute to the continued success of [COMPANY] and help drive impactful results.</p>
+<div id="how-would-you-design-a-project-to-measure-the-lift-of-a-pricing-model-across-different-client-segments" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> How would you design a project to measure the lift of a pricing model across different client segments?”**<a href="mockup.html#how-would-you-design-a-project-to-measure-the-lift-of-a-pricing-model-across-different-client-segments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Great question. First, I’d want to clearly define the outcome — are we measuring lift in retention, revenue, or satisfaction post-pricing change? Let’s say retention.</p>
+<p>I’d begin with <strong>randomized A/B testing</strong> or, if not feasible, a <strong>quasi-experiment</strong> using matched segments or propensity score matching.</p>
+<p>I’d segment clients by size, industry, and service bundle to account for heterogeneity. Each group would have a control group that did not receive the pricing change and a test group that did.</p>
+<p>Then I’d compute <strong>lift</strong> as the difference in retention rate (or churn reduction) between control and treatment, possibly using a regression model to adjust for confounders.</p>
+<p>I’d also include interaction terms in the model to see <strong>which segments benefit most</strong>.</p>
+<p>Finally, I’d visualize and summarize results not just statistically, but in terms of business value: “This pricing strategy improves retention by 5% for mid-sized firms in finance, which translates to X million in ARR.”</p>
+<p>That gives decision-makers a clear, segmented ROI view.</p>
 
 </div>
 </div>
@@ -365,8 +326,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="project-summaries.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="behavioral-questions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="experiences.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="root.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

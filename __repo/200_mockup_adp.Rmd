@@ -1,0 +1,83 @@
+# mockup
+
+
+## Walk us through how you approached churn modeling for a client.
+
+
+Sure. For a large retail furniture client, we were asked to build a churn model to predict which customers were unlikely to return for another purchase within 6 months.
+
+We began by defining churn using a rolling window approach, since furniture purchases are infrequent. We labeled customers as churned if they had no purchase activity within 180 days of their last transaction.
+
+I engineered features from both transactional history (like recency, frequency, and product category mix) and from media exposure data to understand marketing interactions. We also included demographics, payment type, and delivery speed.
+
+After comparing several models — including logistic regression, GBT, and XGBoost — XGBoost performed best, with an AUC of 0.82. To interpret results, I used SHAP values to identify key drivers like recency, transaction amount, and exposure to certain media channels.
+
+The final output was a score that fed into marketing’s CRM tool, allowing personalized winback campaigns. Over 3 months, the campaign based on our scores drove a 12% improvement in repeat rates vs. the control group.
+
+
+## How do you select features when you have 400+ binary variables?
+
+
+I’ve dealt with this exact situation — in one project, we had 400 binary features representing purchase behavior and segment tags.
+
+My process starts with **domain understanding**: grouping features into thematic categories like furniture type, room category, or lifestyle signal, to detect redundancy.
+
+Next, I check **sparsity and variance filters** — removing features with extremely low variance or near-zero frequency.
+
+I also calculate **correlation matrices** to detect highly collinear features.
+
+Then I use **model-based importance** — especially with tree models like XGBoost — to narrow down top features. SHAP values help validate which features contribute most across observations.
+
+Finally, I may apply **dimensionality reduction** (e.g., PCA) if needed, but prefer interpretable subsets unless performance truly demands it.
+
+This process gives me a good balance of performance, interpretability, and generalizability.
+
+
+## Have you dealt with a stakeholder who didn’t trust your model output? What did you do?
+
+Yes — this happened during a repeat purchase prediction project. The marketing team was skeptical because some high-value customers were being scored low.
+
+I set up a session to walk them through the modeling process and explain key features. Using SHAP, I showed how recent inactivity or smaller purchases could explain the low scores — even for past big spenders.
+
+To build confidence, we ran a pilot A/B test using the scores for targeting. I also built simple decision tree summaries to illustrate customer profiles in plain language.
+
+After the pilot showed a measurable lift in targeting efficiency, the team became more comfortable and we integrated the model into their audience selection workflow.
+
+I learned that **transparency + small wins** are key to building stakeholder trust.
+
+
+## Imagine a model is highly accurate but business stakeholders don’t understand it — how do you bridge that gap?
+
+I believe a model isn’t useful unless it’s trusted and actionable. In one case, I had an XGBoost model with great metrics, but the stakeholders were overwhelmed by the complexity.
+
+So I translated it into two versions:
+
+(1) A simplified logistic regression with top 5 features to show directional effects.
+
+(2) SHAP-based visuals showing how individual features affected predictions for actual customers.
+
+Then I tied predictions to personas they understood — for example, “this group of long-term buyers recently disengaged,” rather than “cluster ID 4.”
+
+This combination of technical fidelity + plain language helped them trust the results. I’ve found that **mapping outputs to business concepts** makes the model feel more like a decision support tool than a black box.
+
+
+
+## How would you design a project to measure the lift of a pricing model across different client segments?”**
+
+
+Great question. First, I’d want to clearly define the outcome — are we measuring lift in retention, revenue, or satisfaction post-pricing change? Let’s say retention.
+
+I’d begin with **randomized A/B testing** or, if not feasible, a **quasi-experiment** using matched segments or propensity score matching.
+
+I'd segment clients by size, industry, and service bundle to account for heterogeneity. Each group would have a control group that did not receive the pricing change and a test group that did.
+
+
+Then I’d compute **lift** as the difference in retention rate (or churn reduction) between control and treatment, possibly using a regression model to adjust for confounders.
+
+
+I’d also include interaction terms in the model to see **which segments benefit most**.
+
+Finally, I’d visualize and summarize results not just statistically, but in terms of business value: “This pricing strategy improves retention by 5% for mid-sized firms in finance, which translates to X million in ARR.”
+
+That gives decision-makers a clear, segmented ROI view.
+

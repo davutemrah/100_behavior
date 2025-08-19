@@ -1,20 +1,5 @@
 # Behavioral Questions
 
-be genuine
-
-be prepared
-
-try to format answers - STAR
-
-Situation: Briefly describe the context or background of the situation.
-
-Task: Clearly explain what your responsibility or objective was.
-
-Action: Detail the specific steps you took to handle the task or situation.
-
-Result: Share the outcome, emphasizing what you achieved and learned.
-
-## General Tips
 
 Here are some tips to help you stay focused during your interviews:
 
@@ -71,4 +56,19 @@ I handle pressure by staying calm, focused, and organized. I prioritize tasks ba
 I find that maintaining a structured approach helps me stay on track and reduces stress.
 
 For example, when faced with tight deadlines or unexpected challenges, I communicate openly with my team and stakeholders to set clear expectations. I also make sure to take short breaks to recharge, which helps me stay productive and think more clearly. 
+
+
+## Why are you applying for this position:
+
+I am particularly interested in 84.51° because of its reputation for pioneering the use of data science in the retail sector. The company’s innovative approach to leveraging data to drive meaningful insights and decisions aligns perfectly with my professional aspirations. I am excited about the opportunity to work on projects that directly impact consumer behavior and business strategies, especially in a collaborative environment with talented professionals. My background in marketing data science, combined with my skills in econometrics, machine learning, and causal models, makes me confident that I can contribute effectively to 84.51°'s mission of transforming the customer experience through data science.
+
+
+## What skills are you bringing
+
+
+I bring a robust set of skills and knowledge to 84.51°, developed through my extensive experience as a Senior Data Scientist. With over 2 years of expertise in extracting insights from large databases, I excel at translating complex market research into actionable solutions and presenting these findings to clients. My proficiency in Python and SQL, coupled with my experience in developing advanced analytics solutions, positions me well to contribute effectively to your team.
+
+My strong communication and presentation skills ensure that I can convey technical concepts to non-technical audiences, a crucial ability for driving informed decision-making. I am adept at data visualization, using tools like Tableau to create clear and impactful visuals that highlight key insights. My analytical, problem-solving, and decision-making skills enable me to link analysis to business impact, particularly in the retail and grocery sectors.
+
+I possess a natural curiosity and a willingness to embrace change, continuously seeking new methodologies and technologies to improve my work. My attention to detail, organizational skills, and ability to work collaboratively ensure that I consistently deliver high-quality results. I am eager to contribute to 84.51°'s mission of transforming the customer experience through data science, leveraging my skills and experience to drive success in this role."
 

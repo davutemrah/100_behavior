@@ -1,0 +1,54 @@
+# Most Proud Project – Influencing Adoption of Balancing Weights
+
+**S – Situation**
+
+When I was working on the demographic profile reports, I noticed that some of our panel data sources (like Ibotta receipt sharers) were **skewed**. Younger, budget-conscious groups were overrepresented, which could mislead clients.
+
+At that time, the standard practice across teams was to report **raw results only**, and many colleagues believed that was “good enough.”
+
+**T – Task**
+
+I believed we needed to improve accuracy by applying **balancing weights** — but first, I had to convince others to adopt this idea and then design a solution that could scale to large datasets used across multiple departments.
+
+**A – Action**
+
+* I ran side-by-side analyses comparing raw vs. weighted results, showing clearly how the raw version exaggerated some demographics.
+
+* Presented the findings to my team, explaining in simple terms how weights aligned the panel closer to Census benchmarks.
+
+* Addressed concerns about complexity by building an **automated weighting process** that could handle big data efficiently.
+
+* Influenced adoption by showing that this wasn’t just an academic improvement — it would directly improve client trust in our insights.
+
+* Set up a **monthly refresh pipeline**, so the weights stayed current and could be reliably used in all projects.
+
+**R – Result**
+
+My colleagues and leadership agreed to adopt balancing weights, and it became the **standard methodology across departments** for panel data.
+
+Today, multiple teams use the weights in their reports, and I continue to maintain the refresh process.
+
+I am proud because I not only came up with the idea but also influenced adoption, built the technical solution, and ensured it delivered long-term value.
+
+---
+
+👉 Why this version is even stronger:
+
+* **Influence**: you challenged the status quo and got others on board.
+
+* **Think Big**: you turned a one-off fix into a company-wide solution.
+
+* **Ownership**: you built and still maintain the monthly refresh.
+
+* **Deliver Results**: adoption improved accuracy and client confidence.
+
+---
+
+**Quick Pitch:**
+
+One project I’m most proud of was introducing balancing weights for our panel data. At first, colleagues resisted, but I showed side-by-side results proving that raw data was skewed and built an automated, scalable process. Today, multiple departments use these weights every month, and I still maintain the refresh — it became a company-wide standard that improved accuracy and client trust.
+
+
+
+
+

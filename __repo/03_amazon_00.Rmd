@@ -1,0 +1,162 @@
+# Amazon Positions
+
+
+## Economics at Amazon
+
+**Leadership Principles :** Your greatest success in answering the behavioral questions will come from correlating the leadership principles to examples from your work experience. Your examples should highlight the actions you took in these situations, rather than the actions your team or group took. Using “I” statements rather than “we” statements is the best way to think about this (e.g., “The research that I did led to the decision in implementing this process throughout the company.”) A statement like this shows ownership. Be prepared for your interviewer to ask follow-up questions that will dive deeper into your examples. The more interesting and compelling your answers are, the more data points that the interviewer will be able to gather, as well as a clear understanding of your ability to implement your skills in Amazon’s work environment. Be prepared to share multiple strong examples of your professional experience demonstrating each leadership principle.
+
+
+**Technical Interview:** The technical component of the interview will be focused around a business case study question. The business case study will be modeled off of a previous problem that our economists have solved. The technical evaluation is assessed by way of technical depth and technical breadth –
+
+**Depth:** Diving deeper into the specifics of the model that you use to solve the business related case study question (e.g., inquiring about the different assumptions of the model and what considerations should be accounted for). 
+
+**Breadth:** Think of breadth as a toolbox of different econometric methods/approaches
+specific to your skill set. Breadth shows your ability to appropriately apply other models when answering a problem. You don’t necessarily need to have expertise in every model specific to your skill set, but going back and brushing up on various models is certainly helpful (i.e., knowing the different assumptions of other models and having an understanding of how and when to apply such models.)
+
+Keep in mind that when choosing an approach in solving the business case study question that some
+models will be more appropriate than others (e.g., a diff in diff model requires there to be a certain time series of data, rather than a snapshot at one period in time. If you don’t have that series of data, a diff in diff model would be inappropriate to use.)
+
+**Other helpful tips:** When asked the technical question, be sure to take your time before answering. The technical questions tend to be ambiguous; so thoughtfully considering the question that you have been presented with, and asking follow-up questions will help to provide a clear understanding of the question.
+
+When you are answering the case study question, it is helpful to follow this format presenting a clear thought out answer:
+
+1. What type of data should you use?
+
+2. What kind of model should you apply?
+
+3. How should you set up the econometrics?
+
+4. How should you interpret it?
+
+*(data, model, econometrics, interpretation).
+
+
+
+## Amazon Leadership Principles
+
+**Earn Trust**
+
+Listen well. Speak honestly. Show respect. Admit mistakes. Stay humble. Always aim for the best.
+
+
+**Ownership**
+
+Think long term. Protect lasting value. Act for the whole company. Never say “not my job.”
+
+
+**Deliver Results**
+
+Focus on what matters. Deliver quality on time. Overcome setbacks. Never settle.
+
+
+
+**Customer Obsession**
+
+Leaders start with the customer and work backwards. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers.
+
+
+**Invent and Simplify**
+
+Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by “not invented here.” As we do new things, we accept that we may be misunderstood for long periods of time.
+
+**Are Right, A Lot**
+
+Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
+
+**Learn and Be Curious**
+
+Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
+
+
+
+**Insist on the Highest Standards**
+
+Leaders have relentlessly high standards — many people may think these standards are unreasonably high. Leaders are continually raising the bar and drive their teams to deliver high quality products, services, and processes. Leaders ensure that defects do not get sent down the line and that problems are fixed so they stay fixed.
+
+
+**Think Big**
+
+Thinking small is a self-fulfilling prophecy. Leaders create and communicate a bold direction that inspires results. They think differently and look around corners for ways to serve customers.
+
+**Bias for Action**
+
+Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk taking.
+
+
+**Dive Deep**
+
+Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them.
+
+**Have Backbone; Disagree and Commit**
+
+Speak up respectfully when you disagree, even if it’s uncomfortable. Stand by your convictions and don’t give in just to keep everyone happy. Once a decision is made, fully support it, even if it wasn’t your choice.
+
+
+
+
+
+Do not worry about coming up with examples for the following:
+
+
+**Success and Scale Bring Broad Responsibility**
+
+We’re big and our actions affect the world. Be humble, consider all impacts, and strive daily to improve for customers, employees, partners, and the planet. Leave things better than you found them.
+
+**Frugality**
+
+Accomplish more with less. Constraints breed resourcefulness, self-sufficiency, and invention. There are no extra points for growing headcount, budget size, or fixed expense.
+
+**Hire and Develop the Best**
+
+Leaders raise the performance bar with every hire and promotion. They recognize exceptional talent, and willingly move them throughout the organization. Leaders develop leaders and take seriously their role in coaching others. We work on behalf of our people to invent mechanisms for development like Career Choice.
+
+**Strive to be Earth’s Best Employer**
+
+Create a safe, productive, and fair workplace where people can grow. Lead with empathy, make work enjoyable, and help others succeed—at Amazon or beyond.
+
+
+
+## Email from Amazon
+
+**Reduced Form Causal Analysis (RFCA)** RFCA economists specialize in econometric methods to identify causal relationships, handling challenges like selection bias and omitted variables. They use tools such as difference-in-differences, regression discontinuity, matching, synthetic control, and DML, and may conduct surveys or RCTs when needed.
+
+They work on program/product evaluations, elasticity estimation, customer behavior analysis, long-term effect prediction, and translating results into business decisions. 
+
+Communication with non-technical partners is key. In interviews, you’ll be given an ambiguous business case to test your breadth (range of methods you can propose) and depth (ability to implement and explain one method in detail).
+
+ I suggest asking clarifying questions on the front end before diving into a strategy.
+ 
+**Sample Technical Questions**
+
+- How would you measure the effect of a training program for Fulfillment Center associates on performance?
+
+- How would you help business leaders think about whether they should invest in creating tools to help AWS customers reduce their costs by optimizing the cloud services they use?
+
+- There’s an intervention X that we tried or are thinking of trying. Leaders want to know if it was or will be a good idea. How would you help them answer that question?
+
+
+**Non-Technical Questions:**
+
+You will also be asked a few situational questions about your experience modeled off of the Amazon Leadership Principles. There is heavy emphasis on this piece as the principles define our company culture and values and the purpose is to assess your scope of experience and impact. 
+
+I would suggest coming up with a creative example for each principle about a time in your professional experience where you have demonstrated it. 
+
+Questions will be in the form of “tell me about a time when…” and be prepared to know your stories well as there will be follow up questions! 
+
+
+## STAR format
+
+I would suggest formatting your stories in the STAR method for interviewing. 
+
+The STAR method is a structured manner of responding to a behavioral-based interview question by discussing the specific situation, task, action, and result of what you're describing. 
+
+Here’s what it looks like:
+
+•	**Situation** - Describe the situation that you were in, or the task that you needed to accomplish. Give enough detail for the interviewer to understand the complexities of the situation. This example can be from a previous job, school project, volunteer activity, or any relevant event.
+
+•	**Task** - What goal were you working toward?
+
+•	**Action** - Describe the actions you took to address the situation with an appropriate amount of detail, and keep the focus on you. What specific steps did you take? What was your particular contribution? Be careful that you don’t describe what the team or group did when talking about a project. Let us know what you actually did. Use the word “I,” not “we,” when describing actions.
+
+•	**Result** - Describe the outcome of your actions and don’t be shy about taking credit for your behavior. What happened? How did the event end? What did you accomplish? What did you learn? Provide examples using metrics or data if applicable
+

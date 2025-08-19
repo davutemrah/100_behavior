@@ -1,0 +1,180 @@
+# Experiences
+
+## Amazon Sr.Economist
+
+In ab test, how do you communicate significance level change to non-technicals? 
+
+Amazon started a delivery program can deliver in a day. This is implemented in 20-30 cities. 
+
+-	How do you evaluate? Outcomes?
+
+-	What type of analysis?
+
+-	In synthetic control how do you calculate weigths?
+
+-	How do you make sure this is good?
+
+-	What if leadership says implement his program in big cities?
+
+-	What if leadership want to do it within east and west coast?
+
+-	How do you determine size, effect size, significance?
+
+-	How do you communicate 10-15% significance to non-technicals
+-	
+
+
+## Amazon Economist II
+
+### Phone Screening
+
+- went over the expectations for your upcoming interview. 
+
+- not interviewing for a specific team at this stage. This is a preliminary, general interview for the Economist role at Amazon.
+
+Location details: Since we don’t know the specific team yet, the exact location is also undecided. That said, about 80% of our Economist positions are based in Seattle, Washington. Other common locations include Arlington, Virginia, and the Bay Area in California.
+
+
+#### Are you open to those locations, or do you have preferences? 
+
+I’m in Chicago right now and open to relocation.
+
+#### Role types at Amazon: 
+
+We hire Economists across three main skill sets:
+
+- Reduced-form causal analysis: this is the skill set most commonly hired for and the one you’re interviewing for.
+
+- Financial, macroeconomic, and forecasting analysis
+
+- Structural or empirical industrial organization (IO) economics: This gives you a sense of the types of work Economists do at Amazon and where your role fits within the broader organization.
+
+#### Technical Breadth
+
+We’re looking for a wide range of causal inference methods that you can bring to the table. Specifically, we’d like you to be familiar with at least two or three methods — for example, difference-in-differences, synthetic control, propensity score matching, or double machine learning.
+
+You don’t need to be an expert in all of them, but you should have experience applying multiple methods and understand, at a high level, what they are, how they’re applied, and the trade-offs between them. This is what we mean by technical breadth.
+
+#### Technical Depth
+
+This is where you are expected to be an expert in one or two specific methods — your bread and butter approaches. You should understand the method thoroughly, including the trade-offs and downstream impacts of different decisions within it.
+
+During the interview, you’ll choose which method to go deep on. We’ll evaluate both breadth and depth through a business case study, which will be based on a real Amazon business scenario. There’s no single right or wrong answer — we want to see how you think through the problem, what methods you bring to the table, and how you apply one method in depth.
+
+#### Case Study Flow
+
+**--Technical Breadth--**
+
+
+**Step One – Clarify the Problem**
+
+The interviewer will provide the case example. Your first step is to ask clarifying questions about both the problem and the business context. Understand the business drivers, motivations, and goals so you can see the bigger picture and know what the business is actually trying to achieve.
+
+Step One begins when the interviewer presents the business question. Your task is to ask clarifying questions to understand the business side of the problem.
+
+For example, you might ask:
+
+- Do they have the data you need?
+
+- Have they tried something similar in the past, and what were the outcomes?
+
+- What are they hoping to achieve — what are their goals and expected gains?
+
+-By understanding the business context and objectives, you can work backwards to ensure your solution addresses the problem effectively and covers all key aspects.
+
+
+**Step Two – Explore Multiple Methods**
+
+Propose two to three potential methods to solve the problem. You don’t need to be an expert in all of them, but you should be able to discuss them at a high level, including their trade-offs, strengths, and limitations.
+
+**Step Three – Narrow to One Method**
+
+After discussing the options with the interviewer, you’ll narrow the choices down to a single method — your bread and butter method. This is the method you are most familiar with and know the best. Explain how you would apply it, what decisions matter within the method, and what potential outcomes to expect.
+
+**--Technical Depth--**
+
+**Step Four – Apply the Method**
+
+At this stage, you will go deep into your chosen method. Walk through how you would design, implement, and measure it. This is where we assess your technical depth — your ability to apply the method in practice.
+
+We’ll evaluate how you account for different variables, consider potential treatment effects, and handle nuances that could affect the outcome. This step demonstrates your mastery of the method and your ability to use it effectively to solve a real business problem.
+
+
+#### Example Case Study Context & Role Expectations
+
+For example, you might work on a content team — not necessarily the Amazon Books team — helping Amazon decide which products to show first on the Amazon.com site based on what a user is browsing and what products are available. 
+
+This could serve as a sample case study question.
+
+As an Economist at Amazon, your role goes beyond technical skills. You need to:
+
+- Follow business-related conversations, even when they aren’t technical.
+
+- Translate non-technical business problems into scientific experiments.
+
+- Translate technical requirements and results into non-technical language so you can communicate effectively with business stakeholders.
+
+- This combination of technical and business fluency is key to success in the role.
+
+
+
+
+### Leadership Principle Portion
+
+Another part of the interview will focus on Amazon’s Leadership Principles. In your case, you will only be assessed on one principle — but I want you to prepare for three in particular:
+
+- Earn Trust
+
+- Ownership
+
+- Deliver Results
+
+Additionally, be ready to share a story about a time you failed or didn’t meet a deliverable. This should include what happened, what you learned, and how you applied those lessons moving forward.
+
+The failure story ties into the Earn Trust principle — but that’s not the only way **Earn Trust** can be assessed.
+
+If Earn Trust is the principle your interviewer focuses on, the question might involve a failure-related scenario, but it could also take a different form. For example, they might ask how you influenced a group of people when you expected pushback, or how you built trust in a challenging situation.
+
+I’m asking you to prepare a failure-related story just in case the interviewer chooses that angle — but also be ready for other variations of Earn Trust questions.
+
+
+#### Teams Currently Hiring at Amazon
+
+Right now, several different teams are hiring economists, including:
+
+- Amazon Books
+
+- Commerce Content Team – owns workflows tied to the Amazon.com retail site.
+
+- Kindle Devices Team
+
+- Project Kuiper Team
+
+- Customer Behavior Analytics (CBA) Team – part of the Central Science organization, focused on understanding and predicting customer behavior.
+
+- Returns & Recommerce Team – manages all product returns flowing through sort centers and fulfillment centers, optimizing processes and demand planning. This one leans more toward finance/macro forecasting.
+
+The case study question you get in your interview may or may not relate to one of these domains — it’s not necessarily tied to a specific team.
+
+
+#### Final Round Interview Process
+
+
+- You will have one final round interview, no matter which teams you speak to.
+
+- If you do not pass the final round, you will not be team-matched again.
+
+- In the final round, you’ll interview with a specific hiring team for their role.
+
+Amazon hires “Amazon first, team second”:
+
+- If you pass the final round but the fit with that team isn’t ideal, Amazon will find another team for you.
+
+- You won’t need to redo the interview — they’ll simply repeat the team matching process until you’re placed.
+
+- You’ll only go through the final round once.
+
+- After your interview, Amazon will follow up within two business days with the outcome.
+
+
+

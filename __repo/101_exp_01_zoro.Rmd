@@ -1,0 +1,459 @@
+# Zoro – Data Scientist Interview (2024)
+
+**Company Note:**
+Zoro.com operates under Grainger, a major B2B distributor.
+
+
+## Feedback from Interview
+
+* I unintentionally interrupted the interviewer while she was asking a question.
+
+* I tend to over-explain. Some of my answers included unnecessary details.
+
+* Instead of giving concise responses, I gave long-winded answers, which may have distracted from the core message.
+
+**Takeaway for Next Interviews:**
+
+* Practice **active listening** — let the interviewer finish the full question before responding.
+
+* Aim for **concise, targeted responses** first. Add context only if prompted.
+
+* Use a structured approach (like STAR) to stay on point and avoid rambling.
+
+
+## Behavioral Questions Asked
+
+### Walk me through your resume, focusing on data science.
+
+*Tip: Highlight key milestones — Ph.D. with quantitative methods, experience with predictive modeling in marketing and operations, Databricks and Snowflake, audience segmentation, A/B testing.*
+   
+   Sure. I have a Ph.D. in Economics, where I focused on data analysis and decision-making. After that, I worked as a postdoc, doing research that involved statistics and modeling.
+
+  Now I’m a data scientist in marketing. I mostly work on measuring campaign performance, building audience segments, and running models to predict customer behavior — like who is likely to convert or come back. I work with large datasets using Python, Spark, and Snowflake.
+
+  I’ve also worked in emergency and risk planning before, where I helped with data analysis for national security and disaster response. That gave me experience working under pressure and with teams from different areas.
+
+#### Explain your role as Associate Director.
+
+As an Associate Director, my main focus is still hands-on data work. I build models, analyze campaigns, and help improve targeting strategies. I support the strategy team by giving them clear insights and data-driven recommendations.
+
+I also help set up workflows and make sure data is clean and ready for analysis. I sometimes mentor junior team members, but I don’t manage people directly.
+
+#### Do you prefer R or Python?
+
+I prefer Python. I use it for almost all of my work — data processing, modeling, visualization, and automation. I know R too, and I used it more in academic work, but now I mostly use Python with libraries like pandas, scikit-learn, and XGBoost.
+
+#### What is your primary domain? Marketing or something else?
+
+Marketing is my main area, especially digital advertising and retail analytics. I’ve worked on projects that involve measuring the impact of campaigns, customer segmentation, and building predictive models for conversions.
+
+But I also have experience with risk modeling and operations from my earlier work in defense and disaster planning, so I’m comfortable working in other domains too.
+
+
+
+#### Is this work culture fast-paced? Do you deliver value quickly or what?
+
+Yes, the environment I work in is definitely fast-paced. Especially in marketing analytics, we often have tight timelines and need to deliver insights quickly — sometimes within a few days.
+
+To handle that, I focus on building repeatable workflows and reusable code, so I can move fast without losing accuracy. I try to deliver value early, even if it’s in smaller pieces, and then build on it as more data becomes available or the analysis matures.
+
+**Pushback: “How do you balance speed with accuracy and quality?”**
+
+**Response:**
+
+I prioritize building automated workflows and validation checks so the process stays reliable even when moving quickly. I also communicate early about trade-offs — for example, delivering a quick initial insight versus a deeper, fully validated analysis later. That way, stakeholders know what to expect and can make decisions accordingly.
+
+
+
+
+#### Are you involved in any efforts convincing business stakeholders to adopt the models or analysis you do?
+
+Yes, I often support those conversations. While I don’t lead client communication directly, I work closely with account leads and strategists to make sure the analysis is clear and actionable. I explain what the model does, why it matters, and how it connects to business goals.
+
+Sometimes that means simplifying the story — avoiding technical terms and focusing more on business impact. I also create visuals or summaries that help them understand the “so what.”
+
+**Pushback: “What if a business stakeholder doesn’t trust the model or analysis?”**
+
+**Response:**
+
+I focus on transparency and clear communication. I break down the model results into simple terms and highlight the business impact, not just technical details. I’m also open to feedback and ready to adapt the analysis if needed. Sometimes, running a pilot or small test can build trust before a full rollout.
+
+
+
+
+#### Have you been in a situation where you felt like a model was the right way to go, but had to convince a client or manager?**
+
+Yes, more than once. One example was when we built a model to predict repeat customers for a furniture brand. I believed the model was strong, but there was hesitation from the strategy team about whether it was too complex or risky to apply.
+
+To build trust, I ran a few test cases, shared SHAP values to explain key drivers, and compared model predictions to actual results. That helped them see it wasn’t a “black box” — and that it could actually improve targeting decisions.
+
+Eventually, we rolled it out in a controlled way, and it became part of how we shaped future campaigns.
+
+**Pushback: “What if the client or manager still resists after your explanation?”**
+
+**Response:**
+
+In that case, I listen carefully to their concerns to understand what’s blocking them — whether it’s technical, business risk, or something else. Then I try to address those specific concerns, maybe by providing more evidence, simplifying the approach, or proposing a compromise solution. If resistance remains, I stay collaborative and patient, recognizing that change can take time.
+
+
+### Model Related Questions:
+
+#### Discuss a model you did before? Walk me thru the steps, how I built the model, how I evaluated the model. I try to explain a look alike model
+
+
+**Look-Alike Model — STAR Format Answer**
+
+**Situation:**
+
+I was working with a retail client who wanted to grow their customer base by finding new prospects similar to their best existing customers. The challenge was to identify these “look-alike” prospects using available data.
+
+**Task:**
+
+My task was to build a predictive model that could distinguish high-value customers from the general population and then use that model to find new potential customers to target.
+
+**Action:**
+
+* I gathered multiple data sources, including purchase history, demographic info
+
+* I created meaningful features, such as life stage indicators, closeness to stores
+
+* I labeled the best customers as positives and the rest -- non buyers, or sample from population -- as negatives to create a classification dataset.
+
+* I trained a gradient boosting model (XGBoost) to learn the patterns that separate high-value customers from others.
+
+* To evaluate, I used AUC-ROC and precision-recall metrics, ensuring the model performed well in identifying true positives without too many false alarms.
+
+* I also applied SHAP values to explain the model’s predictions, helping the client understand what drives customer similarity.
+
+* Finally, I scored a new audience with the model and worked with the marketing team to apply these look-alike segments in campaigns.
+
+**Result:**
+
+The model helped improve targeting efficiency, leading to higher conversion rates in campaigns. The client appreciated the transparent explanations from SHAP analysis, which increased their trust in the model. This project became a key part of their marketing strategy for prospecting.
+
+
+
+
+#### Can you elaborate what is lookalike model and objective of the model, what you are trying to predict?
+
+
+ **What is a Look-Alike Model?**
+
+A **look-alike model** is a type of **classification model** used to find new people who are similar to a group of known, high-value users — for example, loyal customers, repeat buyers, or people who completed a conversion.
+
+
+**Objective of the Model**
+
+The goal is to help marketing teams **expand their audience** by targeting new users who “look like” their best customers — based on behavior, demographics, or other data signals.
+
+In other words, we want to **predict which non-customers are most likely to become valuable customers**, based on patterns we’ve learned from existing ones.
+
+
+**What the Model is Predicting**
+
+The model is trained to **predict a binary outcome**:
+
+* **1 = high-value customer** (like someone who purchased recently or frequently)
+* **0 = general population or lower-value customer**
+
+Once trained, the model gives a **score or probability** for each person in a larger population — showing how likely they are to resemble a top customer. These high scorers become the “look-alike audience” for targeting.
+
+
+
+#### How do you overcome overfitting?
+
+Great question! Here’s a simple, structured answer you can use in an interview to explain **how you handle overfitting**, tailored to the kind of modeling work you do:
+
+---
+
+### **How do you overcome overfitting?**
+
+Overfitting happens when a model performs well on training data but poorly on new or unseen data. I use a few key strategies to prevent it:
+
+1. **Train-Test Split / Cross-Validation**
+   I always split my data into training and test sets, and often use **cross-validation** to make sure the model performs consistently across different folds.
+
+2. **Feature Selection / Regularization**
+   I reduce noisy or irrelevant features, especially when working with high-dimensional data like 400 binary features. I also use **regularization techniques** (like L1/L2 or tree-specific ones like `max_depth` and `min_child_weight` in XGBoost) to penalize overly complex models.
+
+3. **Simplifying the Model**
+   I avoid overly deep trees or too many estimators in ensemble models. Sometimes a simpler model, like logistic regression, can generalize better than a complex one.
+
+4. **Early Stopping**
+   In models like XGBoost, I use **early stopping** based on validation performance to avoid training too long and fitting to noise.
+
+5. **Monitor Test Performance**
+   I always compare training and test set metrics — if the training accuracy is much higher, that’s a red flag. I may tune hyperparameters or simplify the model based on that.
+
+#### How do you detect overfitting?
+
+##### **Short Answer (Interview-Ready)**
+
+I detect overfitting by comparing performance between the training set and the validation or test set. If the model performs much better on training data than on unseen data — like high accuracy or AUC in training but much lower on test — that’s a clear sign of overfitting.
+
+
+##### **Expanded Answer (If You Want to Add a Bit More)**
+
+To detect overfitting, I:
+
+* **Split the data** into training and validation/test sets.
+
+* **Compare model metrics** — like accuracy, AUC, precision-recall — across both sets.
+
+* If I see a **large gap**, like 95% accuracy on training and only 75% on test, it likely means the model is too complex and is fitting noise in the training data.
+
+* I may also use **learning curves** to visually inspect training vs. validation loss over time.
+
+
+#### What do you do when you detect overfitting?”* (that’s a likely follow-up)?
+
+
+When I detect overfitting, I take steps to simplify the model and improve generalization:
+
+1. **Simplify the Model:**
+   I reduce complexity — like lowering the depth of decision trees or reducing the number of features, especially in high-dimensional data.
+
+2. **Use Regularization:**
+   I apply techniques like L1 or L2 regularization, or tune parameters like `max_depth`, `min_child_weight`, or `subsample` in XGBoost to control complexity.
+
+3. **Add Early Stopping:**
+   I monitor validation loss and stop training when performance starts to drop, to prevent the model from learning noise.
+
+4. **Cross-Validation:**
+   I use k-fold cross-validation to make sure the model performs well across different subsets of the data.
+
+5. **More Data or Feature Engineering:**
+   If possible, I add more training data or improve feature quality, which helps the model learn more general patterns instead of memorizing.
+
+
+
+Awesome! Let’s walk through a real example from your past work — we’ll use your **look-alike model** since it’s relevant, and frame it around how you detected and fixed overfitting.
+
+
+
+####  Live Example: Detecting & Fixing Overfitting in a Look-Alike Model
+
+**Context:**
+
+I built a look-alike model to identify new prospects who resembled high-value customers for a retail furniture client. The model used hundreds of features — including web behavior, purchase categories, and demographics — and I trained it using XGBoost.
+
+
+
+**How I Detected Overfitting**
+
+During evaluation, I noticed the **training AUC was very high (around 0.95)**, but the **test AUC dropped to around 0.78**. That gap suggested the model was overfitting — learning patterns specific to the training set instead of generalizable signals.
+
+I also plotted **learning curves**, which showed the training loss continuing to drop while the validation loss flattened — another red flag.
+
+
+
+**What I Did to Fix It**
+
+1. **Regularization:**
+   I added more regularization to the model by adjusting `lambda`, `alpha`, and `min_child_weight` in XGBoost to reduce model complexity.
+
+2. **Feature Pruning:**
+   I had over 400 binary features from categorical sources. I used feature importance and SHAP values to remove low-signal features, which helped reduce noise.
+
+3. **Cross-Validation:**
+   I switched to **5-fold cross-validation** to get a more stable estimate of performance and avoid accidental bias from one random train-test split.
+
+4. **Early Stopping:**
+   I enabled early stopping based on validation AUC, so training would stop once performance plateaued.
+
+
+**Result**
+
+After tuning, the model achieved a **balanced AUC of around 0.84** on both train and test sets — much better generalization. The final model was used to score and activate new audience segments in media campaigns, and the client saw improved conversion rates from those segments.
+
+
+
+
+####	Any data stratification technique that you can use to overcome overfitting?
+
+Yes — stratified sampling is a helpful technique, especially when the target classes are imbalanced.
+
+Instead of randomly splitting the data, I use stratified train-test splits or stratified cross-validation, which ensures that the proportion of classes (like 1s and 0s) stays consistent across training and test sets. This helps the model learn more balanced patterns and prevents overfitting to the dominant class.
+
+For example, in a look-alike model where positive examples (high-value customers) are rare, stratification helps make sure both the train and validation sets have similar class distribution — which leads to more reliable evaluation and less risk of the model overfitting to the majority class.
+
+```
+StratifiedKFold or 
+
+train_test_split(..., stratify=y) in scikit-learn
+```
+
+
+
+
+
+
+#### Any other ways to simplify a model (to reduce overfitting)?
+
+
+
+1. **Use a Simpler Algorithm:**
+   If the problem doesn’t require complex modeling, I may use **logistic regression** or **decision trees** instead of XGBoost or random forests. Simpler models are easier to interpret and less prone to overfitting.
+
+
+2. **Limit Feature Interactions:**
+   In tree-based models, I can limit **`max_depth`** or **number of leaves**, so the model doesn’t learn very specific combinations that might not generalize.
+
+
+3. **Reduce Feature Count:**
+   I remove **highly correlated** or **low-variance features**, or use dimensionality reduction (like PCA) when it makes sense. This reduces noise and helps the model focus on the strongest signals.
+
+
+4. **Bin Continuous Variables:**
+   For some models, turning numeric variables into **bins or categories** (like income ranges or age groups) can help reduce sensitivity to outliers and improve generalization.
+
+
+5. **Ensemble Simpler Models:**
+   Sometimes, I combine a few **weaker learners** (like shallow trees) rather than fitting a very complex single model. This is the idea behind boosting and bagging — but I still control the complexity of base learners.
+
+
+
+#### Are you using cross validation method?
+
+Yes, I often use cross-validation to get a more reliable estimate of model performance — especially when I’m tuning hyperparameters or working with limited data.
+
+The most common method I use is k-fold cross-validation, usually with 5 folds. It helps me make sure the model performs consistently across different subsets of the data and reduces the chance of overfitting to a single train-test split.
+
+When I have **imbalanced classes**, I use stratified k-fold, so each fold keeps the class distribution balanced — this is especially important in classification tasks like look-alike modeling.
+
+
+#### What are you looking for when you compare multiple classification models?
+
+**In short:** 
+
+I compare models based on performance metrics, generalization, interpretability, and how well they support business goals.
+
+
+**Long version**
+
+When I compare classification models, I look at a mix of **performance metrics, interpretability, and stability**:
+
+**1. Model Performance**
+
+* I start with **AUC-ROC**, **precision**, **recall**, and **F1-score**, depending on the problem.
+
+* For imbalanced data, I pay close attention to **precision-recall curves** and **false positive/negative rates**.
+
+**2. Generalization Ability**
+
+* I compare **train vs. validation/test performance** to check for overfitting.
+
+* Cross-validation results help me see if a model is stable across different data splits.
+
+**3. Interpretability**
+
+* I consider how easy it is to **explain the model to business stakeholders**.
+
+* If the client needs transparency, I may prefer logistic regression or decision trees over black-box models.
+
+Some clients or teams want to understand how the model makes decisions — especially in regulated industries or for high-stakes use cases.
+
+In those situations, I prefer interpretable models like:
+
+**Logistic Regression:**
+
+Easy to explain — each feature has a coefficient that shows how it increases or decreases the probability of the outcome. This is great for understanding the effect of individual variables.
+
+**Decision Trees:**
+
+They show clear rules like “if age > 30 and income > 50K → likely to convert.” Clients can easily follow the logic.
+
+In contrast, black-box models like XGBoost or neural networks may perform better but are harder to explain. In those cases, I may use SHAP values to help visualize feature impact and make the model more transparent.
+
+
+
+**4. Training Speed & Scalability**
+
+If I’m working with large datasets or in a pipeline that needs frequent retraining, I check model **training time and resource use**.
+
+**5. Business Impact**
+
+Finally, I think about which model gives the most **useful and actionable results**. Even a slightly lower-performing model might be better if it’s easier to implement or explain.
+
+
+
+
+
+#### What is ROC curve?
+
+Here’s a clear, simple answer you can use in an interview:
+
+**What is an ROC curve?**
+
+The **ROC curve** (Receiver Operating Characteristic curve) is a graph that shows the performance of a **classification model** at different thresholds.
+
+It plots:
+
+* **True Positive Rate** (a.k.a. recall or sensitivity) on the **Y-axis**
+* **False Positive Rate** on the **X-axis**
+
+
+**What it tells you:**
+
+It helps you understand how well the model separates the positive and negative classes.
+
+* A model that’s **closer to the top-left corner** is better.
+
+* A random guess would follow the diagonal line.
+
+
+**AUC (Area Under Curve):**
+
+The AUC score summarizes the curve —
+
+* **AUC = 1.0** → perfect model
+
+* **AUC = 0.5** → no better than random
+
+I often use **ROC-AUC** to compare models — it’s especially useful when classes are balanced.
+
+
+
+#### Have you used Lift charts?
+
+
+Yes, I’ve used **Lift charts** when evaluating classification models, especially in **marketing** use cases like targeting and audience scoring.
+
+##### What is a Lift Chart?
+
+A **Lift chart** shows how much better the model performs compared to random targeting.
+
+It plots the **cumulative gain or conversion rate** when targeting top-ranked individuals (based on model scores), compared to a baseline (random selection).
+
+##### Why I Use It
+
+* It helps answer:
+
+  > *"If I target the top 10% of people scored by my model, how much more likely are they to convert compared to random?"*
+
+* In marketing, this is **very actionable** — it helps decide how many people to include in a campaign to get the best return.
+
+##### Example from My Work
+
+In my **look-alike model**, I used lift charts to evaluate how well the model ranked new prospects. The top decile (top 10%) of scores showed **3–4x higher conversion** compared to the baseline — that gave the client confidence in using the model for targeting.
+
+
+
+
+
+
+
+
+
+-	Sometimes we need to explain how we get to find the model results/scores. Have you worked on a case where you want to help business stakeholders understand what is driving predictions.
+-	In a scenario, outcome is whether responding campaign and predictor is a binary variable whether opened an email or not.
+-	How do you interpret a feature coefficient in a logistic regression? Is it causal or correlation?
+-	Is shap value a causation or correlation?
+-	When interpreting the coefficient in shap, you said “people who opened the email are more likely to respond to campaign? You sounded more of a causation. How would you rephrase it to sound more like correlation? 
+-	In a black box model and trying to understand what features are important, rather than using SHAP values, just using the model? How do you evaluate if feature is important outside of SHAP values? Can you use the model and feature set to
+-	As data scientists, we collaborate with business stakeholders and we have to do a lot of convincing. We communicate model performances and how model works with them. Let’s say we are building a same response model. We are predicting who will respond to campaign and stakeholders are interested in increasing the response rate. Stakeholders say we have our way to do it. How would you prove model is bringing value to the organizations? 
+-	How can you set up a test/experiment and show the model is better?
+-	
+
+
+

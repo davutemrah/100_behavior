@@ -1,0 +1,26 @@
+# Project summaries
+
+
+## Academic projects at IPSR
+
+### TANF Project: 
+
+Impact of party affiliation of a governor and legislatures on social safety net programs. My role was to extracted data from several data sources, manipulating and cleaning, merging datasets to gather and perform the analysis. I met with the collaborator weekly to update her about the progresses. 
+
+We have tried several methods to estimate the effect including difference in differences, linear regression and non-parametric regression discontinuity design. We find out more restrictive policies associated with republican governors and legislatures. This project is about to end soon and will start to write down the as a research article.
+
+### Innovation Capacity project: 
+
+This is a joint project with two collaborators, we investigated determinants of researcher and innovation capacity of countries covering over 150 countries. I collected several datasets from online sources on various sources and cleaned, visualized and analyzed dataset for my non-statistical collaborator. I have to explain every detail for her to understand and move from there. This project helped me practice translating my statistical knowledge and findings to non-technical audience. 
+
+### Medicaid expansion: 
+
+This is a joint project analyzing the effect of non-expanding Medicaid in Kansas. Other collaborator is health economist working in Sweden. I collected data from several sources, cleaned and visualized then apply synthetic control methodologies. This project still continues and progress report is presented to government officials. 
+
+
+
+
+
+
+
+

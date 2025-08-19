@@ -1,0 +1,37 @@
+# liveramp Finals
+
+there were 3-4 45min sessions
+
+- sql and pyhton
+
+- machine learning project walk thru
+
+- behavioral
+
+
+- IN sql part:
+
+live coding
+
+use group by, aggregation, window functions
+
+
+python:
+
+live coding
+
+goal was to create a class or method doing the following
+
+- merge two data
+- fill salary of employees if missing by dept means
+
+
+ML part:
+
+- compare why linear and non linear model objective functions
+
+
+
+
+
+

@@ -1,0 +1,350 @@
+
+# Amazon Prep Stories
+
+we’ll start building your **Amazon Economist interview prep** around the **Leadership Principles** your interviewer mentioned:
+
+* **Earn Trust** (primary principle assessed)
+
+* **Ownership**
+
+* **Deliver Results**
+
+Amazon loves **STAR** format (Situation, Task, Action, Result) — and for more senior/technical roles, sometimes **STAR+L** (learning)
+
+
+
+
+## Sample Questions
+
+### **Earn Trust**
+
+Amazon wants to see how you build credibility, listen attentively, and handle mistakes.
+
+**What they’re looking for:**
+
+* Willingness to admit mistakes.
+
+* Ability to recover trust and credibility.
+
+* Transparency in communication.
+
+
+**Sample Questions:**
+
+* Tell me about a time you earned the trust of a difficult stakeholder or teammate.
+
+* Give an example where you admitted a mistake at work. How did you handle it?
+
+* How do you make sure your analyses are trusted by both technical and non-technical teams?
+
+* Describe a time when you had to challenge someone senior to you. How did you do it respectfully?
+
+
+
+### **Ownership**
+
+Amazon expects leaders to act as long-term owners, not just employees doing their piece.
+
+**What they’re looking for:**
+
+* Initiative without being told.
+
+* Thinking beyond your immediate deliverables.
+
+* Acting in the company’s best interest.
+
+
+**Sample Questions:**
+
+
+* Tell me about a time you took ownership of a project outside your job scope.
+
+* Give me an example of when you anticipated a problem and acted early.
+
+* Describe a time you had to make a decision with incomplete data.
+
+* Tell me about a time you went beyond your job description to solve a problem.
+
+* Give me an example where you had to take initiative without being asked.
+
+* Describe a time you spotted a risk in a project and fixed it before it became an 
+issue.
+
+* Tell me about a situation where you made a tough decision that benefited the company long-term, even if it required short-term sacrifices.
+
+
+### **Deliver Results**
+
+Amazon emphasizes achieving goals despite challenges and rising to the occasion.
+
+
+**What they’re looking for:**
+
+* Persistence under pressure.
+
+* Resourcefulness in overcoming barriers.
+
+* Ability to focus on high-impact work.
+
+
+**Sample Questions:**
+
+* Tell me about a time you were under a tight deadline and still delivered results.
+
+* Describe a time when you had to deal with setbacks but still achieved your target.
+
+* Give an example where you balanced speed vs. accuracy in your work.
+
+* Tell me about the most impactful analysis or project you delivered. What was the outcome for the business?
+
+* Tell me about a time you had to meet a tough deadline.
+
+* Give an example of when you overcame significant obstacles to deliver something.
+
+* Describe a situation where you had to prioritize competing deliverables.
+
+
+---
+
+⚡ **Tip for You (Data Scientist angle):**
+
+* For **Earn Trust**, highlight times you simplified complex data science work for business leaders.
+* For **Ownership**, bring up how you maintained or fixed pipelines, improved processes, or took on UAT/testing responsibilities even when outside your scope.
+* For **Deliver Results**, emphasize projects where your analysis directly drove marketing decisions, improved lift, or influenced bottom-line impact.
+
+
+
+
+
+
+
+## Earn Trust - Tell me about a time you failed and how you handled it.
+
+- **Earn Trust - When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow from that experience?**
+
+- **A failure to meet a deliverable where you still maintained professional relationships.**
+
+- **Tell me about a time when you did not meet a deadline**
+
+(your interviewer specifically warned this may appear here)
+
+**S – Situation**
+
+I was working on a project to develop and revise the quarterly audience framework for our retail furniture client. The framework depended on several input datasets, including a retention exclusion segment that refreshed weekly.
+
+**T – Task**
+
+During one cycle, team member noticed my audience counts were inconsistent compared to prior quarters. Since this framework was central for reporting performance and strategy, I had to quickly understand why the numbers were off.
+
+**A – Action**
+
+- I dug deep into the refresh history and compared historical counts across multiple weeks.
+
+- Found that in one week, the retention exclusion dataset had refreshed incorrectly, with nearly half the records missing.
+
+- This explained the sudden drop in counts, since my logic excluded that segment programmatically.
+
+- Investigated further and discovered that in rare cases, ingestion happened in two parts, causing partial loads.
+
+- I escalated the issue to the engineering team, sharing detailed logs and examples so they could trace it upstream — they were surprised by the finding.
+
+- To protect the framework going forward, I redesigned my workflow: first creating stable tables to lock inputs before running the audience logic, so refresh inconsistencies couldn’t break downstream counts.
+
+**R – Result**
+
+The issue was confirmed and corrected by engineering. My redesigned process ensured consistent results quarter over quarter. This not only protected the client deliverable but also demonstrated to the team that I take ownership beyond analysis, making sure the entire data pipeline is reliable and future-proof.
+
+----
+
+👉 Why this works:
+
+- **Ownership** → you didn’t just patch your report; you redesigned your process.
+
+- **Dive Deep** → you traced the problem to its origin when even engineers weren’t aware.
+
+- **Deliver Results** → you kept the quarterly framework on track despite the problem.
+
+- **Earn Trust** → you communicated clearly and built credibility by solving a hidden issue.
+
+----
+
+
+
+## Earn Trust - Describe a time you influenced a group despite resistance.
+
+**S – Situation**
+
+When I first started building the demographic profile report, one of our key data sources was a panel from Ibotta — people who share receipts. I noticed right away that this was a self-selected group, and it might not represent the full customer base.
+
+**T – Task**
+
+My task was to deliver accurate insights to the client, but I was concerned that using raw panel data would mislead them. I wanted the team to apply balancing weights to correct for skewness, but at first there was pushback.
+
+**A – Action**
+
+Many teammates felt the raw results were “good enough,” and weighting would make things unnecessarily complicated or make it artificial.
+
+To address that, I:
+
+- Pulled side-by-side comparisons of raw vs. weighted demographics.
+
+- Showed that the Ibotta panel had over-representation in certain groups (like younger, budget-conscious shoppers), which could distort the insights.
+
+- Explained in simple terms how weighting aligns the panel closer to Census benchmarks.
+
+- Built a process to apply weights automatically, so it added little extra work.
+
+
+**R – Result**
+
+After seeing the evidence, the team agreed to adopt weighting in the demographic profile report.
+
+The client trusted the updated results and felt more confident using the insights.
+
+Weighting has since become standard practice in our reporting whenever panels are involved.
+
+
+
+## Ownership – Mastercard Report Redesign
+
+
+**S – Situation**
+
+Our team regularly used a Mastercard report that took around 45 minutes to run. I wasn’t responsible for maintaining this report — it belonged to another part of the team — but I saw that the long runtime slowed everyone down.
+
+**T – Task**
+
+Even though it wasn’t my job, I felt ownership to improve it. My goal was to make the process faster so the team could get results more efficiently.
+
+**A – Action**
+
+- I decided to take initiative and re-design the process.
+
+- I reviewed the code and data flow to find bottlenecks.
+
+- Optimized SQL queries and removed unnecessary steps.
+
+- Reorganized how transformations were done so they ran in a more efficient sequence.
+
+- Validated the new output carefully to make sure results stayed accurate.
+
+**R – Result**
+
+The report runtime dropped from 45 minutes to 5 minutes.
+
+This saved hours of waiting every week for the team and made analyses easier to run on-demand.
+
+Even though it wasn’t my responsibility, I took ownership to make the process better, and the team still benefits from the faster version today.
+
+
+## Ownership - Describe a time you took the lead on a project 
+
+**S – Situation**
+
+While working with our retail furniture client, they revealed that their key business goals were to **grow revenue and store footprint**. At that time, the quarterly audience framework we used was mainly based on simple segmentation rules.
+
+**T – Task**
+
+I needed to refresh the audience framework to better support those goals. My role wasn’t just to produce counts, but to help ensure the framework was meaningful for driving revenue impact.
+
+**A – Action**
+
+I suggested a new approach:
+
+* Combine a **propensity model** (likelihood of purchase) with a **regression model** (expected spend) so that the framework could capture both **probability of buying** and **how much they might spend**.
+
+* Prototyped the methodology, showing how the combined score would help prioritize high-value customers.
+
+* Walked the team and client through the logic in simple terms, so they could see the connection between the model outputs and their business goals.
+
+**R – Result**
+
+The approach was adopted in the revised framework. It gave the client a more accurate view of potential revenue from different audience segments, not just reach.
+This helped them make better-informed marketing decisions and strengthened my role as a thought leader on the project.
+
+---
+
+👉 Why this works:
+
+* Shows **leadership by influence** (you shaped the methodology).
+
+* Ties directly to **business impact** (revenue, footprint).
+
+* Demonstrates **Invent and Simplify** and **Deliver Results**, in addition to **Ownership**.
+
+---
+
+
+
+
+
+
+## Deliver Results – Blu vs. Non-Blu Analysis
+
+**S – Situation**
+
+Right after I joined a new team, a retail furniture client, leadership needed a **Blu vs. non-Blu audience analysis** to evaluate the effectiveness of contracting Blu data. It was urgent, and I was still new to the client’s data environment.
+
+**T – Task**
+
+My responsibility was to deliver a clear and accurate analysis showing whether Blu audiences performed better than purchased audiences, even though I had limited time to learn the data structure.
+
+**A – Action**
+
+* I asked many questions early on — to my manager and teammates — to quickly familiarize myself with the client’s 1P tables, exposure data, and business context.
+
+* Focused on the **key metrics** that mattered for leadership: conversion rate and lift.
+
+* Built the analysis step by step, validating with small samples first to ensure the joins and filters were correct.
+
+* Kept the design simple and transparent so the results were easy to interpret.
+
+**R – Result**
+
+I delivered the analysis within the tight deadline. It clearly showed that Blu segments were performing better than purchased segments, giving the client confidence to continue the contract.
+For me, it built early credibility on the team — showing that I could deliver accurate, high-impact results quickly, even as a new hire.
+
+
+
+## Deliver results - How have you leveraged data to develop a strategy?
+
+*Dive Deep, Bias for Action, Deliver Results, Think Big*
+
+
+**S – Situation**
+
+In the Bid Intelligence project, our campaigns typically treated everyone equally — the same budget allocation regardless of customer value.
+
+**T – Task**
+
+I believed this approach wasn’t optimal. High-value customers should get more budget than low-value customers. My task was to propose a strategy backed by data and test whether it would truly work.
+
+**A – Action**
+
+* I used **past purchase data** and **regression modeling** to estimate customer value and predict spend for prospects.
+
+* Proposed allocating more budget to high-value customers while reducing spend on lower-value ones.
+
+* To validate, I designed and ran an **A/B test**: one group with the old “equal treatment” strategy, and one with differentiated budget allocation.
+
+**R – Result**
+
+The test showed **15% lower cost** and a **higher conversion rate** when we prioritized high-value customers.
+
+This data-driven strategy proved more efficient, and it influenced how the team approached campaign budgeting going forward.
+
+---
+
+👉 Why this story is strong:
+
+* **Data → Strategy → Action → Results** (the full chain).
+
+* Shows **experimentation (A/B testing)**, which Amazon values a lot.
+
+* Demonstrates you don’t just analyze — you turn insights into **business impact.**
+
+---
+
+
+
+

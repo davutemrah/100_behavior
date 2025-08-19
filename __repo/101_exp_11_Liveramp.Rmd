@@ -1,0 +1,1418 @@
+# LiveRamp - Sr. Data Scientist
+
+
+
+**Role:** Senior Data Scientist
+
+**Company:** LiveRamp
+
+**Team:** MMA – Management Model and Adalytex
+
+
+### First Round with Hiring Manager
+
+**Interviewer:** Meo, Staff Technical Lead Manager (TLM)
+
+
+**Team & Organization Overview**
+
+* **Team focus**: Measurement effectiveness – from simple reach/frequency reports to advanced attribution models.
+
+* **Key projects**:
+
+  * Basic reporting (e.g., number of unique households reached)
+  
+  * Attribution modeling:
+
+    * Rule-based (e.g., single-touch)
+    
+    * Causal/experimental models (uplift models, incrementality attribution)
+
+* **Data sources**: Broad and varied (TV exposure, digital exposure, publisher data via cloud, row-level integrations).
+
+
+#### 🛠 **Technical Environment**
+
+* Team is part of the **Engineering org** under the "Insights" pillar.
+
+* Closely collaborates with:
+
+  * **Cleanroom engineering team** (acquired product)
+  
+  * **Data engineering team** (ETL, data cleansing, econometrics)
+  
+  * **UI/UX team** (building user-facing tools for measurement workflows)
+
+
+
+* 4 members: 2 Staff DS, 2 Senior DS, 1 long-term co-op/intern (9-month placement)
+
+* **60–70% coding/model development**: Code must be **production-ready** to support live customer deployments.
+
+* **30–40% R\&D**: Experimentation, innovation on methods.
+
+* Work is organized in **two-week sprints**, similar to other engineering teams.
+
+* Supported by a dedicated **Product Manager** for prioritization.
+
+
+* Shifting from project-based work to building a **scalable measurement product** (e.g., uplift modeling as productized service).
+
+* Strong emphasis on **real-time readiness**, **cleanroom infrastructure**, and **end-to-end measurement integration**.
+
+
+#### do you tell me something about yourself?
+
+
+Yes, definitely.
+
+I've been working as a Data Scientist for the past three years at Horizon Media, primarily within the marketing domain. I hold a Ph.D. in Economics, which has given me a strong foundation in causal inference models.
+
+Over the last three years, I’ve used tools such as Python, PySpark, SQL, and R to analyze consumer behavior across a variety of clients and datasets—including measurement data. My work has largely focused on pre-campaign analysis: identifying optimal targeting segments, optimizing segment performance, analyzing consumer behavior, and running customer segmentation. I’ve also built predictive models to help scale targeting strategies.
+
+Additionally, I’ve developed engineering scripts using SQL-based weighted sampling methods to create balanced samples across datasets, ensuring representativeness of target populations. In a similar effort, I engineered scalable scripts to create balancing weights for large datasets—addressing selection bias due to non-random sampling of the U.S. population.
+
+I've also applied causal inference models to estimate marketing effectiveness where needed—though our agency has a separate team that primarily handles post-campaign measurement.
+
+I’m familiar with using LiveRamp data, as well as GCP logs and trade test data, to run marketing effectiveness and conversion analyses—particularly broken down by demographic groups based on population data.
+
+So overall, my experience blends statistical modeling, engineering, and applied marketing analytics with a strong focus on rigorous methodology and scalable implementation.
+
+
+**Concise version**
+
+I'm a data scientist with a Ph.D. in economics and three years of hands-on experience in marketing analytics at Horizon Media. My focus is on pre-campaign strategy—segmenting audiences, analyzing consumer behavior, and building predictive models to improve targeting efficiency. I work extensively with Python, PySpark, SQL, and R, and I’ve also developed weighted sampling and balancing scripts to ensure data representativeness across large, non-random datasets. I’ve applied causal inference methods to estimate marketing lift when needed, and I’m familiar with using LiveRamp, GCP logs, and trade test data for demographic conversion analysis. I enjoy bridging rigorous methodology with business needs to deliver scalable, impactful insights.
+
+
+
+#### Can you tell me about the methodology you used to create balancing weights for panel data to remove bias?
+
+Sure, happy to explain.
+
+We work with datasets that vary widely in size—from about 10 million to over 250 million records—including transaction data, TV viewership, and web search activity. These datasets often have demographic biases depending on how they were collected. For instance, some might overrepresent younger users or underrepresent rural areas.
+
+To correct for these imbalances and make the datasets more representative of the national population, I apply post-stratification weighting. The idea is to assign weights to individual records based on how well they align with known population benchmarks—like age, gender, income, or region—so that the aggregate more closely matches something like the U.S. Census distribution.
+
+For smaller datasets, I’ve used R—specifically the anesrake package, which performs iterative proportional fitting (also known as raking). But that approach doesn’t scale well for big data.
+
+So for larger datasets, I built a custom SQL-based solution that implements post-stratification logic directly at scale. It calculates the ratio between sample distribution and the target distribution within each stratum and assigns a weight accordingly. This allows us to run the process on tens or hundreds of millions of records efficiently, using distributed computing environments like Spark or Snowflake.
+
+The result is a set of balanced weights that we apply to downstream analyses, like modeling or summary stats, which helps mitigate bias and improve representativeness.
+
+
+
+#### I also noticed on your résumé that you mentioned measuring and optimizing campaign performance.
+
+Would you mind sharing more details about those projects?
+Were you doing media exposure analysis, or perhaps something like a marketing mix model? 
+That’s what I was assuming. Also, you mentioned that your strategy led to a 10% increase in conversion rate. Could you walk me through how you reached that conclusion? I’d love to hear more about the study and methodology you used there.
+
+
+**reponse**
+
+These were all different projects, but they fall under the broader theme of campaign performance optimization. I’ll start with one specific experiment I led last year, which was part of a new initiative.
+
+Typically, when launching a campaign, all individuals are treated equally in terms of bid allocation—regardless of their likelihood to convert or their expected return. The bidding algorithm usually assigns a flat bid, say $10 or $20, based on overall budget constraints, without differentiating between users.
+
+To improve this, I developed a predictive algorithm to estimate both:
+
+The likelihood of conversion for each individual, and The expected spend or value each user might generate.By combining these two models, we could calculate an expected customer value—or in some contexts, a proxy for customer lifetime value—for each user. These values were then used to inform bidding strategies. Instead of flat bids, we weighted our spend to prioritize higher-value users.
+
+The idea is that not all conversions are equal—some customers bring more revenue than others. So we designed a value-based targeting model that allocates budget more efficiently, based on predicted customer value.
+
+To validate this, we ran an A/B test. We created two groups that were as demographically and behaviorally similar as possible:
+
+One group was targeted equally, with uniform bidding. The other group was targeted based on expected value, using our model-driven bidding strategy. After running the experiment for about three weeks, we collected enough data and observed a 10% increase in conversions in the model-treated group, while actually lowering cost per conversion.
+
+Since then, we've run similar experiments for different clients, and results have been consistently promising. We're continuing to explore platform capabilities—some DSPs like The Trade Desk allow us to pass user-level predicted values or weights, which gives us flexibility to implement these strategies at scale, depending on the platform's support.
+
+
+#### No holdout group?
+
+**So it sounds like most of your work focuses on pre-campaign optimization, which is great. But as you know, measurement usually happens post-campaign.**
+
+**What if there’s no clean experimental design, like a holdout group? Maybe something went wrong, or the campaign wasn’t set up with measurement in mind. In those cases, how would you approach drawing causal inference from the campaign data? What methodology would you use?**
+
+
+**Response 1**
+
+That’s a great question—and definitely a challenge we face in real-world scenarios where clean holdout designs aren’t always feasible.
+
+When a true A/B test or randomized holdout group isn’t available, I typically rely on quasi-experimental methods to estimate causal effects. One common approach I use is propensity score matching or weighting, where we attempt to simulate a control group by matching treated individuals to similar untreated ones based on observable covariates—such as demographics, past behavior, or media exposure history.
+
+If time-series data is available, I might also apply difference-in-differences (DiD)—comparing outcomes for treated and control groups over time, before and after the campaign. This helps control for time-varying confounders that affect both groups similarly.
+
+In some cases, if there’s variation in exposure intensity (e.g., some users saw more ads than others), I’ve also used instrumental variable techniques or regression-based uplift models, especially when trying to isolate incremental effects across different dosage levels.
+
+The key in these situations is to understand the limitations of observational data, carefully account for selection bias, and validate assumptions through sensitivity analyses or placebo tests.
+
+So while it’s not as clean as a randomized experiment, with the right design and controls, we can still get reasonably robust causal estimates—even in messy, real-world data.
+
+**My Response**
+
+Yes, that’s a common situation—often we can’t set up a proper holdout group for every campaign due to cost or timing constraints. In those cases, we rely on quasi-experimental methods, but we do have to make some assumptions.
+
+One common approach I use is propensity score matching. The idea is to match users who were exposed to the campaign (the treatment group) with similar users who were not exposed during the campaign period (the control group). Matching is done based on observed characteristics such as demographics and pre-campaign behaviors.
+
+The assumption here is conditional independence—that once we’ve accounted for these covariates, exposure is as good as random. So, we estimate propensity scores (the probability of being treated) and then match treated and control users based on these scores.
+
+I’ve worked with propensity score models before. While my current role at Horizon Media focuses mostly on pre-campaign analytics, I do have a background in causal inference. I completed a postdoctoral research position at the University of Kansas, where I applied various quasi-experimental methods—including propensity score matching and difference-in-differences.
+
+In fact, I’ve used both methods in combination: first, matching treated and control groups based on their covariates, and then applying difference-in-differences to compare outcomes before and after the campaign. This layered approach helps to account for time trends and improves the robustness of the causal inference.
+
+So, even in the absence of a randomized design, I try to approximate causal effects using these principled statistical techniques.
+
+
+#### You also mentioned that you’ve done some media exposure analysis. Could you tell me a bit more about what that involves?
+
+
+Certainly. Media exposure analysis is primarily descriptive rather than causal. The goal is to understand how different audience segments perform by comparing those who were exposed to a campaign or media touchpoint against those who were not exposed during a given time period.
+
+We look at metrics such as engagement, conversions, or other KPIs within these segments to get insights on relative performance. While this analysis helps identify patterns or associations, it does not by itself establish causality.
+
+
+
+#### Balancing weights?
+
+**You also mentioned something about a panel study. When you're assembling weights for a sample, are you using those weights to estimate reach numbers? Or what exactly is the purpose of those weights in that context?**
+
+That’s a great question. While this isn’t directly tied to measurement yet, it's part of our marketing insights work—especially in the early stages of campaign planning or when preparing for a new business pitch.
+
+The idea is that we often work with very large population datasets—sometimes upwards of 250 million records. These datasets are intended to represent the U.S. adult population, but in practice, the distribution across demographics like age, income, or geography can be skewed.
+
+For example, when we compare our segment distributions to census benchmarks, we might find that certain groups—like 18 to 24-year-olds—are underrepresented. To correct for this, we apply demographic balancing weights. These weights assign higher importance to underrepresented groups so that when we analyze the data, it better reflects the true population distribution.
+
+So while the weights aren’t being used to estimate media reach directly, they’re essential for ensuring that the insights we generate from segment-level analysis are representative and not biased due to sampling imbalance.
+
+🧠 **Optional Add-On (If Asked Further)**
+
+In other use cases—especially in measurement—similar weighting strategies could be applied to estimate reach or impact across a representative population, but in this specific case, it’s focused more on audience profiling and strategic planning.
+
+
+**Additional**
+
+Let’s say I’m working with a large national dataset, but we notice it’s underrepresenting younger adults—specifically the 18–24 age group, which only makes up about one-third of what we would expect based on census data. At the same time, older adults are overrepresented, appearing at twice their actual proportion in the U.S. population.
+
+Now, let’s say I build a segment of chocolate buyers, and I want to analyze their demographic breakdown and behaviors—for example, to understand how likely they are to use social media. If I look at this unweighted data, the results would be biased because the sample skews older. It might look like chocolate buyers are less active on social media—not because they actually are, but because younger consumers are under-captured in the dataset.
+
+To correct for that, I apply balancing weights. These weights increase the influence of underrepresented groups—like the 18–24-year-olds—and downweight the overrepresented groups, such as those over 65. This allows me to produce insights that are more reflective of the true national population, which is critical when delivering marketing recommendations or building go-to-market strategies.
+
+So in this case, the weighting isn’t used to estimate campaign reach, but rather to ensure the accuracy and representativeness of audience insights—which often informs pre-campaign targeting or even creative strategy.
+
+
+
+#### And while working on all these research projects, what programming languages or tools do you typically use?
+
+
+Sure. For tasks like random sampling or creating balancing weights, I primarily use SQL, since most of our data lives in a Snowflake environment. I use SQL extensively for pulling data, doing exploratory analysis, and preparing data for further modeling.
+
+When it comes to predictive modeling on large datasets, especially in Databricks, I rely on PySpark to efficiently process and model data at scale.
+
+And whenever needed—for tasks like model development, feature engineering, or building custom scripts—I use Python, which is my go-to for most data science workflows.
+
+
+
+#### Have you used any PySpark machine learning packages?
+
+
+Yes, I’ve used PySpark MLlib for predictive modeling tasks—such as lookalike modeling and churn prediction.
+
+Typically, I start by using SQL within PySpark to pull and filter data, since it’s often embedded directly into our PySpark workflows—especially when working in Databricks or connected to Snowflake.
+
+Once the data is pulled, I handle data cleaning and transformation using PySpark’s DataFrame API—this includes feature engineering and preparation for the modeling phase.
+
+For modeling, I use PySpark’s MLlib, including pipelines with transformers and estimators. These workflows often include stages like tokenization, normalization, and one-hot encoding, followed by models like logistic regression, random forest, or GBT.
+
+After training, I generate predictions or probabilities and write the results—such as propensity scores or likelihood estimates—back to Snowflake for downstream use in dashboards or activation.
+
+So, end-to-end, most of my modeling workflows in large-scale environments are done in PySpark.
+
+💡 Bonus Tip (for Follow-up)
+If they ask you to name specific PySpark ML features, you can say:
+
+“I’ve used StringIndexer, VectorAssembler, Pipeline, and CrossValidator, and trained models like LogisticRegression and GBTClassifier using MLlib.”
+
+
+
+#### Python usage level?
+
+**You mentioned that you’ve been using Python. Can you tell me a bit more about the level of your experience? For example, some people just use Python for basic data manipulation in notebooks—like with pandas—while others go deeper and build reusable functions, classes, or even package their own modules. Have you ever built a full reusable Python class or packaged your methodology?**
+
+
+That’s a great question. To be transparent—I haven’t yet built or published my own reusable Python package or class structure from scratch in a production environment.
+
+Before transitioning into industry, I was actually more experienced in R, where I had created my own internal libraries during my academic work. Since moving into industry, I’ve been using Python more extensively—mainly for data science workflows, including exploratory analysis, model development, and custom scripting within Jupyter notebooks or Databricks notebooks.
+
+While I haven’t formally packaged a full methodology into a Python module or class yet, I have written reusable functions, applied modular coding practices, and worked within structured notebooks that feed into larger workflows—especially in collaboration with engineering teams who handle deployment.
+
+I’d definitely be comfortable taking the next step into object-oriented or more production-level packaging if the project required it. I’m already writing clean, reusable code and following best practices like using virtual environments, Git for version control, and testing components before deployment.
+
+**new hire will use 60-70% of the time, write production ready code**
+
+That’s a fair point. I wouldn’t describe myself as a full-time programmer, but I’m very comfortable using programming languages—especially Python, PySpark, and SQL—to support my work in statistics, machine learning, and causal inference.
+
+My strength really lies in building robust models, such as classification models or gradient-boosted trees (e.g., XGBoost, LightGBM, or Spark’s GBT), and I can implement these reliably within the required coding frameworks.
+
+So while I might not be writing production-level software daily, I can confidently code, adapt, and scale solutions using the right tools for the problem—and I’m always improving on the engineering side.
+
+
+You're absolutely right—object-oriented programming, especially understanding classes and class inheritance, is important for production-ready code.
+
+To be transparent, I haven’t yet had a need to build Python classes from scratch in my previous roles, as most of my work has been in functional or notebook-based workflows—often using R, which is not inherently object-oriented.
+
+That said, I do understand the concepts of encapsulation, methods, and class structure, and I’ve read and worked with codebases that follow OOP principles. While I haven’t authored a full class-based system yet, I’m confident that I can pick it up quickly—I’m a fast learner and I’m actively building more structure into my Python workflows.
+
+I see this as a great opportunity to grow on the engineering side, especially in an environment like yours where clean, modular, and deployable code is core to the product.
+
+
+
+
+#### Are you familiar with Python decorators—like what's a static method and what's a class method?
+
+To be honest, I haven’t worked in depth with Python decorators, static methods, or class methods yet, so I wouldn’t claim deep expertise there.
+
+That said, I understand that decorators are a way to modify the behavior of functions or methods without changing their code, and that @staticmethod and @classmethod are used to define methods that don’t rely on instance-level data. I’ve come across them in code reviews and tutorials, but I haven’t had the opportunity to implement them myself.
+
+This is an area I’m actively looking to deepen, especially since I know it’s important in writing clean, modular, and reusable code in production environments. I’m confident I can ramp up quickly—I’m comfortable with learning new Python paradigms and have done so before when adapting from R to Python.
+
+
+
+#### Do you know the difference between a shallow copy and a deep copy in Python?
+
+**Sometimes this comes up when you're working with mutable objects and you see unexpected behavior or warnings.**
+
+Yes, I do.
+
+A shallow copy creates a new object, but it still references the same inner objects as the original. So if those inner objects are mutable and you change them in the copy, the changes will also appear in the original.
+
+A deep copy, on the other hand, creates a completely independent clone—not just of the outer object, but of all the nested objects inside it as well. So any changes to the deep copy won't affect the original object at all.
+
+I remember encountering this when working with nested dictionaries and lists—it helped me understand how object references work in memory.
+
+
+#### What’s the difference between positional arguments and keyword arguments in Python?
+
+Yes, I’ve definitely worked with both positional and keyword arguments when creating user-defined functions—especially while maintaining large automated demographic profile reports.
+
+To clarify:
+
+Positional arguments are the required parameters you pass to a function in a specific order. The function expects these arguments in the sequence they’re defined.
+
+Keyword arguments are optional parameters that have default values defined in the function signature. When calling the function, you can specify these arguments by name, and if you don’t provide a value, the default is used.
+I’m familiar with these concepts, though I admit I sometimes need to refresh details about how Python handles them internally—especially when dealing with `*args` and `**kwargs` to accept variable numbers of positional or keyword arguments.
+
+
+#### Have you worked with Git and Git repositories? Do you have experience collaborating through Git?
+
+
+Yes, I’ve used Git through the terminal, though not on a daily basis. I have experience with basic Git commands like clone, add, commit, push, pull, and resolving simple merge conflicts.
+
+In most of my recent work, especially when collaborating less frequently, I’ve also used GitHub Desktop for convenience. While I haven’t worked extensively with branching strategies or in a heavily collaborative Git environment, I’m familiar with the core concepts and workflows.
+
+I’m confident I can easily adapt to more advanced or team-based Git practices, especially since I’m already comfortable using the terminal and have a solid understanding of version control principles.
+
+
+#### Have you ever dealt with merge conflicts when working with Git?
+
+
+Yes, I’ve experienced merge conflicts—mostly in individual projects rather than team settings.
+
+They usually happen when I’ve created a feature branch and made changes, but the main branch has been updated in the meantime. If I try to merge without pulling and integrating those updates first, Git detects conflicting changes—especially if the same lines were modified in both branches—and that’s when a merge conflict occurs.
+
+To resolve it, I typically:
+
+- Run `git pull origin main` into my branch to bring in the latest changes.
+
+- Manually review the files where conflicts occurred—Git marks the conflicting sections, so I decide which changes to keep.
+
+- After resolving conflicts, I use `git add`, then `git commit` to finalize the merge.
+
+
+Although I don't face merge conflicts daily—because most of my recent work hasn’t involved active team collaboration—I’m familiar with the process and comfortable resolving them when they arise. I also try to work in isolated feature branches and regularly sync with the main branch to minimize conflicts.
+
+And I’m always open to learning more advanced Git workflows used in engineering-heavy environments.
+
+
+
+#### Do you know the difference between WHERE and HAVING in SQL?
+
+
+Yes—`WHERE` and `HAVING` are both used to filter data, but they’re applied at different stages of SQL query execution.
+
+`WHERE` is used to filter rows before any grouping or aggregation happens. You typically use it to filter raw records based on column conditions.
+
+`HAVING` is used after a `GROUP BY` clause—when you want to filter aggregated results. So, if you grouped your data and calculated something like `SUM` or `COUNT`, you’d use `HAVING` to filter those group-level results.
+
+This difference is tied to the order of execution in SQL: `WHERE` comes early, while `HAVING` comes later, after aggregation.
+
+
+#### What’s the difference between UNION and UNION ALL in SQL?
+
+
+Yes, the main difference is how duplicates are handled when combining result sets.
+
+`UNION` merges two or more datasets but removes duplicate rows in the final output.
+
+`UNION ALL` combines all rows from the datasets including duplicates, so it’s usually faster because it skips the deduplication step.
+
+So if you want all records including duplicates, you use `UNION ALL`. If you want a distinct combined set, you use `UNION.`
+
+
+#### What are some ways to handle row duplication in a PySpark DataFrame?
+
+**They want to know if you can explain how to detect and remove duplicate rows using PySpark.**
+
+
+Yes, handling duplicate rows is a common task in PySpark DataFrames.
+
+PySpark provides a couple of ways to deal with duplicates:
+
+You can use the dropDuplicates() method, which removes duplicate rows based on all columns or a subset of columns if you specify them.
+
+Another way is to use the distinct() method, which returns a new DataFrame with only unique rows across all columns.
+
+
+```python
+
+df_no_duplicates = df.dropDuplicates()
+
+df_no_duplicates = df.dropDuplicates(['column1', 'column2'])
+
+
+```
+
+Because PySpark is a distributed framework, these operations are optimized to run efficiently on large datasets spread across multiple nodes.
+
+While I might not recall every function name or parameter by heart, I’m comfortable exploring documentation or writing such code as needed in real projects.
+
+
+
+#### Have you created your own UDF (User Defined Function) in Spark?
+
+
+Yes, I have created UDFs a few times, especially after estimating probabilities or when I needed to apply some custom logic that wasn’t available in the built-in Spark functions.
+
+While I don’t create UDFs regularly, I understand their purpose—they allow you to extend Spark’s functionality by defining custom operations that can run across distributed data.
+
+Over time, as I learned more about PySpark, I’ve relied more on existing libraries and built-in functions, which are generally more efficient. But when needed, I’m comfortable writing my own UDFs to handle specific cases.
+
+
+
+```python
+# The "probability" column contains a vector of probabilities for each class.
+
+# To get the probability of the positive class, you can extract the second element of the vector.
+
+from pyspark.sql.functions import udf
+from pyspark.sql.types import DoubleType
+
+# UDF to extract positive class probability (index 1)
+get_pos_prob = udf(lambda v: float(v[1]), DoubleType())
+
+predictions = predictions.withColumn("pos_probability", get_pos_prob("probability"))
+predictions.select("pos_probability").show()
+
+```
+
+#### Between PySpark’s built-in functions and User Defined Functions (UDFs), which do you think is more optimized in terms of performance?
+
+
+
+Generally, PySpark’s built-in functions tend to offer better performance compared to UDFs.
+
+This is because built-in functions are native to the Spark engine, allowing Spark to optimize their execution across the cluster efficiently. UDFs, on the other hand, often require serialization and run outside the Catalyst optimizer, which can slow down processing.
+
+While sometimes you might need to write a UDF for custom logic not supported by built-in functions, whenever possible, leveraging PySpark’s native functions will generally be faster and more scalable.
+
+Finding the right balance between clarity, maintainability, and performance is key. I’m always looking for the most efficient approach depending on the problem and the platform.
+
+
+
+#### Are you familiar with the data skew issue in Spark? Do you know what causes it and common ways to fix it?
+
+
+Yes, I’m familiar with the concept of data skew in distributed systems like Spark.
+
+Data skew happens when the data is unevenly distributed across partitions—meaning one or a few partitions have a disproportionately large amount of data compared to others. This causes those tasks to become bottlenecks, slowing down the entire job.
+
+While I haven’t had to deeply troubleshoot severe skew issues in my projects yet, I understand some common solutions, such as:
+
+- Salting the keys before joins or aggregations to distribute skewed keys more evenly across partitions.
+
+- Using broadcast joins when one dataset is small enough, which avoids shuffling large skewed data.
+
+- Increasing the number of partitions or repartitioning the data based on a more balanced key.
+
+I’m eager to gain more hands-on experience in detecting and fixing data skew because I recognize its importance for optimizing performance in large-scale data processing.
+
+
+#### Can you tell me the differences between L1 and L2 regularization in regression?
+
+
+Yes, both L1 and L2 regularization are techniques used to reduce overfitting by adding a penalty to the model’s coefficients.
+
+L1 regularization (Lasso) adds the sum of the absolute values of the coefficients as a penalty. This tends to shrink some coefficients exactly to zero, effectively performing feature selection by eliminating less important features.
+
+L2 regularization (Ridge) adds the sum of the squared values of the coefficients as a penalty. It shrinks coefficients towards zero but does not set them exactly to zero, so all features remain in the model but with smaller magnitudes.
+
+In summary:
+
+- L1 encourages sparsity (more zeros),
+
+- L2 encourages small but non-zero coefficients, both helping prevent overfitting but in slightly different ways.
+
+
+
+#### How can you tell if a model is overfitting or underfitting? And if a model is underfitting, what are some common solutions you’d suggest?
+
+
+Overfitting happens when a model learns the training data too well, including noise and small fluctuations. As a result, it doesn't generalize well to unseen or test data. It typically occurs when the model is too complex relative to the amount of data.
+
+On the other hand, underfitting is when the model is too simple to capture the underlying patterns in the data. It performs poorly on both the training and test datasets, indicating that it hasn’t learned enough.
+
+**You can identify overfitting when the training accuracy is high but the test accuracy is much lower — this gap between training and test performance is a clear sign.**
+
+To address overfitting, you can:
+
+- Reduce model complexity (e.g., use fewer features or simpler models),
+
+- Apply regularization (like L1 or L2),
+
+- Use cross-validation to ensure generalization.
+
+
+To address underfitting, you can:
+
+- Increase model complexity (e.g., deeper trees, more features),
+
+- Use more relevant features or interactions,
+
+- Provide more training data if available.
+
+The goal is to find the right balance where your model performs well on both training and test sets.
+
+
+
+### Second Round
+
+**Interviewer: Sr. Data Scientist Guongen**
+
+**Scenario:**
+
+E-commerce client is running an experiment on the checkout page to assess whether a cosmetic change leads to meaningful business improvements (e.g., higher conversions, better customer experience).
+
+The goal is to design a science-based approach that can quantify and validate the causal impact of this change.
+This is about a e-commerce client,  there is a website checkout page experiment. You are testing designing an system to assert the impact of cosmetic change. The goal is to determine whether, the changes should result in meaningful improvements.
+
+#### Question 1: Design a science-based approach to assess the impact of a cosmetic change to an e-commerce website’s checkout page. Determine whether the change is meaningful for the company.
+
+
+**Step-by-Step Science-Based Approach**
+
+1. **Clarify the Goal**
+
+* Assess whether the **cosmetic change** improves business performance.
+* Define what is “meaningful” → Usually **conversion rate**, **revenue per visitor**, or **drop-off reduction**.
+
+
+2. **Define Primary & Secondary Metrics**
+
+* **Primary metric**: Conversion rate (e.g., completed checkout / checkout page views)
+
+* **Secondary metrics**: Bounce rate, session duration, drop-off at each checkout step, revenue per user, etc.
+
+
+
+3. **Experimental Design (A/B Test)**
+
+* **Randomized Controlled Trial**:
+
+  * **Control group**: Sees original checkout page
+  
+  * **Treatment group**: Sees cosmetically updated page
+
+* Randomize at the **user or session level** to remove bias.
+
+* Ensure **no contamination** between groups (e.g., same user doesn't see both versions).
+
+
+
+4. **Set Hypotheses**
+
+* **Null hypothesis (H₀)**: No difference in conversion rate between control and treatment.
+
+* **Alternative hypothesis (H₁)**: The treatment improves conversion rate (or other metrics).
+
+
+
+
+5. **Determine Sample Size & Duration**
+
+* Use **power analysis** to calculate the required sample size based on:
+
+  * Baseline conversion rate
+  
+  * Minimum detectable effect (MDE)
+  
+  * Desired significance level (α = 0.05)
+  
+  * Power (usually 80%)
+
+
+
+6. **Ensure Data Quality**
+
+* Log page version, user ID, timestamps, outcomes
+
+* Validate that users are correctly assigned and not switching groups
+
+* Monitor real-time stats for randomization balance
+
+
+
+7. **Analyze Results**
+
+* Use a **two-proportion z-test** for conversion rates
+
+* Or a **t-test** if comparing revenue per user
+
+* Check:
+
+  * Statistical significance (p-value < 0.05?)
+  
+  * Practical significance (Is the lift large enough to matter?)
+
+* Optionally apply **Bayesian inference** for real-time insights
+
+
+
+8. **Interpret Results**
+
+* If the change yields a **statistically and practically significant lift**, consider rolling it out.
+
+* If not significant, weigh the cost/benefit of keeping the change for aesthetic purposes.
+
+
+
+9. **Plan for Rollout**
+
+* Use a **phased rollout** or **canary deployment** to monitor post-launch impact
+
+* Watch for long-term effects and regression to the mean
+
+
+
+10. **What If You Can’t Run an A/B Test?**
+
+If randomization is not possible:
+
+* Use **observational causal inference** methods:
+
+  * **Propensity Score Matching**
+  
+  * **Difference-in-Differences** (if pre-post data is available)
+  
+  * **Interrupted Time Series**
+  
+  
+  
+  
+#### 5. Determine Sample Size & Duration (Power Analysis)
+
+To ensure the experiment has enough statistical power to detect meaningful changes:
+
+✅ **Define Key Inputs**
+
+* **Baseline Conversion Rate (p₁)**: Estimate from historical data (e.g., 5% conversion rate).
+
+* **Minimum Detectable Effect (MDE)**: Smallest relative lift worth detecting (e.g., 0.5% absolute increase).
+
+* **Significance Level (α)**: Probability of Type I error (commonly set at 0.05).
+
+* **Statistical Power (1 - β)**: Probability of detecting a true effect (commonly set at 0.8 or 0.9).
+
+
+
+📊 **Calculate Sample Size**
+
+Use standard formulas or a power calculator (e.g., [statsmodels](https://www.statsmodels.org/), G\*Power, or online tools):
+
+
+* Make sure the sample size is per variant (control/treatment).
+
+* Double it for total required observations.
+
+
+
+🕒 **Estimate Experiment Duration**
+
+* Divide required sample size by expected daily traffic to checkout.
+
+* Adjust for:
+
+  * Seasonal effects
+
+  * Potential outliers or anomalies
+
+  * Business constraints (e.g., promo campaigns, product launches)
+
+**Example**:
+
+If baseline CR is 5% and you want to detect a 10% relative lift (5.5%), then the MDE is 0.5%. You might need \~25,000 users per group.
+
+
+
+#### 7. Analyze Results
+
+After the test has run for a sufficient period:
+
+
+✅ **Preliminary Checks**
+
+* **Randomization balance**: Confirm demographics or behaviors are evenly split.
+
+* **Data sanity**: Are there drops in tracking? Unusual traffic spikes?
+
+
+📊 **Statistical Testing**
+
+Use appropriate statistical tests to compare control vs. treatment.
+
+##### (a) **Binary Metrics (e.g., Conversion Rate)**
+
+Use a **two-proportion z-test**:
+
+$$
+z = \frac{p_1 - p_2}{\sqrt{p(1 - p)(\frac{1}{n_1} + \frac{1}{n_2})}}
+$$
+
+Where:
+
+* $p_1, p_2$ are observed conversion rates,
+
+* $p$ is pooled rate,
+
+* $n_1, n_2$ are sample sizes.
+
+##### (b) **Continuous Metrics (e.g., revenue/user)**
+
+Use a **t-test** for mean comparison. Check for normality and variance assumptions (or use non-parametric tests if needed).
+
+
+##### (c) **Multiple Metrics or Tests**
+
+Apply **corrections** like Bonferroni or Benjamini-Hochberg to control false discovery.
+
+
+
+✅ **Interpret Results**
+
+* **Statistical Significance**: p-value < 0.05 (or confidence interval excludes 0)
+
+* **Practical Significance**: Is the lift **material** for the business?
+
+  * E.g., A 0.2% lift on a \$1M daily revenue = \$2,000/day
+
+* **Confidence Intervals**: Report the range of plausible values for the lift.
+
+
+#### If they are looking for a single metrics, what will you suggest?
+
+
+**A: I would suggest using the “checkout drop-off rate” as the key metric.**
+
+##### ✅ Why Drop-off Rate?
+
+* Since the experiment is about a **cosmetic change on the checkout page**, the most direct behavioral signal is **whether users proceed through the funnel or abandon it.**
+
+* Drop-off rate is defined as:
+
+$$
+\text{Drop-off Rate} = 1 - \frac{\text{Number of completed checkouts}}{\text{Number of users who reached the checkout page}}
+$$
+
+This metric isolates the **effect of the change on the checkout step itself**, rather than being influenced by upstream events like product browsing or add-to-cart.
+
+##### ✅ Advantages:
+
+* **Sensitive to UI/UX changes** on that page.
+
+* **Simple to interpret** — a decrease in drop-off rate signals improvement.
+
+* Allows for **quick testing** and prioritization of UI changes.
+
+
+##### 🚀 Alternative Single-Metric Suggestions (optional to mention):
+
+If asked for other candidates or to justify:
+
+* **Conversion Rate**: Good holistic metric, but may be affected by factors outside the checkout page.
+
+* **Time to Checkout**: Measures efficiency but doesn’t capture abandonment behavior.
+
+* **Revenue per Session/User**: High-level impact, but harder to attribute to cosmetic changes alone.
+
+
+
+#### Second question: How would you design the A/B testing? What are the steps involved? 
+
+Here's a clean and structured way to document and improve your response to the **second interview question** from LiveRamp:
+
+**1. Define the Objective**
+
+* Clearly state the **goal of the test**: to assess whether the cosmetic change to the checkout page improves user behavior or business outcomes (e.g., reduces drop-off rate or increases conversions).
+
+
+**2. Identify Key Metric(s)**
+
+* **Primary metric**: Drop-off rate at the checkout stage (as discussed).
+
+* **Secondary metrics**: Conversion rate, time on page, cart abandonment rate, bounce rate, etc.
+
+
+**3. Formulate Hypothesis**
+
+* Example:
+
+  > *"We hypothesize that the new checkout design will reduce the drop-off rate by at least X%, leading to improved conversion."*
+
+
+
+**4. Determine Test Design**
+
+* **Randomized controlled experiment**: Randomly assign users into:
+
+  * **Control group (A)**: sees the original checkout design.
+
+  * **Treatment group (B)**: sees the new cosmetic design.
+
+* **Randomization unit**: Typically user-level, to avoid spillover.
+
+* Ensure **equal distribution** across segments (e.g., by traffic source, device type).
+
+
+
+**5. Calculate Sample Size & Test Duration**
+
+* Use power analysis to determine required **sample size**:
+
+  * Inputs: baseline conversion/drop-off rate, minimum detectable effect (MDE), significance level (α, usually 0.05), and power (typically 80%).
+
+* Determine test **duration** based on traffic flow to reach the required sample size.
+
+
+
+**6. Implement & Monitor**
+
+* Roll out the A/B test using an experimentation platform (e.g., Optimizely, LaunchDarkly, internal tools).
+
+* **Monitor in real-time** for:
+
+  * Data collection issues
+  * Unusual traffic patterns
+  * Early indicators (but avoid peeking bias)
+
+
+
+**7. Analyze Results**
+
+* Conduct statistical analysis:
+
+  * Compare drop-off rates (or other metrics) between groups using hypothesis testing (e.g., t-test, z-test).
+  * Check confidence intervals and p-values.
+
+* Assess practical significance in addition to statistical significance.
+
+
+
+**8. Interpret and Recommend**
+
+* If the new design significantly outperforms the old one:
+
+  * Roll it out more broadly.
+
+* If not:
+
+  * Consider iterating on the design or testing further hypotheses.
+
+
+💬 **Optional (Advanced): Handling Imperfections**
+
+You can mention if you're asked:
+
+* Use **stratified randomization** or **covariate balancing** to improve test validity.
+
+* Address potential **non-compliance** or **exposure leakage** (e.g., users seeing both versions).
+
+* Consider **Bayesian methods** or **sequential testing** as alternatives to fixed-horizon A/B tests.
+
+
+#### **What is the purpose of randomization?**
+
+**Randomization ensures that the treatment and control groups are statistically equivalent on both observed and unobserved variables at the start of the experiment.**
+
+This allows us to:
+
+1. **Eliminate selection bias**: Without randomization, differences in outcomes might be due to pre-existing differences between groups.
+
+2. **Ensure comparability**: Any post-experiment difference in outcome can be attributed to the treatment itself, assuming all else is equal.
+
+3. **Enable causal inference**: Randomization justifies treating the difference in outcomes between groups as the causal effect of the treatment (assuming proper execution).
+
+4. **Balance confounders**: Both known and unknown confounding variables are, on average, evenly distributed across groups.
+
+
+
+
+🔍 **Example (if you want to elaborate):**
+
+> For instance, in a checkout page A/B test, if we didn't randomize users, and one group ends up with more returning customers while the other has mostly new users, the outcome might be driven by user type, not the UI change. Randomization avoids this problem.
+
+
+
+
+
+
+#### During A/B testing, how do you remove the effect of confounding factors?
+
+
+**Primary approach:**
+
+* ✅ **Randomization** is the main defense. It ensures that both known and unknown confounders are balanced across treatment and control groups *on average*. This reduces systematic differences and makes the groups comparable.
+
+
+**But in practice:**
+
+* 📌 **Stratified randomization** may be used when you know certain confounders (e.g., device type, geography) are critical — this ensures balance *within* those subgroups.
+
+* 📊 **Post-stratification or covariate adjustment**: In analysis, you can use regression models to control for observed variables that might still differ slightly after randomization (especially with smaller samples).
+
+* 🧪 **A/A testing** before the A/B test can also help check for baseline imbalance, ensuring randomization worked correctly.
+
+
+**A/A testing** is an experiment where **both the control and treatment groups receive the same experience** — meaning **no actual change is being tested**. It's often used **before** running an A/B test.
+
+**Purpose of A/A Testing**
+
+1. **Check Randomization**
+
+   * Make sure the random assignment process splits users into comparable groups.
+
+2. **Validate Experiment Setup**
+
+   * Ensure the tracking, metric logging, and statistical analysis are working correctly.
+
+3. **Estimate Natural Variance / Noise**
+
+   * Understand the baseline variability in key metrics when no treatment effect exists.
+
+
+You want to test a new checkout flow, but before running A/B:
+
+* Run an A/A test where **both groups get the current flow**.
+
+* If your system reports a statistically significant difference, it's a red flag — you might have:
+
+  * Instrumentation errors
+
+  * Biased sample splits
+
+  * Misconfigured metrics
+
+
+
+
+**Clean Answer for Interview:**
+
+> "Randomization is our first line of defense — it balances both observed and unobserved confounders across groups. But if we’re concerned about imbalance in known variables, we can use stratified randomization or include covariates in a regression model to control for residual confounding during analysis."
+
+
+
+#### What if the control group is much smaller than the treated group in a propensity score matching setting?
+
+
+When the control group is much smaller than the treated group, **finding good matches for all treated units becomes challenging**, which can reduce the quality of the matching and the validity of causal estimates.
+
+Here are common approaches to handle this imbalance:
+
+1. **Use matching with replacement:** This allows control units to be matched to multiple treated units, improving match quality but increasing dependence on fewer controls.
+
+2. **Caliper matching or nearest neighbor matching:** Set a maximum allowable distance in propensity scores (caliper) to avoid poor matches; unmatched treated units may be discarded, improving validity but reducing sample size.
+
+3. **Weighting methods (e.g., inverse probability of treatment weighting - IPTW):** Instead of matching, use weights based on propensity scores to balance groups, which can be more efficient when control samples are limited.
+
+4. **Consider alternative causal inference methods:** Such as regression adjustment, stratification, or doubly robust estimators, which can better utilize all data even with imbalanced groups.
+
+
+Ultimately, when the control group is small, **some treated units may remain unmatched or poorly matched**, and it’s important to report this limitation transparently and consider sensitivity analyses.
+
+
+
+
+#### Regression Adjustment (Covariate Adjustment)
+
+* You use a regression model (like linear regression, logistic regression, etc.) to model the **outcome** as a function of the **treatment indicator** and other **covariates (confounders)**.
+
+* By including covariates in the model, you **control for their effects**, effectively adjusting for confounding.
+
+* This helps estimate the **treatment effect** while holding other factors constant.
+
+
+##### How it relates to propensity score methods
+
+* Both methods aim to adjust for confounding by balancing covariates between treated and control groups.
+
+* Regression adjustment models the outcome directly, while propensity score methods focus on balancing covariates first.
+
+* Sometimes, both are combined in a **doubly robust** approach for more robust causal estimates.
+
+
+
+#### Q: We did A/B testing and found a statistically significant result (low p-value). What’s the next step? Would you suggest launching the feature?
+
+
+**Answer:**
+
+A statistically significant p-value indicates there’s evidence the treatment effect is unlikely due to random chance. However, **statistical significance alone is not sufficient to decide to launch**. The next steps should include:
+
+1. **Assess Practical Significance:**
+   
+   Check if the effect size is meaningful from a business perspective. A tiny lift with a low p-value might not justify the cost or risk of launching.
+
+2. **Check for Robustness:**
+   
+   Validate the result by looking for consistency across segments, time periods, or secondary metrics. Look for any unexpected negative impacts.
+
+3. **Analyze Potential Risks:**
+   
+   Consider possible negative side effects on user experience, system performance, or downstream KPIs.
+
+4. **Consider Sample Size & Power:**
+   
+   Confirm that the sample size was sufficient and the test was run long enough to avoid false positives.
+
+5. **Run Additional Tests if Needed:**
+   
+   If unsure, run a follow-up experiment or an extended test.
+
+6. **Business Alignment:**
+   
+   Align with product, marketing, and stakeholder teams to evaluate if the change fits strategic priorities.
+
+Only after these steps and cross-functional agreement, you should **consider launching the feature**.
+
+
+
+#### Would you consider the novelty effect?**
+
+**Answer:**
+
+Yes, the novelty effect is important to consider in A/B testing. It refers to the temporary boost in user engagement or behavior simply because something is new or different, not necessarily because the change is truly better.
+
+To account for this, I would:
+
+* **Analyze longer-term data:** Run the experiment for a sufficient duration to see if the effect sustains over time beyond the initial excitement phase.
+
+* **Monitor post-launch metrics:** Continue monitoring after launch to detect if the effect diminishes as users get used to the change.
+
+* **Segment analysis:** Look at new vs. returning users to see if novelty impacts these groups differently.
+
+* **Repeat tests if needed:** Consider rerunning or running phased rollouts to validate the persistence of the effect.
+
+In summary, while a significant lift is promising, ensuring the impact is **not just a temporary novelty effect** is crucial for confident decision-making.
+
+
+#### How do you decide the sample size for an A/B test?**
+
+**Answer:**
+
+Deciding the sample size depends on several factors to ensure the test has enough power to detect meaningful effects:
+
+1. **Minimum Detectable Effect (MDE):** The smallest effect size you care about detecting (e.g., a 2% lift in conversion). Smaller MDEs require larger samples.
+
+2. **Statistical Significance Level (α):** Typically set at 0.05, this controls the false positive rate.
+
+3. **Statistical Power (1-β):** Usually set at 80% or 90%, this is the probability of detecting the effect if it truly exists.
+
+4. **Baseline Conversion Rate:** The existing rate helps estimate variance.
+
+5. **Test Duration and Traffic:** How much traffic you can allocate and for how long affects feasibility.
+
+Using these parameters, you can calculate the required sample size per group using formulas or tools like statistical calculators or libraries (e.g., statsmodels in Python).
+
+
+
+
+#### The main metrics closely related to sample size in experiment design are:
+
+1. **Statistical Power**
+
+   * The probability of correctly rejecting the null hypothesis (detecting a true effect).
+   * Larger sample sizes increase power.
+
+2. **Significance Level (Alpha)**
+
+   * The threshold for Type I error (false positive rate), usually set at 0.05.
+   * Lower alpha requires larger sample size.
+
+3. **Effect Size**
+
+   * The minimum detectable difference or change you want to observe.
+   * Smaller effect sizes require larger samples to detect.
+
+4. **Variance (or Standard Deviation) of the Metric**
+
+   * More variability in the data means you need a larger sample to detect effects.
+
+5. **Confidence Interval Width**
+
+   * Smaller sample sizes lead to wider confidence intervals (less precise estimates).
+
+
+**In summary:**
+
+Sample size depends on the desired power, significance level, effect size you want to detect, and variability of the outcome metric.
+
+
+
+
+#### Q: If a change has already been launched to part of the users without an A/B test, how do you evaluate the impact of the change?**
+
+**Observational impact analysis**
+
+
+When an experiment wasn’t set up beforehand, we can use **observational causal inference methods** to estimate the impact. Some approaches include:
+
+1. **Difference-in-Differences (DiD):**
+
+   Compare the metric changes over time between the treated group (users who saw the change) and a comparable control group (users who didn’t), assuming parallel trends before the change.
+
+2. **Propensity Score Matching (PSM):**
+
+   Match treated users with similar untreated users based on observed covariates to reduce confounding and mimic randomization.
+
+3. **Regression Adjustment / Covariate Adjustment:**
+   Use regression models controlling for user characteristics and time trends to estimate the effect of the change.
+
+4. **Synthetic Control Methods:**
+   Construct a weighted combination of control units to create a synthetic control group that closely matches the treated group before the intervention.
+
+5. **Instrumental Variables (if available):**
+   Use external variables that affect treatment assignment but not the outcome directly to isolate causal impact.
+
+These approaches rely on assumptions like no unobserved confounding and consistent data, so it’s important to validate these assumptions where possible.
+
+
+Great — this is a **realistic scenario** and a very common question in interviews when **experimentation wasn't done properly**. Here's how you can structure your cleaned-up and more polished response for your prep notebook:
+
+
+#### There was a change in the website, but no control group was set up. Can you evaluate the impact of the change? (Follow-up: Can you test if there's a significant change using time series?)
+
+
+**1. Clarify the Timeline**
+
+* Ask: *When exactly did the change go live?*
+
+* Identify a **pre-change** and **post-change** period.
+
+**2. Use Time Series Analysis**
+
+If you have access to historical data **before and after the change**, you can do:
+
+a. **Interrupted Time Series (ITS) Analysis**
+
+* A quasi-experimental method.
+
+* Models the trend before the intervention (change) and tests whether:
+
+  * There’s an **immediate level change** at the intervention point.
+
+  * The **slope or trend** changes after the intervention.
+
+  > *"This helps assess both short- and long-term impact."*
+
+
+b. **Statistical Significance in Time Series**
+
+To test for significance:
+
+* Fit a regression model like:
+
+  ```
+  metric ~ time + intervention_flag + time_after_intervention
+  ```
+
+  where `intervention_flag = 1` after the change, and `0` before.
+
+* Test if the coefficient for `intervention_flag` is statistically significant (i.e., the change caused a shift).
+
+* Use confidence intervals, p-values, or bootstrapping to validate results.
+
+c. **Alternative: Causal Impact (Bayesian Structural Time Series)**
+
+* Developed by Google.
+
+* Compares observed post-intervention data to a **counterfactual** generated from the pre-period.
+
+* Can also handle seasonality and auto-correlation.
+
+🧠 **Bonus (if asked):**
+
+* If data is very noisy, use **moving averages** or **smoothing**.
+
+* If other external changes happened, call out **confounding factors**.
+
+* If you have access to similar users/sites where the change wasn’t rolled out, use them as **synthetic control**.
+
+🔑 **Key Point:**
+
+> Even without a control group, **time series methods like ITS or Causal Impact can help estimate causal effects**, though results are more assumption-dependent than true A/B testing.
+
+
+
+
+#### Comparing pre- and post-treatment time periods using a **single difference model** is a valid and simple starting point for measuring impact **when no control group is available**.
+
+✅ **Single Difference Model (Pre/Post Comparison)**
+
+🧮 **Basic Setup:**
+
+Assume you have a time series metric (e.g., conversion rate, average order value, bounce rate) measured **daily or weekly**.
+
+Let:
+
+* $\bar{Y}_{\text{post}}$: average of the metric **after** the website change
+
+* $\bar{Y}_{\text{pre}}$: average of the metric **before** the website change
+
+Then the **single difference estimate** is:
+
+$$
+\Delta Y = \bar{Y}_{\text{post}} - \bar{Y}_{\text{pre}}
+$$
+
+You can test whether this difference is statistically significant using a **t-test** if assumptions are met.
+
+
+
+❗ **Limitations of Single Difference**
+
+* **Confounding factors**: Other changes (e.g., seasonality, campaigns, promotions) may also affect the metric during the same period.
+
+* **Trend effects**: If there is a natural upward or downward trend, simple pre-post difference can **misattribute** effects to the change.
+
+
+
+
+🧠 **Better: Interrupted Time Series (ITS)**
+
+Instead of just comparing two averages, ITS fits a **regression model** over time, which accounts for the **level and trend**:
+
+$$
+Y_t = \beta_0 + \beta_1 \cdot \text{time}_t + \beta_2 \cdot \text{intervention}_t + \beta_3 \cdot \text{time\_after}_t + \varepsilon_t
+$$
+
+Where:
+
+* $\text{intervention}_t = 1$ after change, 0 before
+* $\text{time\_after}_t$: time since the intervention
+
+Then:
+
+* $\beta_2$: change in level (immediate effect)
+* $\beta_3$: change in trend
+
+
+
+
+✅ **When is single difference okay?**
+
+You may use single difference if:
+
+* The **metric is stable** over time (no strong trend or seasonality)
+
+* The **time window is short**, and no major other changes occurred
+
+* You clearly **observe a jump** in the metric right after the intervention
+
+
+
+
+🧪 **Example in words:**
+
+> “We compared the average conversion rate in the 2 weeks before vs. 2 weeks after the change. The difference was 0.8%, which was statistically significant at the 5% level using a t-test. However, we acknowledge that this method does not control for trend or seasonality.”
+
+
+#### ✅**Paired (Matched) t-test — When to Use**
+
+Use a **paired t-test** when:
+
+* You're measuring the **same unit** (e.g., users, sessions, products) **before and after** the change.
+
+* You're comparing **within-unit change**, not across different groups.
+
+
+Let’s say you tracked conversion rate **per user** before and after the checkout redesign for users who interacted with the site in both periods.
+
+
+
+This tests:
+
+$$
+H_0: \mu_{\text{post}} = \mu_{\text{pre}} \quad \text{vs} \quad H_1: \mu_{\text{post}} \neq \mu_{\text{pre}}
+$$
+
+✅ **Benefits:**
+
+* **Controls for user-level fixed effects** (natural differences in behavior).
+
+* More **statistical power**, since variation **within users** is usually smaller than across users.
+
+
+❗ **Notes:**
+
+* You need to **match users correctly** — only those who were active in both periods.
+
+* Make sure your metric is meaningful per-user (e.g., average spend, conversion flag, time on site).
+
+
+
+
+#### Compare **linear models** and **tree-based models**:
+
+
+1. **Model Structure**
+
+| Aspect           | Linear Models                       | Tree-Based Models                                  |
+| ---------------- | ----------------------------------- | -------------------------------------------------- |
+| Model Type       | Parametric (assumes a linear form)  | Non-parametric (learns splits from data)           |
+| Functional Form  | Linear equation (e.g. y = βx + ε)   | Series of decision rules (splits)                  |
+| Interpretability | High (easy to explain coefficients) | Lower (complex decision paths, unless small trees) |
+
+
+
+2. **Data Assumptions**
+
+| Assumption           | Linear Models                | Tree-Based Models                           |
+| -------------------- | ---------------------------- | ------------------------------------------- |
+| Linearity            | Assumes linear relationships | Captures non-linear relationships naturally |
+| Feature Interactions | Must be manually specified   | Captures interactions automatically         |
+| Feature Scaling      | Sensitive to feature scale   | Not sensitive to scale                      |
+
+
+
+3. **Performance & Flexibility**
+
+| Area                | Linear Models                          | Tree-Based Models                           |
+| ------------------- | -------------------------------------- | ------------------------------------------- |
+| Handling Complexity | Not great with high complexity         | Great for complex patterns and nonlinearity |
+| Overfitting Risk    | Lower (especially with regularization) | Higher (especially with deep trees)         |
+| Handling Outliers   | Sensitive to outliers                  | More robust to outliers                     |
+
+
+4. **Use Cases**
+
+| Use Case                          | Linear Models             | Tree-Based Models                                                   |
+| --------------------------------- | ------------------------- | ------------------------------------------------------------------- |
+| Fast, interpretable baselines     | Yes                       | No (unless using shallow trees)                                     |
+| High-dimensional sparse data      | Strong (e.g., with Lasso) | Not ideal                                                           |
+| Tabular with complex interactions | Weak                      | Very strong (especially with ensembles like Random Forest, XGBoost) |
+
+
+
+🧠 **Summary (What to Say in an Interview)**
+
+> "**Linear models** are simple, fast, and interpretable — best when relationships are roughly linear and you need explainability. **Tree-based models** are more powerful for capturing non-linear patterns, variable interactions, and are robust to outliers — especially when using ensembles like Random Forest or Gradient Boosting. However, they trade off some interpretability and may overfit if not tuned properly."
+
+
+
+
+#### Suppose that your model is taking too long to run. How would you optimize that performance?
+
+
+
+**1. Diagnose the Bottleneck**
+
+> “First, I’d profile the pipeline to identify where the slowdown is — whether it's in data loading, preprocessing, training, or prediction. Tools like `cProfile`, `line_profiler`, or Spark/PySpark logs (if on big data) can help here.”
+
+
+
+**2. Optimize Data Handling**
+
+* **Reduce Dataset Size**:
+
+  * Sample a representative subset for model prototyping.
+  * Use stratified sampling if class imbalance matters.
+* **Efficient Data Structures**:
+
+  * Use `numpy` arrays or `pandas` optimized types (`category`, `float32`).
+* **Avoid Duplicates / Irrelevant Features**:
+
+  * Drop highly correlated or low-variance features to reduce computation.
+
+
+
+
+**3. Improve Model Training Efficiency**
+
+* **Simplify the Model**:
+
+  * Use a simpler algorithm if accuracy-speed tradeoff is acceptable.
+  * For tree-based models: reduce depth, number of trees, or sample rate.
+* **Use Regularization**:
+
+  * Regularization can reduce overfitting and help convergence faster.
+* **Tune Hyperparameters Intelligently**:
+
+  * Use `RandomizedSearchCV` instead of `GridSearchCV`.
+  * Use early stopping for boosted trees or neural nets.
+
+
+
+
+**4. Use Efficient Libraries or Hardware**
+
+* **Libraries**:
+
+  * Switch to faster implementations (e.g., `lightgbm` over `xgboost`, or `scikit-learn` over custom loops).
+* **Parallelization**:
+
+  * Use multi-core training (`n_jobs`, `joblib`, Spark).
+  * Use GPU acceleration for deep learning models (e.g., PyTorch, TensorFlow with CUDA).
+* **Batch Processing**:
+
+  * If using deep learning, batch your data for faster GPU utilization.
+
+
+
+**5. Persist and Cache Intelligently**
+
+* **Save intermediate results**:
+
+  * Avoid redundant computations in data pipelines.
+* **Use caching in Spark**:
+
+  * `df.cache()` or `persist()` to reuse expensive transformations.
+
+
+
+**6. Model Format and Deployment**
+
+* **Model Compression**:
+
+  * Use quantization or pruning for deployment.
+* **Serialization**:
+
+  * Use lightweight formats like `ONNX`, `joblib`, `pickle`, or `MLflow`.
+
+
+✅ **Sample Interview Wrap-Up**
+
+> "Ultimately, I treat performance tuning as a series of tradeoffs between speed, memory, and accuracy. My first step is always to profile the workflow, then make targeted improvements — whether it's simplifying the model, batching efficiently, or tuning smarter. I also leverage the right tools, whether it’s Spark, LightGBM, or GPU acceleration."
+
+
+
+
+
+
+

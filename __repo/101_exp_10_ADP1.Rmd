@@ -1,0 +1,403 @@
+# ADP
+
+
+### First Round
+
+ADP (with Kate Lindsay, Manager of Data Science)
+
+Head of Data Science, Data Engineering, Data Ops & Management (HRO Data & Analytics)
+
+
+* **She's responsible for multiple data functions**, which may signal a cross-functional team environment.
+
+* **Values hands-on project discussion** – wanted to *learn deeply about my experience and applications* of data science.
+
+* **Open-ended intro prompt** – important to *tailor intro to highlight relevant strengths and standout projects*.
+
+
+
+Thank you so much for taking the time and giving me this opportunity to speak with you.
+
+I’m a hands-on data scientist with over five years of experience across academic and industry settings, focusing on the economic and machine learning perspectives of data science.
+
+I hold a Ph.D. in Economics, with a specialization in econometric and microeconometric modeling. I also completed a one-year postdoctoral research position at the University of Kansas, where I worked on policy-driven research projects. After academia, I transitioned into the industry and have been working in the marketing science domain for the past three years.
+
+In my current role, I analyze consumer behavior using diverse data sources including web search data, location-based data, transactional data, and TV viewership data. I apply both supervised learning techniques—such as churn prediction, similarity modeling, and lookalike modeling—as well as unsupervised methods for customer segmentation and persona development.
+
+I also have expertise in causal inference techniques, including difference-in-differences and propensity score matching, to evaluate marketing effectiveness. One area I enjoy is integrating return path data, population data, and first-party purchase data to study how media exposure influences consumer behavior.
+
+Additionally, I’ve developed scalable scripts—especially in SQL and Python—to mimic the functionality of balancing-weight libraries like those in R, enabling them to run efficiently on large datasets with millions of observations, where traditional methods fall short.
+
+In short, I bring a mix of econometrics, machine learning, and scalable engineering approaches to help businesses make data-driven marketing decisions.
+
+
+#### Describe a data science project you are most proud of: The problem the project aimed to solve, The methods used, The outcome/results of the project
+ 
+ 
+##### 📊 Project Highlight – Value-Based Bidding Algorithm
+
+**Context**:
+In a marketing campaign, all users were previously treated equally with the same budget allocation (e.g., \$10 per user), regardless of their likelihood to convert or spend.
+
+**Problem**:
+The uniform budget approach didn’t account for user differences in potential value, possibly leading to inefficient spending.
+
+**Solution**:
+Developed a **customized, value-based bidding algorithm**:
+
+* Estimated each user's **customer lifetime value (CLV)** using past purchase history.
+* Assigned **personalized user budgets** based on expected value:
+
+  * Lower expected value → lower budget
+  * Higher expected value → higher budget
+
+**Method**:
+
+* Designed and implemented an **A/B test**:
+
+  * **Control group**: flat, equal-budget treatment
+  
+  * **Test group**: value-based personalized bidding
+
+**Outcome**:
+
+* The value-based bidding group showed **higher conversion rates** and **better return on ad spend (ROAS)**.
+
+* The project was successful, **measurable**, and **high-impact**.
+
+**Additional Note**:
+
+* Emphasized your enjoyment and skill in **causal inference** and **campaign lift analysis**, which were used to validate the results.
+
+
+ 
+#### Can you speak a little bit about how you deployed a model? Whether it's the example you just walked through or another one — what systems are you using, and how do you deliver the results to the end user?
+
+
+Sure. For the value-based bidding project, we worked with The Trade Desk. After estimating the model predictions for user-level bids, we had to follow The Trade Desk’s specific data formatting and submission rules to push the data into their platform.
+
+More generally, in our day-to-day workflow, we use tools like Snowflake and Databricks. Once a model reaches a stable and mature state, I typically deploy it within the Databricks environment. The outputs are then used to refresh our audience segments on a quarterly basis, ensuring that targeting is aligned with the most recent model predictions.
+ 
+ 
+ 
+#### Can you speak a little bit about the team you currently work with? Is it just you? Are there other data scientists or data engineers? What’s the makeup of that group?
+
+
+Sure. I’m part of a Marketing Science team within an agency, which includes around 20 data scientists in total. However, our structure is client-based, so we typically work independently to support specific client accounts.
+
+For example, I currently support two different clients, and while I am the only data scientist assigned to those accounts, I collaborate closely with a small team that usually includes business owners, account managers, and data solution stakeholders—around five people total per account.
+
+My focus is on hands-on modeling, data analysis, and execution, while client communication and strategic interpretation of the work are usually led by the business owners or account leads.
+ 
+ 
+**they dont deploy models**
+
+**they work with data engineers, clean, prep, premodel, deploy model etc**
+
+
+#### Can you talk through a time when you had to deliver an analysis or outcome that conflicted with a stakeholder’s expectations? How did you handle that?
+
+Yes, this definitely happens, and I think it really comes down to clear communication and collaborative validation.
+
+When I deliver results that differ from what a stakeholder expected, my first step is to review the analysis thoroughly—double-check the code, data transformations, and assumptions to ensure there’s no technical error on my side. I also try to understand what expectations the stakeholder had and why they may have interpreted the data differently.
+
+In these situations, I often conduct a sensitivity analysis or robustness checks to confirm that the findings are solid. Once I’m confident in the results, I work to bring the stakeholders into the process—discussing why the outcome might differ from their intuition and what factors in the data might explain the discrepancy.
+
+For example, I work with a retail furniture company where recent macroeconomic changes, such as those following a national election, affected consumer behavior. Stakeholders had strong expectations based on last year’s trends, but those patterns didn’t hold this year. We had to rethink our audience creation strategy to reflect new economic realities, rather than relying solely on past behavior.
+
+So, in short, I try to balance the technical findings with the business context and stakeholder insights, knowing that their perspective often includes valuable domain knowledge I might not initially see in the data alone.
+
+**GOOD**
+
+* Collaborative mindset – You emphasized communication and validation, which are key when managing expectation gaps.
+
+* Technical caution – You mentioned rechecking your code and doing sensitivity analysis, showing scientific thinking and integrity.
+
+* Respect for stakeholder expertise – You acknowledged their viewpoint and gave a real-world example (e.g., macroeconomic shifts post-election), which shows business awareness.
+
+* Adaptability – You described adjusting audience strategies due to changing conditions, which reflects flexibility and contextual reasoning.
+
+**🔧 Areas to Improve**
+
+* Structure – The original answer was a bit disorganized and repetitive, with filler phrases like “yeah,” “I guess,” and circular thoughts that distracted from the key message.
+
+* Confidence – Phrases like “maybe,” “I think,” or “let me think” made it sound unsure at times. A more assertive tone (“Here’s what I usually do...”) builds credibility.
+
+* Focus – Initially, you didn’t give a concrete example right away. Starting with the retail furniture case could anchor the listener before diving into your thought process.
+
+
+
+#### What interested you most about the job posting, and why did you choose to apply?
+
+Great question. I've been working remotely for the past three years at my current company, which is based in New York. It was my first industry role after academia, and I’ve gained a lot of hands-on experience there—particularly in applied data science for marketing.
+
+What stood out to me about this opportunity at ADP is, first, the Chicago location. I’m based here, so the possibility of a hybrid setup really appealed to me. Second, ADP’s scale and reputation were a major draw. It’s a large, well-established company, and I see that as a strong platform for career growth and long-term learning.
+
+I’m also interested in working in a new domain where I can apply what I’ve learned in marketing science but also expand into broader data science applications. So, overall, the role felt like a natural next step for both professional development and alignment with where I want to grow.
+
+
+
+#### What questions do you have for me? What can I help you understand?
+
+Thanks—yes, I’ve discussed some of this with the recruiter, but I’d love to get your perspective. I understand this is a Lead Data Scientist position and an individual contributor role within a team of around seven data scientists, reporting to you.
+
+I’d like to better understand how the team fits within the larger organization. Specifically:
+
+* How is work prioritized or aligned with business goals?
+
+* Are you structured more like an internal consulting function, or do you work directly with internal business units?
+
+* Do you operate more like an internal product/analytics team, or are there client-facing components?
+
+* Coming from an agency setting, I’m used to supporting external clients directly, often as the only data scientist on the account, working closely with non-technical marketing stakeholders. So, I’d love to get a sense of how cross-functional collaboration looks in your team—especially around communication with business partners or product owners.
+
+
+ 
+**ADP – Data Science Team Overview (Manager’s Response)**
+
+**Business Unit Context:**
+
+* The role sits within ADP’s **Human Resources Outsourcing (HRO)** business unit.
+
+* HRO provides **technology + services**. For example, not just payroll software, but also payroll associates who manage it for clients.
+
+* Two subunits:
+
+  * **Total Source (PEO)** – Full-service HR outsourcing (payroll, benefits, workers’ comp, recruiting, etc.).
+
+  * **Comprehensive Services** – Modular services (e.g., payroll *or* benefits), where clients choose specific functions.
+
+**Team & Role Setup:**
+
+* The data science team supports **internal stakeholders**, not external clients.
+
+* The team focuses on enabling better **decision-making and operations** within the HRO business unit.
+
+* Currently **7 data scientists**; this role would be the **8th**, reporting directly to **Kate Lindsay**.
+
+* Team collaborates with:
+
+  * **Data engineers**
+  
+  * **Business intelligence analysts**
+  
+  * **Product managers** (who lead agile/scrum processes)
+
+**Key Focus Areas & Projects:**
+
+1. **Pricing Optimization:**
+
+   * Models to recommend appropriate annual price increases for clients, based on service usage and churn risk.
+   
+2. **Churn Prediction:**
+
+   * Identifying clients at high risk of leaving, so the team can proactively retain them.
+
+3. **Benefits Participation Forecasting:**
+
+   * Predicting employee enrollment in health plans.
+   
+   * Higher participation is tied to client satisfaction and retention.
+
+4. **Workload Balancing (WorkPod Project):**
+
+   * Monitoring workloads of client service associates to ensure fair and efficient allocation across clients.
+
+**Team Dynamics:**
+
+* Data scientists work **independently** or sometimes in small collaborative groups (e.g., splitting models on a single pricing project).
+
+* Work is embedded within **cross-functional teams**, each oriented around a product or business problem.
+
+ 
+ 
+ She explained that most of their data is internal, coming from ADP's own systems and client interactions. However, for specific areas like workers' compensation insurance, they do integrate some third-party data.
+
+In the case of workers' comp:
+
+* A claim can evolve in unpredictable ways—doctor’s bills, salary replacement, legal involvement, etc.
+
+* To forecast how claims may develop, they partner with external vendors who provide projections based on their expertise and datasets.
+
+* These projections help them manage risk and plan for the potential financial impact of claims.
+
+* So while the majority of their analytics work is based on first-party data, third-party data supplements the modeling in high-stakes or uncertain areas like insurance claims.
+ 
+ 
+#### GenAI at DP
+
+They **haven’t deployed GenAI models to production yet** within her team, but **have explored** its potential in a couple of key areas:
+
+1. **Feature Creation from Unstructured Text**
+
+   * Associates enter free-text notes on client interactions.
+   * They explored using GenAI to **analyze these notes** and infer client sensitivities (e.g., price vs. service-driven concerns).
+
+2. **Enhanced Context for Retention Models**
+
+   * For clients flagged as high churn risk, they experimented with GenAI-generated **summaries to help internal users** understand context and potential next steps.
+
+Additionally:
+
+* **Other teams at ADP are actively focused on GenAI**.
+* Her team sometimes **partners with them** to learn from their innovations and **integrate relevant solutions** where it makes sense.
+
+So, while it’s still **early-stage in their specific unit**, GenAI is a **growing area of interest and experimentation** across the company.
+
+
+
+#### 🧠 Your Observation:
+
+
+This last part of the conversation revealed some important context about one of their internal-facing data science initiatives. Here’s a quick summary and reflection on your question and her response:
+
+
+You asked whether the last project she mentioned—about managing associate workload—was more like *people analytics*, since it involved understanding if employees are getting overwhelmed.
+
+**👍 This was a smart observation**—you noticed a shift in focus from external client analytics to internal workforce insights.
+
+
+##### 👩‍💼 Her Response Summary:
+
+* **It’s not quite people analytics or workforce optimization** in the traditional sense.
+* The goal is to **measure work units consistently** using internal data (e.g., Salesforce cases).
+* Since no two cases are the same, they worked on defining:
+
+  * What counts as a **unit of work**
+  * How much **time/effort** it typically takes
+  * How to **measure and aggregate workload**
+* The ultimate use is **decision support**:
+
+  * For example, helping leadership decide where to allocate new hires to **balance workloads** across teams.
+
+
+##### Why This Matters for You:
+
+If you join their team:
+
+* You’ll work on a diverse range of problems—from **churn modeling** to **workload quantification**.
+
+* You’ll need to **think creatively about data structure and definitions**, especially in operational contexts that don’t have standardized metrics.
+
+* Communication will be key since you're translating unstructured or noisy inputs (like Salesforce activity logs) into actionable insights.
+
+
+### Third Round with two Directors
+
+
+#### what is the project or the deliverable that you're most proud of? 
+
+
+Project You’re Most Proud Of: Propensity + Spend Estimation + Clustering for Targeting Strategy
+
+**S – Situation:**
+
+A retail client was investing heavily in upper-funnel marketing but lacked a way to prioritize media toward consumers most likely to drive net-new revenue. Their goal was not just to increase conversions but to acquire net-new customers who would bring in meaningful future spend.
+
+**T – Task:**
+
+I was tasked with designing a data science pipeline that could:
+
+Identify high-propensity net-new customers,
+
+Estimate their future spend value, and
+
+Segment them into actionable tiers to guide media targeting and budget allocation.
+
+**A – Action:**
+
+- I started by building a propensity model to predict the likelihood of conversion for net-new users only, using features from demographic data, behavioral signals, and geographic location.
+
+- For those with high purchase propensity, I layered on a spend regression model to forecast expected revenue per user.
+
+- Then, I multiplied propensity × expected spend to derive expected value per ID.
+
+- Finally, I applied K-means clustering to group users into value-based segments (e.g., high-expected revenue vs. mid- and low tiers).
+
+- These clusters informed bid strategy, creative investment, and audience prioritization in activation platforms (e.g., heavier bids and premium creative for the top-tier segments).
+
+**R – Result:**
+
+- This segmentation framework helped shift marketing investment toward high-value net-new customers, rather than broadly targeting all high-propensity IDs.
+
+- The client saw a 20–25% lift in ROAS and a measurable increase in net-new customer count during the campaign period.
+
+- The method was adopted as a audience framework for future campaigns, reinforcing the connection between model outputs and strategic execution.
+
+**I'm especially proud of this project because it didn’t just predict who would buy — it helped the client predict who mattered most for net-new revenue growth, and operationalize that insight through smarter media decisions.**
+
+
+
+#### After you’ve built a model that works, how do you keep it working over time?
+
+**Even if you haven’t directly owned full MLOps infrastructure, you can still give a strong answer by framing your experience around monitoring, retraining, and collaborating with engineers—while signaling you're eager to go deeper into formal MLOps.**
+
+
+Even if you haven’t directly owned full MLOps infrastructure, you can still give a strong answer by framing your experience around **monitoring**, **retraining**, and **collaborating with engineers**—while signaling you're eager to go deeper into formal MLOps.
+
+Here’s how to respond **based on your experience** with some smart framing:
+
+**Start with What You’ve Done:**
+
+In my recent roles, I’ve primarily focused on developing and evaluating predictive models that directly inform marketing strategies—for example, lookalike targeting, lift analysis, spend prediction, or customer clustering. While I haven’t owned end-to-end deployment pipelines, I’ve been closely involved in the post-model launch stage, especially in terms of monitoring and evaluating ongoing performance.
+
+Then give a **concrete example**, such as:
+
+For a repeat purchase prediction model, I set up ongoing tracking for feature drift and monitored how model precision/recall changed over time as we acquired new customers or updated creative strategies. We scheduled re-evaluation every X weeks and flagged meaningful changes in input distribution—for instance, a sudden shift in channel mix or category engagement—which might require retraining.
+
+
+**Show You Understand What Maintenance Involves:**
+
+From a maintenance perspective, I’ve learned it’s critical to define success metrics up front—whether it’s conversion lift, revenue, or classification accuracy—and make those metrics part of a regular performance review cadence.
+
+I’ve worked on documenting feature assumptions, saving training data snapshots, and validating that **scoring environments match training logic**—even when model code gets handed off to an engineering team.”
+
+
+
+**Describe Deployment & Collaboration:**
+
+While I haven’t deployed models into production pipelines directly via tools like MLflow or Vertex AI, I’ve collaborated with engineers and product managers to translate models into **production-ready scoring logic**, including writing SQL/Python scripts for batch scoring or API handoff. I’ve also tested outputs and helped debug scoring mismatches after handoff.
+
+**Optional Ending to Show Growth Mindset:**
+
+I’m currently learning more about formal MLOps practices—CI/CD for models, monitoring tools, model registries—because I see how important it is to scale impact and keep models trustworthy in the long run.”
+
+
+**TL;DR Key Talking Points:**
+
+You can build your answer around these themes:
+
+1. **Monitoring** – You’ve tracked model performance post-launch (drift, KPIs).
+2. **Retraining cadence** – You’ve been involved in planning or suggesting when and why to retrain.
+3. **Collaboration** – You've worked with engineers to translate models into production use.
+4. **Documentation & validation** – You understand the importance of reproducibility and matching training vs. scoring logic.
+5. **Learning mindset** – You’re building toward deeper MLOps integration.
+
+
+####  I’m curious about your experience with LLMs. Can you walk through that project—what was the problem, what did you build, and what was the impact?
+
+
+Yes, I started using LLMs about a year ago for a project I’m still maintaining. The core problem was that our demographic profile reports—though rich in data—were difficult to interpret, especially for non-technical stakeholders. These reports include over 45 Excel tabs per audience segment, covering everything from household composition, income, auto ownership, interests, and financial attributes, along with visualizations and comparative metrics.
+
+
+While powerful, the reports were overwhelming to digest, especially when comparing multiple audience segments or benchmarking them against the general U.S. population. So, I built an automated LLM-powered workflow that summarizes the key insights for each segment.
+
+Here's how it works: team members define a segment name in Snowflake, and the automated pipeline pulls all the demographic and behavioral data, runs profiling logic, and generates the full Excel report. Then, the LLM API is used to interpret the summary statistics and generate a concise, one-page natural language insight report. The output is tailored based on the segment's business context—e.g., if it’s an e-commerce or furniture company, the LLM interprets results in a relevant tone.
+
+This solution has been a huge time-saver and adoption booster. Instead of digging through 45 sheets, non-technical users—like business solutions experts and client-facing teams—can quickly grasp how a segment over- or under-indexes across key attributes. It bridges the gap between deep data and clear, actionable insight.
+Ultimately, this tool helps business decision-makers more easily understand their target audiences and make faster, more informed choices about campaign strategies, personalization, or segment prioritization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

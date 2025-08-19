@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Zoro – Data Scientist Interview (2024) | Interview Prep</title>
+  <meta name="description" content="This is a collection of notes from open sources" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Zoro – Data Scientist Interview (2024) | Interview Prep" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a collection of notes from open sources" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Zoro – Data Scientist Interview (2024) | Interview Prep" />
+  
+  <meta name="twitter:description" content="This is a collection of notes from open sources" />
+  
+
+<meta name="author" content="DEA" />
+
+
+<meta name="date" content="2025-08-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="potential-questions.html"/>
+<link rel="next" href="adp.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Behavioral Interview Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="project-summaries.html"><a href="project-summaries.html"><i class="fa fa-check"></i><b>1</b> Project summaries</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="project-summaries.html"><a href="project-summaries.html#academic-projects-at-ipsr"><i class="fa fa-check"></i><b>1.1</b> Academic projects at IPSR</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="project-summaries.html"><a href="project-summaries.html#tanf-project"><i class="fa fa-check"></i><b>1.1.1</b> TANF Project:</a></li>
+<li class="chapter" data-level="1.1.2" data-path="project-summaries.html"><a href="project-summaries.html#innovation-capacity-project"><i class="fa fa-check"></i><b>1.1.2</b> Innovation Capacity project:</a></li>
+<li class="chapter" data-level="1.1.3" data-path="project-summaries.html"><a href="project-summaries.html#medicaid-expansion"><i class="fa fa-check"></i><b>1.1.3</b> Medicaid expansion:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="phone-screening-call.html"><a href="phone-screening-call.html"><i class="fa fa-check"></i><b>2</b> Phone Screening Call</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="phone-screening-call.html"><a href="phone-screening-call.html#about-ds"><i class="fa fa-check"></i><b>2.1</b> About DS</a></li>
+<li class="chapter" data-level="2.2" data-path="phone-screening-call.html"><a href="phone-screening-call.html#tell-me-about-yourself"><i class="fa fa-check"></i><b>2.2</b> Tell me about yourself</a></li>
+<li class="chapter" data-level="2.3" data-path="phone-screening-call.html"><a href="phone-screening-call.html#relocation"><i class="fa fa-check"></i><b>2.3</b> Relocation:</a></li>
+<li class="chapter" data-level="2.4" data-path="phone-screening-call.html"><a href="phone-screening-call.html#timeline-to-start"><i class="fa fa-check"></i><b>2.4</b> Timeline to start:</a></li>
+<li class="chapter" data-level="2.5" data-path="phone-screening-call.html"><a href="phone-screening-call.html#salary"><i class="fa fa-check"></i><b>2.5</b> Salary:</a></li>
+<li class="chapter" data-level="2.6" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-now-you-seem-to-be-doing-great-in-your-current-position."><i class="fa fa-check"></i><b>2.6</b> Why now? you seem to be doing great in your current position.</a></li>
+<li class="chapter" data-level="2.7" data-path="phone-screening-call.html"><a href="phone-screening-call.html#how-does-this-challenge-look-like"><i class="fa fa-check"></i><b>2.7</b> How does this challenge look like</a></li>
+<li class="chapter" data-level="2.8" data-path="phone-screening-call.html"><a href="phone-screening-call.html#what-are-you-looking-for-specifaclly"><i class="fa fa-check"></i><b>2.8</b> What are you looking for specifaclly?</a></li>
+<li class="chapter" data-level="2.9" data-path="phone-screening-call.html"><a href="phone-screening-call.html#what-do-you-want-to-do-tactically"><i class="fa fa-check"></i><b>2.9</b> what do you want to do tactically?</a></li>
+<li class="chapter" data-level="2.10" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-are-you-leaving-your-current-role"><i class="fa fa-check"></i><b>2.10</b> Why are you leaving your current role?</a></li>
+<li class="chapter" data-level="2.11" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-do-you-want-to-work-here"><i class="fa fa-check"></i><b>2.11</b> Why do you want to work here?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="behavioral-questions.html"><a href="behavioral-questions.html"><i class="fa fa-check"></i><b>3</b> Behavioral Questions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-are-your-strengths"><i class="fa fa-check"></i><b>3.1</b> What are your strengths?</a></li>
+<li class="chapter" data-level="3.2" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-are-your-weakness"><i class="fa fa-check"></i><b>3.2</b> What are your weakness?</a></li>
+<li class="chapter" data-level="3.3" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-switched-from-academia-to-industry"><i class="fa fa-check"></i><b>3.3</b> Why switched from Academia to Industry</a></li>
+<li class="chapter" data-level="3.4" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-should-we-hire-you"><i class="fa fa-check"></i><b>3.4</b> Why should we hire you?</a></li>
+<li class="chapter" data-level="3.5" data-path="behavioral-questions.html"><a href="behavioral-questions.html#how-do-you-handle-pressure"><i class="fa fa-check"></i><b>3.5</b> How do you handle pressure?</a></li>
+<li class="chapter" data-level="3.6" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-are-you-applying-for-this-position"><i class="fa fa-check"></i><b>3.6</b> Why are you applying for this position:</a></li>
+<li class="chapter" data-level="3.7" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-skills-are-you-bringing"><i class="fa fa-check"></i><b>3.7</b> What skills are you bringing</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="work-related.html"><a href="work-related.html"><i class="fa fa-check"></i><b>4</b> Work Related</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="work-related.html"><a href="work-related.html#tell-me-about-a-time-when-you-devised-a-simple-solution-to-a-complex-problem."><i class="fa fa-check"></i><b>4.1</b> Tell me about a time when you devised a simple solution to a complex problem.</a></li>
+<li class="chapter" data-level="4.2" data-path="work-related.html"><a href="work-related.html#how-do-you-resolve-conflicts-with-colleagues"><i class="fa fa-check"></i><b>4.2</b> How do you resolve conflicts with colleagues?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="most-proud-project-influencing-adoption-of-balancing-weights.html"><a href="most-proud-project-influencing-adoption-of-balancing-weights.html"><i class="fa fa-check"></i><b>5</b> Most Proud Project – Influencing Adoption of Balancing Weights</a></li>
+<li class="chapter" data-level="6" data-path="amazon-positions.html"><a href="amazon-positions.html"><i class="fa fa-check"></i><b>6</b> Amazon Positions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="amazon-positions.html"><a href="amazon-positions.html#economics-at-amazon"><i class="fa fa-check"></i><b>6.1</b> Economics at Amazon</a></li>
+<li class="chapter" data-level="6.2" data-path="amazon-positions.html"><a href="amazon-positions.html#amazon-leadership-principles"><i class="fa fa-check"></i><b>6.2</b> Amazon Leadership Principles</a></li>
+<li class="chapter" data-level="6.3" data-path="amazon-positions.html"><a href="amazon-positions.html#email-from-amazon"><i class="fa fa-check"></i><b>6.3</b> Email from Amazon</a></li>
+<li class="chapter" data-level="6.4" data-path="amazon-positions.html"><a href="amazon-positions.html#star-format"><i class="fa fa-check"></i><b>6.4</b> STAR format</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html"><i class="fa fa-check"></i><b>7</b> Amazon Prep Stories</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#sample-questions"><i class="fa fa-check"></i><b>7.1</b> Sample Questions</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust"><i class="fa fa-check"></i><b>7.1.1</b> <strong>Earn Trust</strong></a></li>
+<li class="chapter" data-level="7.1.2" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership"><i class="fa fa-check"></i><b>7.1.2</b> <strong>Ownership</strong></a></li>
+<li class="chapter" data-level="7.1.3" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results"><i class="fa fa-check"></i><b>7.1.3</b> <strong>Deliver Results</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust---tell-me-about-a-time-you-failed-and-how-you-handled-it."><i class="fa fa-check"></i><b>7.2</b> Earn Trust - Tell me about a time you failed and how you handled it.</a></li>
+<li class="chapter" data-level="7.3" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust---describe-a-time-you-influenced-a-group-despite-resistance."><i class="fa fa-check"></i><b>7.3</b> Earn Trust - Describe a time you influenced a group despite resistance.</a></li>
+<li class="chapter" data-level="7.4" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership-mastercard-report-redesign"><i class="fa fa-check"></i><b>7.4</b> Ownership – Mastercard Report Redesign</a></li>
+<li class="chapter" data-level="7.5" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership---describe-a-time-you-took-the-lead-on-a-project"><i class="fa fa-check"></i><b>7.5</b> Ownership - Describe a time you took the lead on a project</a></li>
+<li class="chapter" data-level="7.6" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results-blu-vs.-non-blu-analysis"><i class="fa fa-check"></i><b>7.6</b> Deliver Results – Blu vs. Non-Blu Analysis</a></li>
+<li class="chapter" data-level="7.7" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results---how-have-you-leveraged-data-to-develop-a-strategy"><i class="fa fa-check"></i><b>7.7</b> Deliver results - How have you leveraged data to develop a strategy?</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="general-tips-for-big-companies.html"><a href="general-tips-for-big-companies.html"><i class="fa fa-check"></i><b>8</b> General Tips for Big Companies</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="general-tips-for-big-companies.html"><a href="general-tips-for-big-companies.html#walmart"><i class="fa fa-check"></i><b>8.1</b> Walmart</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="potential-questions.html"><a href="potential-questions.html"><i class="fa fa-check"></i><b>9</b> Potential Questions</a></li>
+<li class="chapter" data-level="10" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html"><i class="fa fa-check"></i><b>10</b> Zoro – Data Scientist Interview (2024)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#feedback-from-interview"><i class="fa fa-check"></i><b>10.1</b> Feedback from Interview</a></li>
+<li class="chapter" data-level="10.2" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#behavioral-questions-asked"><i class="fa fa-check"></i><b>10.2</b> Behavioral Questions Asked</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#walk-me-through-your-resume-focusing-on-data-science."><i class="fa fa-check"></i><b>10.2.1</b> Walk me through your resume, focusing on data science.</a></li>
+<li class="chapter" data-level="10.2.2" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#model-related-questions"><i class="fa fa-check"></i><b>10.2.2</b> Model Related Questions:</a></li>
+<li class="chapter" data-level="10.2.3" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#how-do-you-overcome-overfitting-1"><i class="fa fa-check"></i><b>10.2.3</b> <strong>How do you overcome overfitting?</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="adp.html"><a href="adp.html"><i class="fa fa-check"></i><b>11</b> ADP</a>
+<ul>
+<li class="chapter" data-level="11.0.1" data-path="adp.html"><a href="adp.html#first-round"><i class="fa fa-check"></i><b>11.0.1</b> First Round</a></li>
+<li class="chapter" data-level="11.0.2" data-path="adp.html"><a href="adp.html#third-round-with-two-directors"><i class="fa fa-check"></i><b>11.0.2</b> Third Round with two Directors</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html"><i class="fa fa-check"></i><b>12</b> LiveRamp - Sr. Data Scientist</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html#first-round-with-hiring-manager"><i class="fa fa-check"></i><b>12.0.1</b> First Round with Hiring Manager</a></li>
+<li class="chapter" data-level="12.0.2" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html#second-round"><i class="fa fa-check"></i><b>12.0.2</b> Second Round</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="experiences.html"><a href="experiences.html"><i class="fa fa-check"></i><b>13</b> Experiences</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="experiences.html"><a href="experiences.html#amazon-sr.economist"><i class="fa fa-check"></i><b>13.1</b> Amazon Sr.Economist</a></li>
+<li class="chapter" data-level="13.2" data-path="experiences.html"><a href="experiences.html#amazon-economist-ii"><i class="fa fa-check"></i><b>13.2</b> Amazon Economist II</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="experiences.html"><a href="experiences.html#phone-screening"><i class="fa fa-check"></i><b>13.2.1</b> Phone Screening</a></li>
+<li class="chapter" data-level="13.2.2" data-path="experiences.html"><a href="experiences.html#leadership-principle-portion"><i class="fa fa-check"></i><b>13.2.2</b> Leadership Principle Portion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="mockup.html"><a href="mockup.html"><i class="fa fa-check"></i><b>14</b> mockup</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="mockup.html"><a href="mockup.html#walk-us-through-how-you-approached-churn-modeling-for-a-client."><i class="fa fa-check"></i><b>14.1</b> Walk us through how you approached churn modeling for a client.</a></li>
+<li class="chapter" data-level="14.2" data-path="mockup.html"><a href="mockup.html#how-do-you-select-features-when-you-have-400-binary-variables"><i class="fa fa-check"></i><b>14.2</b> How do you select features when you have 400+ binary variables?</a></li>
+<li class="chapter" data-level="14.3" data-path="mockup.html"><a href="mockup.html#have-you-dealt-with-a-stakeholder-who-didnt-trust-your-model-output-what-did-you-do"><i class="fa fa-check"></i><b>14.3</b> Have you dealt with a stakeholder who didn’t trust your model output? What did you do?</a></li>
+<li class="chapter" data-level="14.4" data-path="mockup.html"><a href="mockup.html#imagine-a-model-is-highly-accurate-but-business-stakeholders-dont-understand-it-how-do-you-bridge-that-gap"><i class="fa fa-check"></i><b>14.4</b> Imagine a model is highly accurate but business stakeholders don’t understand it — how do you bridge that gap?</a></li>
+<li class="chapter" data-level="14.5" data-path="mockup.html"><a href="mockup.html#how-would-you-design-a-project-to-measure-the-lift-of-a-pricing-model-across-different-client-segments"><i class="fa fa-check"></i><b>14.5</b> How would you design a project to measure the lift of a pricing model across different client segments?”**</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="root.html"><a href="root.html"><i class="fa fa-check"></i><b>15</b> Root.com</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="root.html"><a href="root.html#question"><i class="fa fa-check"></i><b>15.0.1</b> Question:</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="liveramp-finals.html"><a href="liveramp-finals.html"><i class="fa fa-check"></i><b>16</b> liveramp Finals</a></li>
+<li class="divider"></li>
+<li><a href="https://davutemrah.github.io" target="blank">Back to Home Page</li>
+<li><a href="https://davutemrah.github.io/notebooks/" target="blank">Back to Collections</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interview Prep</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="zoro-data-scientist-interview-2024" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Zoro – Data Scientist Interview (2024)<a href="zoro-data-scientist-interview-2024.html#zoro-data-scientist-interview-2024" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Company Note:</strong>
+Zoro.com operates under Grainger, a major B2B distributor.</p>
+<div id="feedback-from-interview" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Feedback from Interview<a href="zoro-data-scientist-interview-2024.html#feedback-from-interview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>I unintentionally interrupted the interviewer while she was asking a question.</p></li>
+<li><p>I tend to over-explain. Some of my answers included unnecessary details.</p></li>
+<li><p>Instead of giving concise responses, I gave long-winded answers, which may have distracted from the core message.</p></li>
+</ul>
+<p><strong>Takeaway for Next Interviews:</strong></p>
+<ul>
+<li><p>Practice <strong>active listening</strong> — let the interviewer finish the full question before responding.</p></li>
+<li><p>Aim for <strong>concise, targeted responses</strong> first. Add context only if prompted.</p></li>
+<li><p>Use a structured approach (like STAR) to stay on point and avoid rambling.</p></li>
+</ul>
+</div>
+<div id="behavioral-questions-asked" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Behavioral Questions Asked<a href="zoro-data-scientist-interview-2024.html#behavioral-questions-asked" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="walk-me-through-your-resume-focusing-on-data-science." class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Walk me through your resume, focusing on data science.<a href="zoro-data-scientist-interview-2024.html#walk-me-through-your-resume-focusing-on-data-science." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Tip: Highlight key milestones — Ph.D. with quantitative methods, experience with predictive modeling in marketing and operations, Databricks and Snowflake, audience segmentation, A/B testing.</em></p>
+<p>Sure. I have a Ph.D. in Economics, where I focused on data analysis and decision-making. After that, I worked as a postdoc, doing research that involved statistics and modeling.</p>
+<p>Now I’m a data scientist in marketing. I mostly work on measuring campaign performance, building audience segments, and running models to predict customer behavior — like who is likely to convert or come back. I work with large datasets using Python, Spark, and Snowflake.</p>
+<p>I’ve also worked in emergency and risk planning before, where I helped with data analysis for national security and disaster response. That gave me experience working under pressure and with teams from different areas.</p>
+<div id="explain-your-role-as-associate-director." class="section level4 hasAnchor" number="10.2.1.1">
+<h4><span class="header-section-number">10.2.1.1</span> Explain your role as Associate Director.<a href="zoro-data-scientist-interview-2024.html#explain-your-role-as-associate-director." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>As an Associate Director, my main focus is still hands-on data work. I build models, analyze campaigns, and help improve targeting strategies. I support the strategy team by giving them clear insights and data-driven recommendations.</p>
+<p>I also help set up workflows and make sure data is clean and ready for analysis. I sometimes mentor junior team members, but I don’t manage people directly.</p>
+</div>
+<div id="do-you-prefer-r-or-python" class="section level4 hasAnchor" number="10.2.1.2">
+<h4><span class="header-section-number">10.2.1.2</span> Do you prefer R or Python?<a href="zoro-data-scientist-interview-2024.html#do-you-prefer-r-or-python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>I prefer Python. I use it for almost all of my work — data processing, modeling, visualization, and automation. I know R too, and I used it more in academic work, but now I mostly use Python with libraries like pandas, scikit-learn, and XGBoost.</p>
+</div>
+<div id="what-is-your-primary-domain-marketing-or-something-else" class="section level4 hasAnchor" number="10.2.1.3">
+<h4><span class="header-section-number">10.2.1.3</span> What is your primary domain? Marketing or something else?<a href="zoro-data-scientist-interview-2024.html#what-is-your-primary-domain-marketing-or-something-else" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Marketing is my main area, especially digital advertising and retail analytics. I’ve worked on projects that involve measuring the impact of campaigns, customer segmentation, and building predictive models for conversions.</p>
+<p>But I also have experience with risk modeling and operations from my earlier work in defense and disaster planning, so I’m comfortable working in other domains too.</p>
+</div>
+<div id="is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what" class="section level4 hasAnchor" number="10.2.1.4">
+<h4><span class="header-section-number">10.2.1.4</span> Is this work culture fast-paced? Do you deliver value quickly or what?<a href="zoro-data-scientist-interview-2024.html#is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, the environment I work in is definitely fast-paced. Especially in marketing analytics, we often have tight timelines and need to deliver insights quickly — sometimes within a few days.</p>
+<p>To handle that, I focus on building repeatable workflows and reusable code, so I can move fast without losing accuracy. I try to deliver value early, even if it’s in smaller pieces, and then build on it as more data becomes available or the analysis matures.</p>
+<p><strong>Pushback: “How do you balance speed with accuracy and quality?”</strong></p>
+<p><strong>Response:</strong></p>
+<p>I prioritize building automated workflows and validation checks so the process stays reliable even when moving quickly. I also communicate early about trade-offs — for example, delivering a quick initial insight versus a deeper, fully validated analysis later. That way, stakeholders know what to expect and can make decisions accordingly.</p>
+</div>
+<div id="are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adopt-the-models-or-analysis-you-do" class="section level4 hasAnchor" number="10.2.1.5">
+<h4><span class="header-section-number">10.2.1.5</span> Are you involved in any efforts convincing business stakeholders to adopt the models or analysis you do?<a href="zoro-data-scientist-interview-2024.html#are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adopt-the-models-or-analysis-you-do" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I often support those conversations. While I don’t lead client communication directly, I work closely with account leads and strategists to make sure the analysis is clear and actionable. I explain what the model does, why it matters, and how it connects to business goals.</p>
+<p>Sometimes that means simplifying the story — avoiding technical terms and focusing more on business impact. I also create visuals or summaries that help them understand the “so what.”</p>
+<p><strong>Pushback: “What if a business stakeholder doesn’t trust the model or analysis?”</strong></p>
+<p><strong>Response:</strong></p>
+<p>I focus on transparency and clear communication. I break down the model results into simple terms and highlight the business impact, not just technical details. I’m also open to feedback and ready to adapt the analysis if needed. Sometimes, running a pilot or small test can build trust before a full rollout.</p>
+</div>
+<div id="have-you-been-in-a-situation-where-you-felt-like-a-model-was-the-right-way-to-go-but-had-to-convince-a-client-or-manager" class="section level4 hasAnchor" number="10.2.1.6">
+<h4><span class="header-section-number">10.2.1.6</span> Have you been in a situation where you felt like a model was the right way to go, but had to convince a client or manager?**<a href="zoro-data-scientist-interview-2024.html#have-you-been-in-a-situation-where-you-felt-like-a-model-was-the-right-way-to-go-but-had-to-convince-a-client-or-manager" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, more than once. One example was when we built a model to predict repeat customers for a furniture brand. I believed the model was strong, but there was hesitation from the strategy team about whether it was too complex or risky to apply.</p>
+<p>To build trust, I ran a few test cases, shared SHAP values to explain key drivers, and compared model predictions to actual results. That helped them see it wasn’t a “black box” — and that it could actually improve targeting decisions.</p>
+<p>Eventually, we rolled it out in a controlled way, and it became part of how we shaped future campaigns.</p>
+<p><strong>Pushback: “What if the client or manager still resists after your explanation?”</strong></p>
+<p><strong>Response:</strong></p>
+<p>In that case, I listen carefully to their concerns to understand what’s blocking them — whether it’s technical, business risk, or something else. Then I try to address those specific concerns, maybe by providing more evidence, simplifying the approach, or proposing a compromise solution. If resistance remains, I stay collaborative and patient, recognizing that change can take time.</p>
+</div>
+</div>
+<div id="model-related-questions" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Model Related Questions:<a href="zoro-data-scientist-interview-2024.html#model-related-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="discuss-a-model-you-did-before-walk-me-thru-the-steps-how-i-built-the-model-how-i-evaluated-the-model.-i-try-to-explain-a-look-alike-model" class="section level4 hasAnchor" number="10.2.2.1">
+<h4><span class="header-section-number">10.2.2.1</span> Discuss a model you did before? Walk me thru the steps, how I built the model, how I evaluated the model. I try to explain a look alike model<a href="zoro-data-scientist-interview-2024.html#discuss-a-model-you-did-before-walk-me-thru-the-steps-how-i-built-the-model-how-i-evaluated-the-model.-i-try-to-explain-a-look-alike-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Look-Alike Model — STAR Format Answer</strong></p>
+<p><strong>Situation:</strong></p>
+<p>I was working with a retail client who wanted to grow their customer base by finding new prospects similar to their best existing customers. The challenge was to identify these “look-alike” prospects using available data.</p>
+<p><strong>Task:</strong></p>
+<p>My task was to build a predictive model that could distinguish high-value customers from the general population and then use that model to find new potential customers to target.</p>
+<p><strong>Action:</strong></p>
+<ul>
+<li><p>I gathered multiple data sources, including purchase history, demographic info</p></li>
+<li><p>I created meaningful features, such as life stage indicators, closeness to stores</p></li>
+<li><p>I labeled the best customers as positives and the rest – non buyers, or sample from population – as negatives to create a classification dataset.</p></li>
+<li><p>I trained a gradient boosting model (XGBoost) to learn the patterns that separate high-value customers from others.</p></li>
+<li><p>To evaluate, I used AUC-ROC and precision-recall metrics, ensuring the model performed well in identifying true positives without too many false alarms.</p></li>
+<li><p>I also applied SHAP values to explain the model’s predictions, helping the client understand what drives customer similarity.</p></li>
+<li><p>Finally, I scored a new audience with the model and worked with the marketing team to apply these look-alike segments in campaigns.</p></li>
+</ul>
+<p><strong>Result:</strong></p>
+<p>The model helped improve targeting efficiency, leading to higher conversion rates in campaigns. The client appreciated the transparent explanations from SHAP analysis, which increased their trust in the model. This project became a key part of their marketing strategy for prospecting.</p>
+</div>
+<div id="can-you-elaborate-what-is-lookalike-model-and-objective-of-the-model-what-you-are-trying-to-predict" class="section level4 hasAnchor" number="10.2.2.2">
+<h4><span class="header-section-number">10.2.2.2</span> Can you elaborate what is lookalike model and objective of the model, what you are trying to predict?<a href="zoro-data-scientist-interview-2024.html#can-you-elaborate-what-is-lookalike-model-and-objective-of-the-model-what-you-are-trying-to-predict" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>What is a Look-Alike Model?</strong></p>
+<p>A <strong>look-alike model</strong> is a type of <strong>classification model</strong> used to find new people who are similar to a group of known, high-value users — for example, loyal customers, repeat buyers, or people who completed a conversion.</p>
+<p><strong>Objective of the Model</strong></p>
+<p>The goal is to help marketing teams <strong>expand their audience</strong> by targeting new users who “look like” their best customers — based on behavior, demographics, or other data signals.</p>
+<p>In other words, we want to <strong>predict which non-customers are most likely to become valuable customers</strong>, based on patterns we’ve learned from existing ones.</p>
+<p><strong>What the Model is Predicting</strong></p>
+<p>The model is trained to <strong>predict a binary outcome</strong>:</p>
+<ul>
+<li><strong>1 = high-value customer</strong> (like someone who purchased recently or frequently)</li>
+<li><strong>0 = general population or lower-value customer</strong></li>
+</ul>
+<p>Once trained, the model gives a <strong>score or probability</strong> for each person in a larger population — showing how likely they are to resemble a top customer. These high scorers become the “look-alike audience” for targeting.</p>
+</div>
+<div id="how-do-you-overcome-overfitting" class="section level4 hasAnchor" number="10.2.2.3">
+<h4><span class="header-section-number">10.2.2.3</span> How do you overcome overfitting?<a href="zoro-data-scientist-interview-2024.html#how-do-you-overcome-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Great question! Here’s a simple, structured answer you can use in an interview to explain <strong>how you handle overfitting</strong>, tailored to the kind of modeling work you do:</p>
+<hr />
+</div>
+</div>
+<div id="how-do-you-overcome-overfitting-1" class="section level3 hasAnchor" number="10.2.3">
+<h3><span class="header-section-number">10.2.3</span> <strong>How do you overcome overfitting?</strong><a href="zoro-data-scientist-interview-2024.html#how-do-you-overcome-overfitting-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Overfitting happens when a model performs well on training data but poorly on new or unseen data. I use a few key strategies to prevent it:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Train-Test Split / Cross-Validation</strong>
+I always split my data into training and test sets, and often use <strong>cross-validation</strong> to make sure the model performs consistently across different folds.</p></li>
+<li><p><strong>Feature Selection / Regularization</strong>
+I reduce noisy or irrelevant features, especially when working with high-dimensional data like 400 binary features. I also use <strong>regularization techniques</strong> (like L1/L2 or tree-specific ones like <code>max_depth</code> and <code>min_child_weight</code> in XGBoost) to penalize overly complex models.</p></li>
+<li><p><strong>Simplifying the Model</strong>
+I avoid overly deep trees or too many estimators in ensemble models. Sometimes a simpler model, like logistic regression, can generalize better than a complex one.</p></li>
+<li><p><strong>Early Stopping</strong>
+In models like XGBoost, I use <strong>early stopping</strong> based on validation performance to avoid training too long and fitting to noise.</p></li>
+<li><p><strong>Monitor Test Performance</strong>
+I always compare training and test set metrics — if the training accuracy is much higher, that’s a red flag. I may tune hyperparameters or simplify the model based on that.</p></li>
+</ol>
+<div id="how-do-you-detect-overfitting" class="section level4 hasAnchor" number="10.2.3.1">
+<h4><span class="header-section-number">10.2.3.1</span> How do you detect overfitting?<a href="zoro-data-scientist-interview-2024.html#how-do-you-detect-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="short-answer-interview-ready" class="section level5 hasAnchor" number="10.2.3.1.1">
+<h5><span class="header-section-number">10.2.3.1.1</span> <strong>Short Answer (Interview-Ready)</strong><a href="zoro-data-scientist-interview-2024.html#short-answer-interview-ready" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>I detect overfitting by comparing performance between the training set and the validation or test set. If the model performs much better on training data than on unseen data — like high accuracy or AUC in training but much lower on test — that’s a clear sign of overfitting.</p>
+</div>
+<div id="expanded-answer-if-you-want-to-add-a-bit-more" class="section level5 hasAnchor" number="10.2.3.1.2">
+<h5><span class="header-section-number">10.2.3.1.2</span> <strong>Expanded Answer (If You Want to Add a Bit More)</strong><a href="zoro-data-scientist-interview-2024.html#expanded-answer-if-you-want-to-add-a-bit-more" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>To detect overfitting, I:</p>
+<ul>
+<li><p><strong>Split the data</strong> into training and validation/test sets.</p></li>
+<li><p><strong>Compare model metrics</strong> — like accuracy, AUC, precision-recall — across both sets.</p></li>
+<li><p>If I see a <strong>large gap</strong>, like 95% accuracy on training and only 75% on test, it likely means the model is too complex and is fitting noise in the training data.</p></li>
+<li><p>I may also use <strong>learning curves</strong> to visually inspect training vs. validation loss over time.</p></li>
+</ul>
+</div>
+</div>
+<div id="what-do-you-do-when-you-detect-overfitting-thats-a-likely-follow-up" class="section level4 hasAnchor" number="10.2.3.2">
+<h4><span class="header-section-number">10.2.3.2</span> What do you do when you detect overfitting?”* (that’s a likely follow-up)?<a href="zoro-data-scientist-interview-2024.html#what-do-you-do-when-you-detect-overfitting-thats-a-likely-follow-up" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When I detect overfitting, I take steps to simplify the model and improve generalization:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Simplify the Model:</strong>
+I reduce complexity — like lowering the depth of decision trees or reducing the number of features, especially in high-dimensional data.</p></li>
+<li><p><strong>Use Regularization:</strong>
+I apply techniques like L1 or L2 regularization, or tune parameters like <code>max_depth</code>, <code>min_child_weight</code>, or <code>subsample</code> in XGBoost to control complexity.</p></li>
+<li><p><strong>Add Early Stopping:</strong>
+I monitor validation loss and stop training when performance starts to drop, to prevent the model from learning noise.</p></li>
+<li><p><strong>Cross-Validation:</strong>
+I use k-fold cross-validation to make sure the model performs well across different subsets of the data.</p></li>
+<li><p><strong>More Data or Feature Engineering:</strong>
+If possible, I add more training data or improve feature quality, which helps the model learn more general patterns instead of memorizing.</p></li>
+</ol>
+<p>Awesome! Let’s walk through a real example from your past work — we’ll use your <strong>look-alike model</strong> since it’s relevant, and frame it around how you detected and fixed overfitting.</p>
+</div>
+<div id="live-example-detecting-fixing-overfitting-in-a-look-alike-model" class="section level4 hasAnchor" number="10.2.3.3">
+<h4><span class="header-section-number">10.2.3.3</span> Live Example: Detecting &amp; Fixing Overfitting in a Look-Alike Model<a href="zoro-data-scientist-interview-2024.html#live-example-detecting-fixing-overfitting-in-a-look-alike-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Context:</strong></p>
+<p>I built a look-alike model to identify new prospects who resembled high-value customers for a retail furniture client. The model used hundreds of features — including web behavior, purchase categories, and demographics — and I trained it using XGBoost.</p>
+<p><strong>How I Detected Overfitting</strong></p>
+<p>During evaluation, I noticed the <strong>training AUC was very high (around 0.95)</strong>, but the <strong>test AUC dropped to around 0.78</strong>. That gap suggested the model was overfitting — learning patterns specific to the training set instead of generalizable signals.</p>
+<p>I also plotted <strong>learning curves</strong>, which showed the training loss continuing to drop while the validation loss flattened — another red flag.</p>
+<p><strong>What I Did to Fix It</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Regularization:</strong>
+I added more regularization to the model by adjusting <code>lambda</code>, <code>alpha</code>, and <code>min_child_weight</code> in XGBoost to reduce model complexity.</p></li>
+<li><p><strong>Feature Pruning:</strong>
+I had over 400 binary features from categorical sources. I used feature importance and SHAP values to remove low-signal features, which helped reduce noise.</p></li>
+<li><p><strong>Cross-Validation:</strong>
+I switched to <strong>5-fold cross-validation</strong> to get a more stable estimate of performance and avoid accidental bias from one random train-test split.</p></li>
+<li><p><strong>Early Stopping:</strong>
+I enabled early stopping based on validation AUC, so training would stop once performance plateaued.</p></li>
+</ol>
+<p><strong>Result</strong></p>
+<p>After tuning, the model achieved a <strong>balanced AUC of around 0.84</strong> on both train and test sets — much better generalization. The final model was used to score and activate new audience segments in media campaigns, and the client saw improved conversion rates from those segments.</p>
+</div>
+<div id="any-data-stratification-technique-that-you-can-use-to-overcome-overfitting" class="section level4 hasAnchor" number="10.2.3.4">
+<h4><span class="header-section-number">10.2.3.4</span> Any data stratification technique that you can use to overcome overfitting?<a href="zoro-data-scientist-interview-2024.html#any-data-stratification-technique-that-you-can-use-to-overcome-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes — stratified sampling is a helpful technique, especially when the target classes are imbalanced.</p>
+<p>Instead of randomly splitting the data, I use stratified train-test splits or stratified cross-validation, which ensures that the proportion of classes (like 1s and 0s) stays consistent across training and test sets. This helps the model learn more balanced patterns and prevents overfitting to the dominant class.</p>
+<p>For example, in a look-alike model where positive examples (high-value customers) are rare, stratification helps make sure both the train and validation sets have similar class distribution — which leads to more reliable evaluation and less risk of the model overfitting to the majority class.</p>
+<pre><code>StratifiedKFold or 
+
+train_test_split(..., stratify=y) in scikit-learn</code></pre>
+</div>
+<div id="any-other-ways-to-simplify-a-model-to-reduce-overfitting" class="section level4 hasAnchor" number="10.2.3.5">
+<h4><span class="header-section-number">10.2.3.5</span> Any other ways to simplify a model (to reduce overfitting)?<a href="zoro-data-scientist-interview-2024.html#any-other-ways-to-simplify-a-model-to-reduce-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Use a Simpler Algorithm:</strong>
+If the problem doesn’t require complex modeling, I may use <strong>logistic regression</strong> or <strong>decision trees</strong> instead of XGBoost or random forests. Simpler models are easier to interpret and less prone to overfitting.</p></li>
+<li><p><strong>Limit Feature Interactions:</strong>
+In tree-based models, I can limit <strong><code>max_depth</code></strong> or <strong>number of leaves</strong>, so the model doesn’t learn very specific combinations that might not generalize.</p></li>
+<li><p><strong>Reduce Feature Count:</strong>
+I remove <strong>highly correlated</strong> or <strong>low-variance features</strong>, or use dimensionality reduction (like PCA) when it makes sense. This reduces noise and helps the model focus on the strongest signals.</p></li>
+<li><p><strong>Bin Continuous Variables:</strong>
+For some models, turning numeric variables into <strong>bins or categories</strong> (like income ranges or age groups) can help reduce sensitivity to outliers and improve generalization.</p></li>
+<li><p><strong>Ensemble Simpler Models:</strong>
+Sometimes, I combine a few <strong>weaker learners</strong> (like shallow trees) rather than fitting a very complex single model. This is the idea behind boosting and bagging — but I still control the complexity of base learners.</p></li>
+</ol>
+</div>
+<div id="are-you-using-cross-validation-method" class="section level4 hasAnchor" number="10.2.3.6">
+<h4><span class="header-section-number">10.2.3.6</span> Are you using cross validation method?<a href="zoro-data-scientist-interview-2024.html#are-you-using-cross-validation-method" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I often use cross-validation to get a more reliable estimate of model performance — especially when I’m tuning hyperparameters or working with limited data.</p>
+<p>The most common method I use is k-fold cross-validation, usually with 5 folds. It helps me make sure the model performs consistently across different subsets of the data and reduces the chance of overfitting to a single train-test split.</p>
+<p>When I have <strong>imbalanced classes</strong>, I use stratified k-fold, so each fold keeps the class distribution balanced — this is especially important in classification tasks like look-alike modeling.</p>
+</div>
+<div id="what-are-you-looking-for-when-you-compare-multiple-classification-models" class="section level4 hasAnchor" number="10.2.3.7">
+<h4><span class="header-section-number">10.2.3.7</span> What are you looking for when you compare multiple classification models?<a href="zoro-data-scientist-interview-2024.html#what-are-you-looking-for-when-you-compare-multiple-classification-models" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>In short:</strong></p>
+<p>I compare models based on performance metrics, generalization, interpretability, and how well they support business goals.</p>
+<p><strong>Long version</strong></p>
+<p>When I compare classification models, I look at a mix of <strong>performance metrics, interpretability, and stability</strong>:</p>
+<p><strong>1. Model Performance</strong></p>
+<ul>
+<li><p>I start with <strong>AUC-ROC</strong>, <strong>precision</strong>, <strong>recall</strong>, and <strong>F1-score</strong>, depending on the problem.</p></li>
+<li><p>For imbalanced data, I pay close attention to <strong>precision-recall curves</strong> and <strong>false positive/negative rates</strong>.</p></li>
+</ul>
+<p><strong>2. Generalization Ability</strong></p>
+<ul>
+<li><p>I compare <strong>train vs. validation/test performance</strong> to check for overfitting.</p></li>
+<li><p>Cross-validation results help me see if a model is stable across different data splits.</p></li>
+</ul>
+<p><strong>3. Interpretability</strong></p>
+<ul>
+<li><p>I consider how easy it is to <strong>explain the model to business stakeholders</strong>.</p></li>
+<li><p>If the client needs transparency, I may prefer logistic regression or decision trees over black-box models.</p></li>
+</ul>
+<p>Some clients or teams want to understand how the model makes decisions — especially in regulated industries or for high-stakes use cases.</p>
+<p>In those situations, I prefer interpretable models like:</p>
+<p><strong>Logistic Regression:</strong></p>
+<p>Easy to explain — each feature has a coefficient that shows how it increases or decreases the probability of the outcome. This is great for understanding the effect of individual variables.</p>
+<p><strong>Decision Trees:</strong></p>
+<p>They show clear rules like “if age &gt; 30 and income &gt; 50K → likely to convert.” Clients can easily follow the logic.</p>
+<p>In contrast, black-box models like XGBoost or neural networks may perform better but are harder to explain. In those cases, I may use SHAP values to help visualize feature impact and make the model more transparent.</p>
+<p><strong>4. Training Speed &amp; Scalability</strong></p>
+<p>If I’m working with large datasets or in a pipeline that needs frequent retraining, I check model <strong>training time and resource use</strong>.</p>
+<p><strong>5. Business Impact</strong></p>
+<p>Finally, I think about which model gives the most <strong>useful and actionable results</strong>. Even a slightly lower-performing model might be better if it’s easier to implement or explain.</p>
+</div>
+<div id="what-is-roc-curve" class="section level4 hasAnchor" number="10.2.3.8">
+<h4><span class="header-section-number">10.2.3.8</span> What is ROC curve?<a href="zoro-data-scientist-interview-2024.html#what-is-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Here’s a clear, simple answer you can use in an interview:</p>
+<p><strong>What is an ROC curve?</strong></p>
+<p>The <strong>ROC curve</strong> (Receiver Operating Characteristic curve) is a graph that shows the performance of a <strong>classification model</strong> at different thresholds.</p>
+<p>It plots:</p>
+<ul>
+<li><strong>True Positive Rate</strong> (a.k.a. recall or sensitivity) on the <strong>Y-axis</strong></li>
+<li><strong>False Positive Rate</strong> on the <strong>X-axis</strong></li>
+</ul>
+<p><strong>What it tells you:</strong></p>
+<p>It helps you understand how well the model separates the positive and negative classes.</p>
+<ul>
+<li><p>A model that’s <strong>closer to the top-left corner</strong> is better.</p></li>
+<li><p>A random guess would follow the diagonal line.</p></li>
+</ul>
+<p><strong>AUC (Area Under Curve):</strong></p>
+<p>The AUC score summarizes the curve —</p>
+<ul>
+<li><p><strong>AUC = 1.0</strong> → perfect model</p></li>
+<li><p><strong>AUC = 0.5</strong> → no better than random</p></li>
+</ul>
+<p>I often use <strong>ROC-AUC</strong> to compare models — it’s especially useful when classes are balanced.</p>
+</div>
+<div id="have-you-used-lift-charts" class="section level4 hasAnchor" number="10.2.3.9">
+<h4><span class="header-section-number">10.2.3.9</span> Have you used Lift charts?<a href="zoro-data-scientist-interview-2024.html#have-you-used-lift-charts" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I’ve used <strong>Lift charts</strong> when evaluating classification models, especially in <strong>marketing</strong> use cases like targeting and audience scoring.</p>
+<div id="what-is-a-lift-chart" class="section level5 hasAnchor" number="10.2.3.9.1">
+<h5><span class="header-section-number">10.2.3.9.1</span> What is a Lift Chart?<a href="zoro-data-scientist-interview-2024.html#what-is-a-lift-chart" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>A <strong>Lift chart</strong> shows how much better the model performs compared to random targeting.</p>
+<p>It plots the <strong>cumulative gain or conversion rate</strong> when targeting top-ranked individuals (based on model scores), compared to a baseline (random selection).</p>
+</div>
+<div id="why-i-use-it" class="section level5 hasAnchor" number="10.2.3.9.2">
+<h5><span class="header-section-number">10.2.3.9.2</span> Why I Use It<a href="zoro-data-scientist-interview-2024.html#why-i-use-it" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><p>It helps answer:</p>
+<blockquote>
+<p><em>“If I target the top 10% of people scored by my model, how much more likely are they to convert compared to random?”</em></p>
+</blockquote></li>
+<li><p>In marketing, this is <strong>very actionable</strong> — it helps decide how many people to include in a campaign to get the best return.</p></li>
+</ul>
+</div>
+<div id="example-from-my-work" class="section level5 hasAnchor" number="10.2.3.9.3">
+<h5><span class="header-section-number">10.2.3.9.3</span> Example from My Work<a href="zoro-data-scientist-interview-2024.html#example-from-my-work" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>In my <strong>look-alike model</strong>, I used lift charts to evaluate how well the model ranked new prospects. The top decile (top 10%) of scores showed <strong>3–4x higher conversion</strong> compared to the baseline — that gave the client confidence in using the model for targeting.</p>
+<ul>
+<li>Sometimes we need to explain how we get to find the model results/scores. Have you worked on a case where you want to help business stakeholders understand what is driving predictions.</li>
+<li>In a scenario, outcome is whether responding campaign and predictor is a binary variable whether opened an email or not.</li>
+<li>How do you interpret a feature coefficient in a logistic regression? Is it causal or correlation?</li>
+<li>Is shap value a causation or correlation?</li>
+<li>When interpreting the coefficient in shap, you said “people who opened the email are more likely to respond to campaign? You sounded more of a causation. How would you rephrase it to sound more like correlation?</li>
+<li>In a black box model and trying to understand what features are important, rather than using SHAP values, just using the model? How do you evaluate if feature is important outside of SHAP values? Can you use the model and feature set to</li>
+<li>As data scientists, we collaborate with business stakeholders and we have to do a lot of convincing. We communicate model performances and how model works with them. Let’s say we are building a same response model. We are predicting who will respond to campaign and stakeholders are interested in increasing the response rate. Stakeholders say we have our way to do it. How would you prove model is bringing value to the organizations?</li>
+<li>How can you set up a test/experiment and show the model is better?</li>
+<li></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="potential-questions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Behavioral Interview.pdf", "Behavioral Interview.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

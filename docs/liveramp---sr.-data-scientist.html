@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 LiveRamp - Sr. Data Scientist | Interview Prep</title>
+  <meta name="description" content="This is a collection of notes from open sources" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 LiveRamp - Sr. Data Scientist | Interview Prep" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a collection of notes from open sources" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 LiveRamp - Sr. Data Scientist | Interview Prep" />
+  
+  <meta name="twitter:description" content="This is a collection of notes from open sources" />
+  
+
+<meta name="author" content="DEA" />
+
+
+<meta name="date" content="2025-08-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="adp.html"/>
+<link rel="next" href="experiences.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Behavioral Interview Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="project-summaries.html"><a href="project-summaries.html"><i class="fa fa-check"></i><b>1</b> Project summaries</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="project-summaries.html"><a href="project-summaries.html#academic-projects-at-ipsr"><i class="fa fa-check"></i><b>1.1</b> Academic projects at IPSR</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="project-summaries.html"><a href="project-summaries.html#tanf-project"><i class="fa fa-check"></i><b>1.1.1</b> TANF Project:</a></li>
+<li class="chapter" data-level="1.1.2" data-path="project-summaries.html"><a href="project-summaries.html#innovation-capacity-project"><i class="fa fa-check"></i><b>1.1.2</b> Innovation Capacity project:</a></li>
+<li class="chapter" data-level="1.1.3" data-path="project-summaries.html"><a href="project-summaries.html#medicaid-expansion"><i class="fa fa-check"></i><b>1.1.3</b> Medicaid expansion:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="phone-screening-call.html"><a href="phone-screening-call.html"><i class="fa fa-check"></i><b>2</b> Phone Screening Call</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="phone-screening-call.html"><a href="phone-screening-call.html#about-ds"><i class="fa fa-check"></i><b>2.1</b> About DS</a></li>
+<li class="chapter" data-level="2.2" data-path="phone-screening-call.html"><a href="phone-screening-call.html#tell-me-about-yourself"><i class="fa fa-check"></i><b>2.2</b> Tell me about yourself</a></li>
+<li class="chapter" data-level="2.3" data-path="phone-screening-call.html"><a href="phone-screening-call.html#relocation"><i class="fa fa-check"></i><b>2.3</b> Relocation:</a></li>
+<li class="chapter" data-level="2.4" data-path="phone-screening-call.html"><a href="phone-screening-call.html#timeline-to-start"><i class="fa fa-check"></i><b>2.4</b> Timeline to start:</a></li>
+<li class="chapter" data-level="2.5" data-path="phone-screening-call.html"><a href="phone-screening-call.html#salary"><i class="fa fa-check"></i><b>2.5</b> Salary:</a></li>
+<li class="chapter" data-level="2.6" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-now-you-seem-to-be-doing-great-in-your-current-position."><i class="fa fa-check"></i><b>2.6</b> Why now? you seem to be doing great in your current position.</a></li>
+<li class="chapter" data-level="2.7" data-path="phone-screening-call.html"><a href="phone-screening-call.html#how-does-this-challenge-look-like"><i class="fa fa-check"></i><b>2.7</b> How does this challenge look like</a></li>
+<li class="chapter" data-level="2.8" data-path="phone-screening-call.html"><a href="phone-screening-call.html#what-are-you-looking-for-specifaclly"><i class="fa fa-check"></i><b>2.8</b> What are you looking for specifaclly?</a></li>
+<li class="chapter" data-level="2.9" data-path="phone-screening-call.html"><a href="phone-screening-call.html#what-do-you-want-to-do-tactically"><i class="fa fa-check"></i><b>2.9</b> what do you want to do tactically?</a></li>
+<li class="chapter" data-level="2.10" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-are-you-leaving-your-current-role"><i class="fa fa-check"></i><b>2.10</b> Why are you leaving your current role?</a></li>
+<li class="chapter" data-level="2.11" data-path="phone-screening-call.html"><a href="phone-screening-call.html#why-do-you-want-to-work-here"><i class="fa fa-check"></i><b>2.11</b> Why do you want to work here?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="behavioral-questions.html"><a href="behavioral-questions.html"><i class="fa fa-check"></i><b>3</b> Behavioral Questions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-are-your-strengths"><i class="fa fa-check"></i><b>3.1</b> What are your strengths?</a></li>
+<li class="chapter" data-level="3.2" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-are-your-weakness"><i class="fa fa-check"></i><b>3.2</b> What are your weakness?</a></li>
+<li class="chapter" data-level="3.3" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-switched-from-academia-to-industry"><i class="fa fa-check"></i><b>3.3</b> Why switched from Academia to Industry</a></li>
+<li class="chapter" data-level="3.4" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-should-we-hire-you"><i class="fa fa-check"></i><b>3.4</b> Why should we hire you?</a></li>
+<li class="chapter" data-level="3.5" data-path="behavioral-questions.html"><a href="behavioral-questions.html#how-do-you-handle-pressure"><i class="fa fa-check"></i><b>3.5</b> How do you handle pressure?</a></li>
+<li class="chapter" data-level="3.6" data-path="behavioral-questions.html"><a href="behavioral-questions.html#why-are-you-applying-for-this-position"><i class="fa fa-check"></i><b>3.6</b> Why are you applying for this position:</a></li>
+<li class="chapter" data-level="3.7" data-path="behavioral-questions.html"><a href="behavioral-questions.html#what-skills-are-you-bringing"><i class="fa fa-check"></i><b>3.7</b> What skills are you bringing</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="work-related.html"><a href="work-related.html"><i class="fa fa-check"></i><b>4</b> Work Related</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="work-related.html"><a href="work-related.html#tell-me-about-a-time-when-you-devised-a-simple-solution-to-a-complex-problem."><i class="fa fa-check"></i><b>4.1</b> Tell me about a time when you devised a simple solution to a complex problem.</a></li>
+<li class="chapter" data-level="4.2" data-path="work-related.html"><a href="work-related.html#how-do-you-resolve-conflicts-with-colleagues"><i class="fa fa-check"></i><b>4.2</b> How do you resolve conflicts with colleagues?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="most-proud-project-influencing-adoption-of-balancing-weights.html"><a href="most-proud-project-influencing-adoption-of-balancing-weights.html"><i class="fa fa-check"></i><b>5</b> Most Proud Project – Influencing Adoption of Balancing Weights</a></li>
+<li class="chapter" data-level="6" data-path="amazon-positions.html"><a href="amazon-positions.html"><i class="fa fa-check"></i><b>6</b> Amazon Positions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="amazon-positions.html"><a href="amazon-positions.html#economics-at-amazon"><i class="fa fa-check"></i><b>6.1</b> Economics at Amazon</a></li>
+<li class="chapter" data-level="6.2" data-path="amazon-positions.html"><a href="amazon-positions.html#amazon-leadership-principles"><i class="fa fa-check"></i><b>6.2</b> Amazon Leadership Principles</a></li>
+<li class="chapter" data-level="6.3" data-path="amazon-positions.html"><a href="amazon-positions.html#email-from-amazon"><i class="fa fa-check"></i><b>6.3</b> Email from Amazon</a></li>
+<li class="chapter" data-level="6.4" data-path="amazon-positions.html"><a href="amazon-positions.html#star-format"><i class="fa fa-check"></i><b>6.4</b> STAR format</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html"><i class="fa fa-check"></i><b>7</b> Amazon Prep Stories</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#sample-questions"><i class="fa fa-check"></i><b>7.1</b> Sample Questions</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust"><i class="fa fa-check"></i><b>7.1.1</b> <strong>Earn Trust</strong></a></li>
+<li class="chapter" data-level="7.1.2" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership"><i class="fa fa-check"></i><b>7.1.2</b> <strong>Ownership</strong></a></li>
+<li class="chapter" data-level="7.1.3" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results"><i class="fa fa-check"></i><b>7.1.3</b> <strong>Deliver Results</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust---tell-me-about-a-time-you-failed-and-how-you-handled-it."><i class="fa fa-check"></i><b>7.2</b> Earn Trust - Tell me about a time you failed and how you handled it.</a></li>
+<li class="chapter" data-level="7.3" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#earn-trust---describe-a-time-you-influenced-a-group-despite-resistance."><i class="fa fa-check"></i><b>7.3</b> Earn Trust - Describe a time you influenced a group despite resistance.</a></li>
+<li class="chapter" data-level="7.4" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership-mastercard-report-redesign"><i class="fa fa-check"></i><b>7.4</b> Ownership – Mastercard Report Redesign</a></li>
+<li class="chapter" data-level="7.5" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#ownership---describe-a-time-you-took-the-lead-on-a-project"><i class="fa fa-check"></i><b>7.5</b> Ownership - Describe a time you took the lead on a project</a></li>
+<li class="chapter" data-level="7.6" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results-blu-vs.-non-blu-analysis"><i class="fa fa-check"></i><b>7.6</b> Deliver Results – Blu vs. Non-Blu Analysis</a></li>
+<li class="chapter" data-level="7.7" data-path="amazon-prep-stories.html"><a href="amazon-prep-stories.html#deliver-results---how-have-you-leveraged-data-to-develop-a-strategy"><i class="fa fa-check"></i><b>7.7</b> Deliver results - How have you leveraged data to develop a strategy?</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="general-tips-for-big-companies.html"><a href="general-tips-for-big-companies.html"><i class="fa fa-check"></i><b>8</b> General Tips for Big Companies</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="general-tips-for-big-companies.html"><a href="general-tips-for-big-companies.html#walmart"><i class="fa fa-check"></i><b>8.1</b> Walmart</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="potential-questions.html"><a href="potential-questions.html"><i class="fa fa-check"></i><b>9</b> Potential Questions</a></li>
+<li class="chapter" data-level="10" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html"><i class="fa fa-check"></i><b>10</b> Zoro – Data Scientist Interview (2024)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#feedback-from-interview"><i class="fa fa-check"></i><b>10.1</b> Feedback from Interview</a></li>
+<li class="chapter" data-level="10.2" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#behavioral-questions-asked"><i class="fa fa-check"></i><b>10.2</b> Behavioral Questions Asked</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#walk-me-through-your-resume-focusing-on-data-science."><i class="fa fa-check"></i><b>10.2.1</b> Walk me through your resume, focusing on data science.</a></li>
+<li class="chapter" data-level="10.2.2" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#model-related-questions"><i class="fa fa-check"></i><b>10.2.2</b> Model Related Questions:</a></li>
+<li class="chapter" data-level="10.2.3" data-path="zoro-data-scientist-interview-2024.html"><a href="zoro-data-scientist-interview-2024.html#how-do-you-overcome-overfitting-1"><i class="fa fa-check"></i><b>10.2.3</b> <strong>How do you overcome overfitting?</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="adp.html"><a href="adp.html"><i class="fa fa-check"></i><b>11</b> ADP</a>
+<ul>
+<li class="chapter" data-level="11.0.1" data-path="adp.html"><a href="adp.html#first-round"><i class="fa fa-check"></i><b>11.0.1</b> First Round</a></li>
+<li class="chapter" data-level="11.0.2" data-path="adp.html"><a href="adp.html#third-round-with-two-directors"><i class="fa fa-check"></i><b>11.0.2</b> Third Round with two Directors</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html"><i class="fa fa-check"></i><b>12</b> LiveRamp - Sr. Data Scientist</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html#first-round-with-hiring-manager"><i class="fa fa-check"></i><b>12.0.1</b> First Round with Hiring Manager</a></li>
+<li class="chapter" data-level="12.0.2" data-path="liveramp---sr.-data-scientist.html"><a href="liveramp---sr.-data-scientist.html#second-round"><i class="fa fa-check"></i><b>12.0.2</b> Second Round</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="experiences.html"><a href="experiences.html"><i class="fa fa-check"></i><b>13</b> Experiences</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="experiences.html"><a href="experiences.html#amazon-sr.economist"><i class="fa fa-check"></i><b>13.1</b> Amazon Sr.Economist</a></li>
+<li class="chapter" data-level="13.2" data-path="experiences.html"><a href="experiences.html#amazon-economist-ii"><i class="fa fa-check"></i><b>13.2</b> Amazon Economist II</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="experiences.html"><a href="experiences.html#phone-screening"><i class="fa fa-check"></i><b>13.2.1</b> Phone Screening</a></li>
+<li class="chapter" data-level="13.2.2" data-path="experiences.html"><a href="experiences.html#leadership-principle-portion"><i class="fa fa-check"></i><b>13.2.2</b> Leadership Principle Portion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="mockup.html"><a href="mockup.html"><i class="fa fa-check"></i><b>14</b> mockup</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="mockup.html"><a href="mockup.html#walk-us-through-how-you-approached-churn-modeling-for-a-client."><i class="fa fa-check"></i><b>14.1</b> Walk us through how you approached churn modeling for a client.</a></li>
+<li class="chapter" data-level="14.2" data-path="mockup.html"><a href="mockup.html#how-do-you-select-features-when-you-have-400-binary-variables"><i class="fa fa-check"></i><b>14.2</b> How do you select features when you have 400+ binary variables?</a></li>
+<li class="chapter" data-level="14.3" data-path="mockup.html"><a href="mockup.html#have-you-dealt-with-a-stakeholder-who-didnt-trust-your-model-output-what-did-you-do"><i class="fa fa-check"></i><b>14.3</b> Have you dealt with a stakeholder who didn’t trust your model output? What did you do?</a></li>
+<li class="chapter" data-level="14.4" data-path="mockup.html"><a href="mockup.html#imagine-a-model-is-highly-accurate-but-business-stakeholders-dont-understand-it-how-do-you-bridge-that-gap"><i class="fa fa-check"></i><b>14.4</b> Imagine a model is highly accurate but business stakeholders don’t understand it — how do you bridge that gap?</a></li>
+<li class="chapter" data-level="14.5" data-path="mockup.html"><a href="mockup.html#how-would-you-design-a-project-to-measure-the-lift-of-a-pricing-model-across-different-client-segments"><i class="fa fa-check"></i><b>14.5</b> How would you design a project to measure the lift of a pricing model across different client segments?”**</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="root.html"><a href="root.html"><i class="fa fa-check"></i><b>15</b> Root.com</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="root.html"><a href="root.html#question"><i class="fa fa-check"></i><b>15.0.1</b> Question:</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="liveramp-finals.html"><a href="liveramp-finals.html"><i class="fa fa-check"></i><b>16</b> liveramp Finals</a></li>
+<li class="divider"></li>
+<li><a href="https://davutemrah.github.io" target="blank">Back to Home Page</li>
+<li><a href="https://davutemrah.github.io/notebooks/" target="blank">Back to Collections</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interview Prep</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="liveramp---sr.-data-scientist" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Chapter 12</span> LiveRamp - Sr. Data Scientist<a href="liveramp---sr.-data-scientist.html#liveramp---sr.-data-scientist" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Role:</strong> Senior Data Scientist</p>
+<p><strong>Company:</strong> LiveRamp</p>
+<p><strong>Team:</strong> MMA – Management Model and Adalytex</p>
+<div id="first-round-with-hiring-manager" class="section level3 hasAnchor" number="12.0.1">
+<h3><span class="header-section-number">12.0.1</span> First Round with Hiring Manager<a href="liveramp---sr.-data-scientist.html#first-round-with-hiring-manager" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Interviewer:</strong> Meo, Staff Technical Lead Manager (TLM)</p>
+<p><strong>Team &amp; Organization Overview</strong></p>
+<ul>
+<li><p><strong>Team focus</strong>: Measurement effectiveness – from simple reach/frequency reports to advanced attribution models.</p></li>
+<li><p><strong>Key projects</strong>:</p>
+<ul>
+<li><p>Basic reporting (e.g., number of unique households reached)</p></li>
+<li><p>Attribution modeling:</p>
+<ul>
+<li><p>Rule-based (e.g., single-touch)</p></li>
+<li><p>Causal/experimental models (uplift models, incrementality attribution)</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Data sources</strong>: Broad and varied (TV exposure, digital exposure, publisher data via cloud, row-level integrations).</p></li>
+</ul>
+<div id="technical-environment" class="section level4 hasAnchor" number="12.0.1.1">
+<h4><span class="header-section-number">12.0.1.1</span> 🛠 <strong>Technical Environment</strong><a href="liveramp---sr.-data-scientist.html#technical-environment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Team is part of the <strong>Engineering org</strong> under the “Insights” pillar.</p></li>
+<li><p>Closely collaborates with:</p>
+<ul>
+<li><p><strong>Cleanroom engineering team</strong> (acquired product)</p></li>
+<li><p><strong>Data engineering team</strong> (ETL, data cleansing, econometrics)</p></li>
+<li><p><strong>UI/UX team</strong> (building user-facing tools for measurement workflows)</p></li>
+</ul></li>
+<li><p>4 members: 2 Staff DS, 2 Senior DS, 1 long-term co-op/intern (9-month placement)</p></li>
+<li><p><strong>60–70% coding/model development</strong>: Code must be <strong>production-ready</strong> to support live customer deployments.</p></li>
+<li><p><strong>30–40% R&amp;D</strong>: Experimentation, innovation on methods.</p></li>
+<li><p>Work is organized in <strong>two-week sprints</strong>, similar to other engineering teams.</p></li>
+<li><p>Supported by a dedicated <strong>Product Manager</strong> for prioritization.</p></li>
+<li><p>Shifting from project-based work to building a <strong>scalable measurement product</strong> (e.g., uplift modeling as productized service).</p></li>
+<li><p>Strong emphasis on <strong>real-time readiness</strong>, <strong>cleanroom infrastructure</strong>, and <strong>end-to-end measurement integration</strong>.</p></li>
+</ul>
+</div>
+<div id="do-you-tell-me-something-about-yourself" class="section level4 hasAnchor" number="12.0.1.2">
+<h4><span class="header-section-number">12.0.1.2</span> do you tell me something about yourself?<a href="liveramp---sr.-data-scientist.html#do-you-tell-me-something-about-yourself" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, definitely.</p>
+<p>I’ve been working as a Data Scientist for the past three years at Horizon Media, primarily within the marketing domain. I hold a Ph.D. in Economics, which has given me a strong foundation in causal inference models.</p>
+<p>Over the last three years, I’ve used tools such as Python, PySpark, SQL, and R to analyze consumer behavior across a variety of clients and datasets—including measurement data. My work has largely focused on pre-campaign analysis: identifying optimal targeting segments, optimizing segment performance, analyzing consumer behavior, and running customer segmentation. I’ve also built predictive models to help scale targeting strategies.</p>
+<p>Additionally, I’ve developed engineering scripts using SQL-based weighted sampling methods to create balanced samples across datasets, ensuring representativeness of target populations. In a similar effort, I engineered scalable scripts to create balancing weights for large datasets—addressing selection bias due to non-random sampling of the U.S. population.</p>
+<p>I’ve also applied causal inference models to estimate marketing effectiveness where needed—though our agency has a separate team that primarily handles post-campaign measurement.</p>
+<p>I’m familiar with using LiveRamp data, as well as GCP logs and trade test data, to run marketing effectiveness and conversion analyses—particularly broken down by demographic groups based on population data.</p>
+<p>So overall, my experience blends statistical modeling, engineering, and applied marketing analytics with a strong focus on rigorous methodology and scalable implementation.</p>
+<p><strong>Concise version</strong></p>
+<p>I’m a data scientist with a Ph.D. in economics and three years of hands-on experience in marketing analytics at Horizon Media. My focus is on pre-campaign strategy—segmenting audiences, analyzing consumer behavior, and building predictive models to improve targeting efficiency. I work extensively with Python, PySpark, SQL, and R, and I’ve also developed weighted sampling and balancing scripts to ensure data representativeness across large, non-random datasets. I’ve applied causal inference methods to estimate marketing lift when needed, and I’m familiar with using LiveRamp, GCP logs, and trade test data for demographic conversion analysis. I enjoy bridging rigorous methodology with business needs to deliver scalable, impactful insights.</p>
+</div>
+<div id="can-you-tell-me-about-the-methodology-you-used-to-create-balancing-weights-for-panel-data-to-remove-bias" class="section level4 hasAnchor" number="12.0.1.3">
+<h4><span class="header-section-number">12.0.1.3</span> Can you tell me about the methodology you used to create balancing weights for panel data to remove bias?<a href="liveramp---sr.-data-scientist.html#can-you-tell-me-about-the-methodology-you-used-to-create-balancing-weights-for-panel-data-to-remove-bias" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sure, happy to explain.</p>
+<p>We work with datasets that vary widely in size—from about 10 million to over 250 million records—including transaction data, TV viewership, and web search activity. These datasets often have demographic biases depending on how they were collected. For instance, some might overrepresent younger users or underrepresent rural areas.</p>
+<p>To correct for these imbalances and make the datasets more representative of the national population, I apply post-stratification weighting. The idea is to assign weights to individual records based on how well they align with known population benchmarks—like age, gender, income, or region—so that the aggregate more closely matches something like the U.S. Census distribution.</p>
+<p>For smaller datasets, I’ve used R—specifically the anesrake package, which performs iterative proportional fitting (also known as raking). But that approach doesn’t scale well for big data.</p>
+<p>So for larger datasets, I built a custom SQL-based solution that implements post-stratification logic directly at scale. It calculates the ratio between sample distribution and the target distribution within each stratum and assigns a weight accordingly. This allows us to run the process on tens or hundreds of millions of records efficiently, using distributed computing environments like Spark or Snowflake.</p>
+<p>The result is a set of balanced weights that we apply to downstream analyses, like modeling or summary stats, which helps mitigate bias and improve representativeness.</p>
+</div>
+<div id="i-also-noticed-on-your-résumé-that-you-mentioned-measuring-and-optimizing-campaign-performance." class="section level4 hasAnchor" number="12.0.1.4">
+<h4><span class="header-section-number">12.0.1.4</span> I also noticed on your résumé that you mentioned measuring and optimizing campaign performance.<a href="liveramp---sr.-data-scientist.html#i-also-noticed-on-your-résumé-that-you-mentioned-measuring-and-optimizing-campaign-performance." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Would you mind sharing more details about those projects?
+Were you doing media exposure analysis, or perhaps something like a marketing mix model?
+That’s what I was assuming. Also, you mentioned that your strategy led to a 10% increase in conversion rate. Could you walk me through how you reached that conclusion? I’d love to hear more about the study and methodology you used there.</p>
+<p><strong>reponse</strong></p>
+<p>These were all different projects, but they fall under the broader theme of campaign performance optimization. I’ll start with one specific experiment I led last year, which was part of a new initiative.</p>
+<p>Typically, when launching a campaign, all individuals are treated equally in terms of bid allocation—regardless of their likelihood to convert or their expected return. The bidding algorithm usually assigns a flat bid, say $10 or $20, based on overall budget constraints, without differentiating between users.</p>
+<p>To improve this, I developed a predictive algorithm to estimate both:</p>
+<p>The likelihood of conversion for each individual, and The expected spend or value each user might generate.By combining these two models, we could calculate an expected customer value—or in some contexts, a proxy for customer lifetime value—for each user. These values were then used to inform bidding strategies. Instead of flat bids, we weighted our spend to prioritize higher-value users.</p>
+<p>The idea is that not all conversions are equal—some customers bring more revenue than others. So we designed a value-based targeting model that allocates budget more efficiently, based on predicted customer value.</p>
+<p>To validate this, we ran an A/B test. We created two groups that were as demographically and behaviorally similar as possible:</p>
+<p>One group was targeted equally, with uniform bidding. The other group was targeted based on expected value, using our model-driven bidding strategy. After running the experiment for about three weeks, we collected enough data and observed a 10% increase in conversions in the model-treated group, while actually lowering cost per conversion.</p>
+<p>Since then, we’ve run similar experiments for different clients, and results have been consistently promising. We’re continuing to explore platform capabilities—some DSPs like The Trade Desk allow us to pass user-level predicted values or weights, which gives us flexibility to implement these strategies at scale, depending on the platform’s support.</p>
+</div>
+<div id="no-holdout-group" class="section level4 hasAnchor" number="12.0.1.5">
+<h4><span class="header-section-number">12.0.1.5</span> No holdout group?<a href="liveramp---sr.-data-scientist.html#no-holdout-group" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>So it sounds like most of your work focuses on pre-campaign optimization, which is great. But as you know, measurement usually happens post-campaign.</strong></p>
+<p><strong>What if there’s no clean experimental design, like a holdout group? Maybe something went wrong, or the campaign wasn’t set up with measurement in mind. In those cases, how would you approach drawing causal inference from the campaign data? What methodology would you use?</strong></p>
+<p><strong>Response 1</strong></p>
+<p>That’s a great question—and definitely a challenge we face in real-world scenarios where clean holdout designs aren’t always feasible.</p>
+<p>When a true A/B test or randomized holdout group isn’t available, I typically rely on quasi-experimental methods to estimate causal effects. One common approach I use is propensity score matching or weighting, where we attempt to simulate a control group by matching treated individuals to similar untreated ones based on observable covariates—such as demographics, past behavior, or media exposure history.</p>
+<p>If time-series data is available, I might also apply difference-in-differences (DiD)—comparing outcomes for treated and control groups over time, before and after the campaign. This helps control for time-varying confounders that affect both groups similarly.</p>
+<p>In some cases, if there’s variation in exposure intensity (e.g., some users saw more ads than others), I’ve also used instrumental variable techniques or regression-based uplift models, especially when trying to isolate incremental effects across different dosage levels.</p>
+<p>The key in these situations is to understand the limitations of observational data, carefully account for selection bias, and validate assumptions through sensitivity analyses or placebo tests.</p>
+<p>So while it’s not as clean as a randomized experiment, with the right design and controls, we can still get reasonably robust causal estimates—even in messy, real-world data.</p>
+<p><strong>My Response</strong></p>
+<p>Yes, that’s a common situation—often we can’t set up a proper holdout group for every campaign due to cost or timing constraints. In those cases, we rely on quasi-experimental methods, but we do have to make some assumptions.</p>
+<p>One common approach I use is propensity score matching. The idea is to match users who were exposed to the campaign (the treatment group) with similar users who were not exposed during the campaign period (the control group). Matching is done based on observed characteristics such as demographics and pre-campaign behaviors.</p>
+<p>The assumption here is conditional independence—that once we’ve accounted for these covariates, exposure is as good as random. So, we estimate propensity scores (the probability of being treated) and then match treated and control users based on these scores.</p>
+<p>I’ve worked with propensity score models before. While my current role at Horizon Media focuses mostly on pre-campaign analytics, I do have a background in causal inference. I completed a postdoctoral research position at the University of Kansas, where I applied various quasi-experimental methods—including propensity score matching and difference-in-differences.</p>
+<p>In fact, I’ve used both methods in combination: first, matching treated and control groups based on their covariates, and then applying difference-in-differences to compare outcomes before and after the campaign. This layered approach helps to account for time trends and improves the robustness of the causal inference.</p>
+<p>So, even in the absence of a randomized design, I try to approximate causal effects using these principled statistical techniques.</p>
+</div>
+<div id="you-also-mentioned-that-youve-done-some-media-exposure-analysis.-could-you-tell-me-a-bit-more-about-what-that-involves" class="section level4 hasAnchor" number="12.0.1.6">
+<h4><span class="header-section-number">12.0.1.6</span> You also mentioned that you’ve done some media exposure analysis. Could you tell me a bit more about what that involves?<a href="liveramp---sr.-data-scientist.html#you-also-mentioned-that-youve-done-some-media-exposure-analysis.-could-you-tell-me-a-bit-more-about-what-that-involves" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Certainly. Media exposure analysis is primarily descriptive rather than causal. The goal is to understand how different audience segments perform by comparing those who were exposed to a campaign or media touchpoint against those who were not exposed during a given time period.</p>
+<p>We look at metrics such as engagement, conversions, or other KPIs within these segments to get insights on relative performance. While this analysis helps identify patterns or associations, it does not by itself establish causality.</p>
+</div>
+<div id="balancing-weights" class="section level4 hasAnchor" number="12.0.1.7">
+<h4><span class="header-section-number">12.0.1.7</span> Balancing weights?<a href="liveramp---sr.-data-scientist.html#balancing-weights" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>You also mentioned something about a panel study. When you’re assembling weights for a sample, are you using those weights to estimate reach numbers? Or what exactly is the purpose of those weights in that context?</strong></p>
+<p>That’s a great question. While this isn’t directly tied to measurement yet, it’s part of our marketing insights work—especially in the early stages of campaign planning or when preparing for a new business pitch.</p>
+<p>The idea is that we often work with very large population datasets—sometimes upwards of 250 million records. These datasets are intended to represent the U.S. adult population, but in practice, the distribution across demographics like age, income, or geography can be skewed.</p>
+<p>For example, when we compare our segment distributions to census benchmarks, we might find that certain groups—like 18 to 24-year-olds—are underrepresented. To correct for this, we apply demographic balancing weights. These weights assign higher importance to underrepresented groups so that when we analyze the data, it better reflects the true population distribution.</p>
+<p>So while the weights aren’t being used to estimate media reach directly, they’re essential for ensuring that the insights we generate from segment-level analysis are representative and not biased due to sampling imbalance.</p>
+<p>🧠 <strong>Optional Add-On (If Asked Further)</strong></p>
+<p>In other use cases—especially in measurement—similar weighting strategies could be applied to estimate reach or impact across a representative population, but in this specific case, it’s focused more on audience profiling and strategic planning.</p>
+<p><strong>Additional</strong></p>
+<p>Let’s say I’m working with a large national dataset, but we notice it’s underrepresenting younger adults—specifically the 18–24 age group, which only makes up about one-third of what we would expect based on census data. At the same time, older adults are overrepresented, appearing at twice their actual proportion in the U.S. population.</p>
+<p>Now, let’s say I build a segment of chocolate buyers, and I want to analyze their demographic breakdown and behaviors—for example, to understand how likely they are to use social media. If I look at this unweighted data, the results would be biased because the sample skews older. It might look like chocolate buyers are less active on social media—not because they actually are, but because younger consumers are under-captured in the dataset.</p>
+<p>To correct for that, I apply balancing weights. These weights increase the influence of underrepresented groups—like the 18–24-year-olds—and downweight the overrepresented groups, such as those over 65. This allows me to produce insights that are more reflective of the true national population, which is critical when delivering marketing recommendations or building go-to-market strategies.</p>
+<p>So in this case, the weighting isn’t used to estimate campaign reach, but rather to ensure the accuracy and representativeness of audience insights—which often informs pre-campaign targeting or even creative strategy.</p>
+</div>
+<div id="and-while-working-on-all-these-research-projects-what-programming-languages-or-tools-do-you-typically-use" class="section level4 hasAnchor" number="12.0.1.8">
+<h4><span class="header-section-number">12.0.1.8</span> And while working on all these research projects, what programming languages or tools do you typically use?<a href="liveramp---sr.-data-scientist.html#and-while-working-on-all-these-research-projects-what-programming-languages-or-tools-do-you-typically-use" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sure. For tasks like random sampling or creating balancing weights, I primarily use SQL, since most of our data lives in a Snowflake environment. I use SQL extensively for pulling data, doing exploratory analysis, and preparing data for further modeling.</p>
+<p>When it comes to predictive modeling on large datasets, especially in Databricks, I rely on PySpark to efficiently process and model data at scale.</p>
+<p>And whenever needed—for tasks like model development, feature engineering, or building custom scripts—I use Python, which is my go-to for most data science workflows.</p>
+</div>
+<div id="have-you-used-any-pyspark-machine-learning-packages" class="section level4 hasAnchor" number="12.0.1.9">
+<h4><span class="header-section-number">12.0.1.9</span> Have you used any PySpark machine learning packages?<a href="liveramp---sr.-data-scientist.html#have-you-used-any-pyspark-machine-learning-packages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I’ve used PySpark MLlib for predictive modeling tasks—such as lookalike modeling and churn prediction.</p>
+<p>Typically, I start by using SQL within PySpark to pull and filter data, since it’s often embedded directly into our PySpark workflows—especially when working in Databricks or connected to Snowflake.</p>
+<p>Once the data is pulled, I handle data cleaning and transformation using PySpark’s DataFrame API—this includes feature engineering and preparation for the modeling phase.</p>
+<p>For modeling, I use PySpark’s MLlib, including pipelines with transformers and estimators. These workflows often include stages like tokenization, normalization, and one-hot encoding, followed by models like logistic regression, random forest, or GBT.</p>
+<p>After training, I generate predictions or probabilities and write the results—such as propensity scores or likelihood estimates—back to Snowflake for downstream use in dashboards or activation.</p>
+<p>So, end-to-end, most of my modeling workflows in large-scale environments are done in PySpark.</p>
+<p>💡 Bonus Tip (for Follow-up)
+If they ask you to name specific PySpark ML features, you can say:</p>
+<p>“I’ve used StringIndexer, VectorAssembler, Pipeline, and CrossValidator, and trained models like LogisticRegression and GBTClassifier using MLlib.”</p>
+</div>
+<div id="python-usage-level" class="section level4 hasAnchor" number="12.0.1.10">
+<h4><span class="header-section-number">12.0.1.10</span> Python usage level?<a href="liveramp---sr.-data-scientist.html#python-usage-level" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>You mentioned that you’ve been using Python. Can you tell me a bit more about the level of your experience? For example, some people just use Python for basic data manipulation in notebooks—like with pandas—while others go deeper and build reusable functions, classes, or even package their own modules. Have you ever built a full reusable Python class or packaged your methodology?</strong></p>
+<p>That’s a great question. To be transparent—I haven’t yet built or published my own reusable Python package or class structure from scratch in a production environment.</p>
+<p>Before transitioning into industry, I was actually more experienced in R, where I had created my own internal libraries during my academic work. Since moving into industry, I’ve been using Python more extensively—mainly for data science workflows, including exploratory analysis, model development, and custom scripting within Jupyter notebooks or Databricks notebooks.</p>
+<p>While I haven’t formally packaged a full methodology into a Python module or class yet, I have written reusable functions, applied modular coding practices, and worked within structured notebooks that feed into larger workflows—especially in collaboration with engineering teams who handle deployment.</p>
+<p>I’d definitely be comfortable taking the next step into object-oriented or more production-level packaging if the project required it. I’m already writing clean, reusable code and following best practices like using virtual environments, Git for version control, and testing components before deployment.</p>
+<p><strong>new hire will use 60-70% of the time, write production ready code</strong></p>
+<p>That’s a fair point. I wouldn’t describe myself as a full-time programmer, but I’m very comfortable using programming languages—especially Python, PySpark, and SQL—to support my work in statistics, machine learning, and causal inference.</p>
+<p>My strength really lies in building robust models, such as classification models or gradient-boosted trees (e.g., XGBoost, LightGBM, or Spark’s GBT), and I can implement these reliably within the required coding frameworks.</p>
+<p>So while I might not be writing production-level software daily, I can confidently code, adapt, and scale solutions using the right tools for the problem—and I’m always improving on the engineering side.</p>
+<p>You’re absolutely right—object-oriented programming, especially understanding classes and class inheritance, is important for production-ready code.</p>
+<p>To be transparent, I haven’t yet had a need to build Python classes from scratch in my previous roles, as most of my work has been in functional or notebook-based workflows—often using R, which is not inherently object-oriented.</p>
+<p>That said, I do understand the concepts of encapsulation, methods, and class structure, and I’ve read and worked with codebases that follow OOP principles. While I haven’t authored a full class-based system yet, I’m confident that I can pick it up quickly—I’m a fast learner and I’m actively building more structure into my Python workflows.</p>
+<p>I see this as a great opportunity to grow on the engineering side, especially in an environment like yours where clean, modular, and deployable code is core to the product.</p>
+</div>
+<div id="are-you-familiar-with-python-decoratorslike-whats-a-static-method-and-whats-a-class-method" class="section level4 hasAnchor" number="12.0.1.11">
+<h4><span class="header-section-number">12.0.1.11</span> Are you familiar with Python decorators—like what’s a static method and what’s a class method?<a href="liveramp---sr.-data-scientist.html#are-you-familiar-with-python-decoratorslike-whats-a-static-method-and-whats-a-class-method" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To be honest, I haven’t worked in depth with Python decorators, static methods, or class methods yet, so I wouldn’t claim deep expertise there.</p>
+<p>That said, I understand that decorators are a way to modify the behavior of functions or methods without changing their code, and that <span class="citation">@staticmethod</span> and <span class="citation">@classmethod</span> are used to define methods that don’t rely on instance-level data. I’ve come across them in code reviews and tutorials, but I haven’t had the opportunity to implement them myself.</p>
+<p>This is an area I’m actively looking to deepen, especially since I know it’s important in writing clean, modular, and reusable code in production environments. I’m confident I can ramp up quickly—I’m comfortable with learning new Python paradigms and have done so before when adapting from R to Python.</p>
+</div>
+<div id="do-you-know-the-difference-between-a-shallow-copy-and-a-deep-copy-in-python" class="section level4 hasAnchor" number="12.0.1.12">
+<h4><span class="header-section-number">12.0.1.12</span> Do you know the difference between a shallow copy and a deep copy in Python?<a href="liveramp---sr.-data-scientist.html#do-you-know-the-difference-between-a-shallow-copy-and-a-deep-copy-in-python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Sometimes this comes up when you’re working with mutable objects and you see unexpected behavior or warnings.</strong></p>
+<p>Yes, I do.</p>
+<p>A shallow copy creates a new object, but it still references the same inner objects as the original. So if those inner objects are mutable and you change them in the copy, the changes will also appear in the original.</p>
+<p>A deep copy, on the other hand, creates a completely independent clone—not just of the outer object, but of all the nested objects inside it as well. So any changes to the deep copy won’t affect the original object at all.</p>
+<p>I remember encountering this when working with nested dictionaries and lists—it helped me understand how object references work in memory.</p>
+</div>
+<div id="whats-the-difference-between-positional-arguments-and-keyword-arguments-in-python" class="section level4 hasAnchor" number="12.0.1.13">
+<h4><span class="header-section-number">12.0.1.13</span> What’s the difference between positional arguments and keyword arguments in Python?<a href="liveramp---sr.-data-scientist.html#whats-the-difference-between-positional-arguments-and-keyword-arguments-in-python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I’ve definitely worked with both positional and keyword arguments when creating user-defined functions—especially while maintaining large automated demographic profile reports.</p>
+<p>To clarify:</p>
+<p>Positional arguments are the required parameters you pass to a function in a specific order. The function expects these arguments in the sequence they’re defined.</p>
+<p>Keyword arguments are optional parameters that have default values defined in the function signature. When calling the function, you can specify these arguments by name, and if you don’t provide a value, the default is used.
+I’m familiar with these concepts, though I admit I sometimes need to refresh details about how Python handles them internally—especially when dealing with <code>*args</code> and <code>**kwargs</code> to accept variable numbers of positional or keyword arguments.</p>
+</div>
+<div id="have-you-worked-with-git-and-git-repositories-do-you-have-experience-collaborating-through-git" class="section level4 hasAnchor" number="12.0.1.14">
+<h4><span class="header-section-number">12.0.1.14</span> Have you worked with Git and Git repositories? Do you have experience collaborating through Git?<a href="liveramp---sr.-data-scientist.html#have-you-worked-with-git-and-git-repositories-do-you-have-experience-collaborating-through-git" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I’ve used Git through the terminal, though not on a daily basis. I have experience with basic Git commands like clone, add, commit, push, pull, and resolving simple merge conflicts.</p>
+<p>In most of my recent work, especially when collaborating less frequently, I’ve also used GitHub Desktop for convenience. While I haven’t worked extensively with branching strategies or in a heavily collaborative Git environment, I’m familiar with the core concepts and workflows.</p>
+<p>I’m confident I can easily adapt to more advanced or team-based Git practices, especially since I’m already comfortable using the terminal and have a solid understanding of version control principles.</p>
+</div>
+<div id="have-you-ever-dealt-with-merge-conflicts-when-working-with-git" class="section level4 hasAnchor" number="12.0.1.15">
+<h4><span class="header-section-number">12.0.1.15</span> Have you ever dealt with merge conflicts when working with Git?<a href="liveramp---sr.-data-scientist.html#have-you-ever-dealt-with-merge-conflicts-when-working-with-git" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I’ve experienced merge conflicts—mostly in individual projects rather than team settings.</p>
+<p>They usually happen when I’ve created a feature branch and made changes, but the main branch has been updated in the meantime. If I try to merge without pulling and integrating those updates first, Git detects conflicting changes—especially if the same lines were modified in both branches—and that’s when a merge conflict occurs.</p>
+<p>To resolve it, I typically:</p>
+<ul>
+<li><p>Run <code>git pull origin main</code> into my branch to bring in the latest changes.</p></li>
+<li><p>Manually review the files where conflicts occurred—Git marks the conflicting sections, so I decide which changes to keep.</p></li>
+<li><p>After resolving conflicts, I use <code>git add</code>, then <code>git commit</code> to finalize the merge.</p></li>
+</ul>
+<p>Although I don’t face merge conflicts daily—because most of my recent work hasn’t involved active team collaboration—I’m familiar with the process and comfortable resolving them when they arise. I also try to work in isolated feature branches and regularly sync with the main branch to minimize conflicts.</p>
+<p>And I’m always open to learning more advanced Git workflows used in engineering-heavy environments.</p>
+</div>
+<div id="do-you-know-the-difference-between-where-and-having-in-sql" class="section level4 hasAnchor" number="12.0.1.16">
+<h4><span class="header-section-number">12.0.1.16</span> Do you know the difference between WHERE and HAVING in SQL?<a href="liveramp---sr.-data-scientist.html#do-you-know-the-difference-between-where-and-having-in-sql" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes—<code>WHERE</code> and <code>HAVING</code> are both used to filter data, but they’re applied at different stages of SQL query execution.</p>
+<p><code>WHERE</code> is used to filter rows before any grouping or aggregation happens. You typically use it to filter raw records based on column conditions.</p>
+<p><code>HAVING</code> is used after a <code>GROUP BY</code> clause—when you want to filter aggregated results. So, if you grouped your data and calculated something like <code>SUM</code> or <code>COUNT</code>, you’d use <code>HAVING</code> to filter those group-level results.</p>
+<p>This difference is tied to the order of execution in SQL: <code>WHERE</code> comes early, while <code>HAVING</code> comes later, after aggregation.</p>
+</div>
+<div id="whats-the-difference-between-union-and-union-all-in-sql" class="section level4 hasAnchor" number="12.0.1.17">
+<h4><span class="header-section-number">12.0.1.17</span> What’s the difference between UNION and UNION ALL in SQL?<a href="liveramp---sr.-data-scientist.html#whats-the-difference-between-union-and-union-all-in-sql" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, the main difference is how duplicates are handled when combining result sets.</p>
+<p><code>UNION</code> merges two or more datasets but removes duplicate rows in the final output.</p>
+<p><code>UNION ALL</code> combines all rows from the datasets including duplicates, so it’s usually faster because it skips the deduplication step.</p>
+<p>So if you want all records including duplicates, you use <code>UNION ALL</code>. If you want a distinct combined set, you use <code>UNION.</code></p>
+</div>
+<div id="what-are-some-ways-to-handle-row-duplication-in-a-pyspark-dataframe" class="section level4 hasAnchor" number="12.0.1.18">
+<h4><span class="header-section-number">12.0.1.18</span> What are some ways to handle row duplication in a PySpark DataFrame?<a href="liveramp---sr.-data-scientist.html#what-are-some-ways-to-handle-row-duplication-in-a-pyspark-dataframe" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>They want to know if you can explain how to detect and remove duplicate rows using PySpark.</strong></p>
+<p>Yes, handling duplicate rows is a common task in PySpark DataFrames.</p>
+<p>PySpark provides a couple of ways to deal with duplicates:</p>
+<p>You can use the dropDuplicates() method, which removes duplicate rows based on all columns or a subset of columns if you specify them.</p>
+<p>Another way is to use the distinct() method, which returns a new DataFrame with only unique rows across all columns.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="liveramp---sr.-data-scientist.html#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="liveramp---sr.-data-scientist.html#cb2-2" tabindex="-1"></a>df_no_duplicates <span class="op">=</span> df.dropDuplicates()</span>
+<span id="cb2-3"><a href="liveramp---sr.-data-scientist.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="liveramp---sr.-data-scientist.html#cb2-4" tabindex="-1"></a>df_no_duplicates <span class="op">=</span> df.dropDuplicates([<span class="st">&#39;column1&#39;</span>, <span class="st">&#39;column2&#39;</span>])</span>
+<span id="cb2-5"><a href="liveramp---sr.-data-scientist.html#cb2-5" tabindex="-1"></a></span></code></pre></div>
+<p>Because PySpark is a distributed framework, these operations are optimized to run efficiently on large datasets spread across multiple nodes.</p>
+<p>While I might not recall every function name or parameter by heart, I’m comfortable exploring documentation or writing such code as needed in real projects.</p>
+</div>
+<div id="have-you-created-your-own-udf-user-defined-function-in-spark" class="section level4 hasAnchor" number="12.0.1.19">
+<h4><span class="header-section-number">12.0.1.19</span> Have you created your own UDF (User Defined Function) in Spark?<a href="liveramp---sr.-data-scientist.html#have-you-created-your-own-udf-user-defined-function-in-spark" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I have created UDFs a few times, especially after estimating probabilities or when I needed to apply some custom logic that wasn’t available in the built-in Spark functions.</p>
+<p>While I don’t create UDFs regularly, I understand their purpose—they allow you to extend Spark’s functionality by defining custom operations that can run across distributed data.</p>
+<p>Over time, as I learned more about PySpark, I’ve relied more on existing libraries and built-in functions, which are generally more efficient. But when needed, I’m comfortable writing my own UDFs to handle specific cases.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="liveramp---sr.-data-scientist.html#cb3-1" tabindex="-1"></a><span class="co"># The &quot;probability&quot; column contains a vector of probabilities for each class.</span></span>
+<span id="cb3-2"><a href="liveramp---sr.-data-scientist.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="liveramp---sr.-data-scientist.html#cb3-3" tabindex="-1"></a><span class="co"># To get the probability of the positive class, you can extract the second element of the vector.</span></span>
+<span id="cb3-4"><a href="liveramp---sr.-data-scientist.html#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="liveramp---sr.-data-scientist.html#cb3-5" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> udf</span>
+<span id="cb3-6"><a href="liveramp---sr.-data-scientist.html#cb3-6" tabindex="-1"></a><span class="im">from</span> pyspark.sql.types <span class="im">import</span> DoubleType</span>
+<span id="cb3-7"><a href="liveramp---sr.-data-scientist.html#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="liveramp---sr.-data-scientist.html#cb3-8" tabindex="-1"></a><span class="co"># UDF to extract positive class probability (index 1)</span></span>
+<span id="cb3-9"><a href="liveramp---sr.-data-scientist.html#cb3-9" tabindex="-1"></a>get_pos_prob <span class="op">=</span> udf(<span class="kw">lambda</span> v: <span class="bu">float</span>(v[<span class="dv">1</span>]), DoubleType())</span>
+<span id="cb3-10"><a href="liveramp---sr.-data-scientist.html#cb3-10" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="liveramp---sr.-data-scientist.html#cb3-11" tabindex="-1"></a>predictions <span class="op">=</span> predictions.withColumn(<span class="st">&quot;pos_probability&quot;</span>, get_pos_prob(<span class="st">&quot;probability&quot;</span>))</span>
+<span id="cb3-12"><a href="liveramp---sr.-data-scientist.html#cb3-12" tabindex="-1"></a>predictions.select(<span class="st">&quot;pos_probability&quot;</span>).show()</span></code></pre></div>
+</div>
+<div id="between-pysparks-built-in-functions-and-user-defined-functions-udfs-which-do-you-think-is-more-optimized-in-terms-of-performance" class="section level4 hasAnchor" number="12.0.1.20">
+<h4><span class="header-section-number">12.0.1.20</span> Between PySpark’s built-in functions and User Defined Functions (UDFs), which do you think is more optimized in terms of performance?<a href="liveramp---sr.-data-scientist.html#between-pysparks-built-in-functions-and-user-defined-functions-udfs-which-do-you-think-is-more-optimized-in-terms-of-performance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Generally, PySpark’s built-in functions tend to offer better performance compared to UDFs.</p>
+<p>This is because built-in functions are native to the Spark engine, allowing Spark to optimize their execution across the cluster efficiently. UDFs, on the other hand, often require serialization and run outside the Catalyst optimizer, which can slow down processing.</p>
+<p>While sometimes you might need to write a UDF for custom logic not supported by built-in functions, whenever possible, leveraging PySpark’s native functions will generally be faster and more scalable.</p>
+<p>Finding the right balance between clarity, maintainability, and performance is key. I’m always looking for the most efficient approach depending on the problem and the platform.</p>
+</div>
+<div id="are-you-familiar-with-the-data-skew-issue-in-spark-do-you-know-what-causes-it-and-common-ways-to-fix-it" class="section level4 hasAnchor" number="12.0.1.21">
+<h4><span class="header-section-number">12.0.1.21</span> Are you familiar with the data skew issue in Spark? Do you know what causes it and common ways to fix it?<a href="liveramp---sr.-data-scientist.html#are-you-familiar-with-the-data-skew-issue-in-spark-do-you-know-what-causes-it-and-common-ways-to-fix-it" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, I’m familiar with the concept of data skew in distributed systems like Spark.</p>
+<p>Data skew happens when the data is unevenly distributed across partitions—meaning one or a few partitions have a disproportionately large amount of data compared to others. This causes those tasks to become bottlenecks, slowing down the entire job.</p>
+<p>While I haven’t had to deeply troubleshoot severe skew issues in my projects yet, I understand some common solutions, such as:</p>
+<ul>
+<li><p>Salting the keys before joins or aggregations to distribute skewed keys more evenly across partitions.</p></li>
+<li><p>Using broadcast joins when one dataset is small enough, which avoids shuffling large skewed data.</p></li>
+<li><p>Increasing the number of partitions or repartitioning the data based on a more balanced key.</p></li>
+</ul>
+<p>I’m eager to gain more hands-on experience in detecting and fixing data skew because I recognize its importance for optimizing performance in large-scale data processing.</p>
+</div>
+<div id="can-you-tell-me-the-differences-between-l1-and-l2-regularization-in-regression" class="section level4 hasAnchor" number="12.0.1.22">
+<h4><span class="header-section-number">12.0.1.22</span> Can you tell me the differences between L1 and L2 regularization in regression?<a href="liveramp---sr.-data-scientist.html#can-you-tell-me-the-differences-between-l1-and-l2-regularization-in-regression" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Yes, both L1 and L2 regularization are techniques used to reduce overfitting by adding a penalty to the model’s coefficients.</p>
+<p>L1 regularization (Lasso) adds the sum of the absolute values of the coefficients as a penalty. This tends to shrink some coefficients exactly to zero, effectively performing feature selection by eliminating less important features.</p>
+<p>L2 regularization (Ridge) adds the sum of the squared values of the coefficients as a penalty. It shrinks coefficients towards zero but does not set them exactly to zero, so all features remain in the model but with smaller magnitudes.</p>
+<p>In summary:</p>
+<ul>
+<li><p>L1 encourages sparsity (more zeros),</p></li>
+<li><p>L2 encourages small but non-zero coefficients, both helping prevent overfitting but in slightly different ways.</p></li>
+</ul>
+</div>
+<div id="how-can-you-tell-if-a-model-is-overfitting-or-underfitting-and-if-a-model-is-underfitting-what-are-some-common-solutions-youd-suggest" class="section level4 hasAnchor" number="12.0.1.23">
+<h4><span class="header-section-number">12.0.1.23</span> How can you tell if a model is overfitting or underfitting? And if a model is underfitting, what are some common solutions you’d suggest?<a href="liveramp---sr.-data-scientist.html#how-can-you-tell-if-a-model-is-overfitting-or-underfitting-and-if-a-model-is-underfitting-what-are-some-common-solutions-youd-suggest" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Overfitting happens when a model learns the training data too well, including noise and small fluctuations. As a result, it doesn’t generalize well to unseen or test data. It typically occurs when the model is too complex relative to the amount of data.</p>
+<p>On the other hand, underfitting is when the model is too simple to capture the underlying patterns in the data. It performs poorly on both the training and test datasets, indicating that it hasn’t learned enough.</p>
+<p><strong>You can identify overfitting when the training accuracy is high but the test accuracy is much lower — this gap between training and test performance is a clear sign.</strong></p>
+<p>To address overfitting, you can:</p>
+<ul>
+<li><p>Reduce model complexity (e.g., use fewer features or simpler models),</p></li>
+<li><p>Apply regularization (like L1 or L2),</p></li>
+<li><p>Use cross-validation to ensure generalization.</p></li>
+</ul>
+<p>To address underfitting, you can:</p>
+<ul>
+<li><p>Increase model complexity (e.g., deeper trees, more features),</p></li>
+<li><p>Use more relevant features or interactions,</p></li>
+<li><p>Provide more training data if available.</p></li>
+</ul>
+<p>The goal is to find the right balance where your model performs well on both training and test sets.</p>
+</div>
+</div>
+<div id="second-round" class="section level3 hasAnchor" number="12.0.2">
+<h3><span class="header-section-number">12.0.2</span> Second Round<a href="liveramp---sr.-data-scientist.html#second-round" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Interviewer: Sr. Data Scientist Guongen</strong></p>
+<p><strong>Scenario:</strong></p>
+<p>E-commerce client is running an experiment on the checkout page to assess whether a cosmetic change leads to meaningful business improvements (e.g., higher conversions, better customer experience).</p>
+<p>The goal is to design a science-based approach that can quantify and validate the causal impact of this change.
+This is about a e-commerce client, there is a website checkout page experiment. You are testing designing an system to assert the impact of cosmetic change. The goal is to determine whether, the changes should result in meaningful improvements.</p>
+<div id="question-1-design-a-science-based-approach-to-assess-the-impact-of-a-cosmetic-change-to-an-e-commerce-websites-checkout-page.-determine-whether-the-change-is-meaningful-for-the-company." class="section level4 hasAnchor" number="12.0.2.1">
+<h4><span class="header-section-number">12.0.2.1</span> Question 1: Design a science-based approach to assess the impact of a cosmetic change to an e-commerce website’s checkout page. Determine whether the change is meaningful for the company.<a href="liveramp---sr.-data-scientist.html#question-1-design-a-science-based-approach-to-assess-the-impact-of-a-cosmetic-change-to-an-e-commerce-websites-checkout-page.-determine-whether-the-change-is-meaningful-for-the-company." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Step-by-Step Science-Based Approach</strong></p>
+<ol style="list-style-type: decimal">
+<li><strong>Clarify the Goal</strong></li>
+</ol>
+<ul>
+<li>Assess whether the <strong>cosmetic change</strong> improves business performance.</li>
+<li>Define what is “meaningful” → Usually <strong>conversion rate</strong>, <strong>revenue per visitor</strong>, or <strong>drop-off reduction</strong>.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Define Primary &amp; Secondary Metrics</strong></li>
+</ol>
+<ul>
+<li><p><strong>Primary metric</strong>: Conversion rate (e.g., completed checkout / checkout page views)</p></li>
+<li><p><strong>Secondary metrics</strong>: Bounce rate, session duration, drop-off at each checkout step, revenue per user, etc.</p></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Experimental Design (A/B Test)</strong></li>
+</ol>
+<ul>
+<li><p><strong>Randomized Controlled Trial</strong>:</p>
+<ul>
+<li><p><strong>Control group</strong>: Sees original checkout page</p></li>
+<li><p><strong>Treatment group</strong>: Sees cosmetically updated page</p></li>
+</ul></li>
+<li><p>Randomize at the <strong>user or session level</strong> to remove bias.</p></li>
+<li><p>Ensure <strong>no contamination</strong> between groups (e.g., same user doesn’t see both versions).</p></li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Set Hypotheses</strong></li>
+</ol>
+<ul>
+<li><p><strong>Null hypothesis (H₀)</strong>: No difference in conversion rate between control and treatment.</p></li>
+<li><p><strong>Alternative hypothesis (H₁)</strong>: The treatment improves conversion rate (or other metrics).</p></li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Determine Sample Size &amp; Duration</strong></li>
+</ol>
+<ul>
+<li><p>Use <strong>power analysis</strong> to calculate the required sample size based on:</p>
+<ul>
+<li><p>Baseline conversion rate</p></li>
+<li><p>Minimum detectable effect (MDE)</p></li>
+<li><p>Desired significance level (α = 0.05)</p></li>
+<li><p>Power (usually 80%)</p></li>
+</ul></li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Ensure Data Quality</strong></li>
+</ol>
+<ul>
+<li><p>Log page version, user ID, timestamps, outcomes</p></li>
+<li><p>Validate that users are correctly assigned and not switching groups</p></li>
+<li><p>Monitor real-time stats for randomization balance</p></li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Analyze Results</strong></li>
+</ol>
+<ul>
+<li><p>Use a <strong>two-proportion z-test</strong> for conversion rates</p></li>
+<li><p>Or a <strong>t-test</strong> if comparing revenue per user</p></li>
+<li><p>Check:</p>
+<ul>
+<li><p>Statistical significance (p-value &lt; 0.05?)</p></li>
+<li><p>Practical significance (Is the lift large enough to matter?)</p></li>
+</ul></li>
+<li><p>Optionally apply <strong>Bayesian inference</strong> for real-time insights</p></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li><strong>Interpret Results</strong></li>
+</ol>
+<ul>
+<li><p>If the change yields a <strong>statistically and practically significant lift</strong>, consider rolling it out.</p></li>
+<li><p>If not significant, weigh the cost/benefit of keeping the change for aesthetic purposes.</p></li>
+</ul>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>Plan for Rollout</strong></li>
+</ol>
+<ul>
+<li><p>Use a <strong>phased rollout</strong> or <strong>canary deployment</strong> to monitor post-launch impact</p></li>
+<li><p>Watch for long-term effects and regression to the mean</p></li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
+<li><strong>What If You Can’t Run an A/B Test?</strong></li>
+</ol>
+<p>If randomization is not possible:</p>
+<ul>
+<li><p>Use <strong>observational causal inference</strong> methods:</p>
+<ul>
+<li><p><strong>Propensity Score Matching</strong></p></li>
+<li><p><strong>Difference-in-Differences</strong> (if pre-post data is available)</p></li>
+<li><p><strong>Interrupted Time Series</strong></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="determine-sample-size-duration-power-analysis" class="section level4 hasAnchor" number="12.0.2.2">
+<h4><span class="header-section-number">12.0.2.2</span> 5. Determine Sample Size &amp; Duration (Power Analysis)<a href="liveramp---sr.-data-scientist.html#determine-sample-size-duration-power-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To ensure the experiment has enough statistical power to detect meaningful changes:</p>
+<p>✅ <strong>Define Key Inputs</strong></p>
+<ul>
+<li><p><strong>Baseline Conversion Rate (p₁)</strong>: Estimate from historical data (e.g., 5% conversion rate).</p></li>
+<li><p><strong>Minimum Detectable Effect (MDE)</strong>: Smallest relative lift worth detecting (e.g., 0.5% absolute increase).</p></li>
+<li><p><strong>Significance Level (α)</strong>: Probability of Type I error (commonly set at 0.05).</p></li>
+<li><p><strong>Statistical Power (1 - β)</strong>: Probability of detecting a true effect (commonly set at 0.8 or 0.9).</p></li>
+</ul>
+<p>📊 <strong>Calculate Sample Size</strong></p>
+<p>Use standard formulas or a power calculator (e.g., <a href="https://www.statsmodels.org/">statsmodels</a>, G*Power, or online tools):</p>
+<ul>
+<li><p>Make sure the sample size is per variant (control/treatment).</p></li>
+<li><p>Double it for total required observations.</p></li>
+</ul>
+<p>🕒 <strong>Estimate Experiment Duration</strong></p>
+<ul>
+<li><p>Divide required sample size by expected daily traffic to checkout.</p></li>
+<li><p>Adjust for:</p>
+<ul>
+<li><p>Seasonal effects</p></li>
+<li><p>Potential outliers or anomalies</p></li>
+<li><p>Business constraints (e.g., promo campaigns, product launches)</p></li>
+</ul></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<p>If baseline CR is 5% and you want to detect a 10% relative lift (5.5%), then the MDE is 0.5%. You might need ~25,000 users per group.</p>
+</div>
+<div id="analyze-results" class="section level4 hasAnchor" number="12.0.2.3">
+<h4><span class="header-section-number">12.0.2.3</span> 7. Analyze Results<a href="liveramp---sr.-data-scientist.html#analyze-results" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>After the test has run for a sufficient period:</p>
+<p>✅ <strong>Preliminary Checks</strong></p>
+<ul>
+<li><p><strong>Randomization balance</strong>: Confirm demographics or behaviors are evenly split.</p></li>
+<li><p><strong>Data sanity</strong>: Are there drops in tracking? Unusual traffic spikes?</p></li>
+</ul>
+<p>📊 <strong>Statistical Testing</strong></p>
+<p>Use appropriate statistical tests to compare control vs. treatment.</p>
+<div id="a-binary-metrics-e.g.-conversion-rate" class="section level5 hasAnchor" number="12.0.2.3.1">
+<h5><span class="header-section-number">12.0.2.3.1</span> (a) <strong>Binary Metrics (e.g., Conversion Rate)</strong><a href="liveramp---sr.-data-scientist.html#a-binary-metrics-e.g.-conversion-rate" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Use a <strong>two-proportion z-test</strong>:</p>
+<p><span class="math display">\[
+z = \frac{p_1 - p_2}{\sqrt{p(1 - p)(\frac{1}{n_1} + \frac{1}{n_2})}}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><span class="math inline">\(p_1, p_2\)</span> are observed conversion rates,</p></li>
+<li><p><span class="math inline">\(p\)</span> is pooled rate,</p></li>
+<li><p><span class="math inline">\(n_1, n_2\)</span> are sample sizes.</p></li>
+</ul>
+</div>
+<div id="b-continuous-metrics-e.g.-revenueuser" class="section level5 hasAnchor" number="12.0.2.3.2">
+<h5><span class="header-section-number">12.0.2.3.2</span> (b) <strong>Continuous Metrics (e.g., revenue/user)</strong><a href="liveramp---sr.-data-scientist.html#b-continuous-metrics-e.g.-revenueuser" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Use a <strong>t-test</strong> for mean comparison. Check for normality and variance assumptions (or use non-parametric tests if needed).</p>
+</div>
+<div id="c-multiple-metrics-or-tests" class="section level5 hasAnchor" number="12.0.2.3.3">
+<h5><span class="header-section-number">12.0.2.3.3</span> (c) <strong>Multiple Metrics or Tests</strong><a href="liveramp---sr.-data-scientist.html#c-multiple-metrics-or-tests" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Apply <strong>corrections</strong> like Bonferroni or Benjamini-Hochberg to control false discovery.</p>
+<p>✅ <strong>Interpret Results</strong></p>
+<ul>
+<li><p><strong>Statistical Significance</strong>: p-value &lt; 0.05 (or confidence interval excludes 0)</p></li>
+<li><p><strong>Practical Significance</strong>: Is the lift <strong>material</strong> for the business?</p>
+<ul>
+<li>E.g., A 0.2% lift on a $1M daily revenue = $2,000/day</li>
+</ul></li>
+<li><p><strong>Confidence Intervals</strong>: Report the range of plausible values for the lift.</p></li>
+</ul>
+</div>
+</div>
+<div id="if-they-are-looking-for-a-single-metrics-what-will-you-suggest" class="section level4 hasAnchor" number="12.0.2.4">
+<h4><span class="header-section-number">12.0.2.4</span> If they are looking for a single metrics, what will you suggest?<a href="liveramp---sr.-data-scientist.html#if-they-are-looking-for-a-single-metrics-what-will-you-suggest" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>A: I would suggest using the “checkout drop-off rate” as the key metric.</strong></p>
+<div id="why-drop-off-rate" class="section level5 hasAnchor" number="12.0.2.4.1">
+<h5><span class="header-section-number">12.0.2.4.1</span> ✅ Why Drop-off Rate?<a href="liveramp---sr.-data-scientist.html#why-drop-off-rate" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><p>Since the experiment is about a <strong>cosmetic change on the checkout page</strong>, the most direct behavioral signal is <strong>whether users proceed through the funnel or abandon it.</strong></p></li>
+<li><p>Drop-off rate is defined as:</p></li>
+</ul>
+<p><span class="math display">\[
+\text{Drop-off Rate} = 1 - \frac{\text{Number of completed checkouts}}{\text{Number of users who reached the checkout page}}
+\]</span></p>
+<p>This metric isolates the <strong>effect of the change on the checkout step itself</strong>, rather than being influenced by upstream events like product browsing or add-to-cart.</p>
+</div>
+<div id="advantages" class="section level5 hasAnchor" number="12.0.2.4.2">
+<h5><span class="header-section-number">12.0.2.4.2</span> ✅ Advantages:<a href="liveramp---sr.-data-scientist.html#advantages" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><p><strong>Sensitive to UI/UX changes</strong> on that page.</p></li>
+<li><p><strong>Simple to interpret</strong> — a decrease in drop-off rate signals improvement.</p></li>
+<li><p>Allows for <strong>quick testing</strong> and prioritization of UI changes.</p></li>
+</ul>
+</div>
+<div id="alternative-single-metric-suggestions-optional-to-mention" class="section level5 hasAnchor" number="12.0.2.4.3">
+<h5><span class="header-section-number">12.0.2.4.3</span> 🚀 Alternative Single-Metric Suggestions (optional to mention):<a href="liveramp---sr.-data-scientist.html#alternative-single-metric-suggestions-optional-to-mention" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>If asked for other candidates or to justify:</p>
+<ul>
+<li><p><strong>Conversion Rate</strong>: Good holistic metric, but may be affected by factors outside the checkout page.</p></li>
+<li><p><strong>Time to Checkout</strong>: Measures efficiency but doesn’t capture abandonment behavior.</p></li>
+<li><p><strong>Revenue per Session/User</strong>: High-level impact, but harder to attribute to cosmetic changes alone.</p></li>
+</ul>
+</div>
+</div>
+<div id="second-question-how-would-you-design-the-ab-testing-what-are-the-steps-involved" class="section level4 hasAnchor" number="12.0.2.5">
+<h4><span class="header-section-number">12.0.2.5</span> Second question: How would you design the A/B testing? What are the steps involved?<a href="liveramp---sr.-data-scientist.html#second-question-how-would-you-design-the-ab-testing-what-are-the-steps-involved" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Here’s a clean and structured way to document and improve your response to the <strong>second interview question</strong> from LiveRamp:</p>
+<p><strong>1. Define the Objective</strong></p>
+<ul>
+<li>Clearly state the <strong>goal of the test</strong>: to assess whether the cosmetic change to the checkout page improves user behavior or business outcomes (e.g., reduces drop-off rate or increases conversions).</li>
+</ul>
+<p><strong>2. Identify Key Metric(s)</strong></p>
+<ul>
+<li><p><strong>Primary metric</strong>: Drop-off rate at the checkout stage (as discussed).</p></li>
+<li><p><strong>Secondary metrics</strong>: Conversion rate, time on page, cart abandonment rate, bounce rate, etc.</p></li>
+</ul>
+<p><strong>3. Formulate Hypothesis</strong></p>
+<ul>
+<li><p>Example:</p>
+<blockquote>
+<p><em>“We hypothesize that the new checkout design will reduce the drop-off rate by at least X%, leading to improved conversion.”</em></p>
+</blockquote></li>
+</ul>
+<p><strong>4. Determine Test Design</strong></p>
+<ul>
+<li><p><strong>Randomized controlled experiment</strong>: Randomly assign users into:</p>
+<ul>
+<li><p><strong>Control group (A)</strong>: sees the original checkout design.</p></li>
+<li><p><strong>Treatment group (B)</strong>: sees the new cosmetic design.</p></li>
+</ul></li>
+<li><p><strong>Randomization unit</strong>: Typically user-level, to avoid spillover.</p></li>
+<li><p>Ensure <strong>equal distribution</strong> across segments (e.g., by traffic source, device type).</p></li>
+</ul>
+<p><strong>5. Calculate Sample Size &amp; Test Duration</strong></p>
+<ul>
+<li><p>Use power analysis to determine required <strong>sample size</strong>:</p>
+<ul>
+<li>Inputs: baseline conversion/drop-off rate, minimum detectable effect (MDE), significance level (α, usually 0.05), and power (typically 80%).</li>
+</ul></li>
+<li><p>Determine test <strong>duration</strong> based on traffic flow to reach the required sample size.</p></li>
+</ul>
+<p><strong>6. Implement &amp; Monitor</strong></p>
+<ul>
+<li><p>Roll out the A/B test using an experimentation platform (e.g., Optimizely, LaunchDarkly, internal tools).</p></li>
+<li><p><strong>Monitor in real-time</strong> for:</p>
+<ul>
+<li>Data collection issues</li>
+<li>Unusual traffic patterns</li>
+<li>Early indicators (but avoid peeking bias)</li>
+</ul></li>
+</ul>
+<p><strong>7. Analyze Results</strong></p>
+<ul>
+<li><p>Conduct statistical analysis:</p>
+<ul>
+<li>Compare drop-off rates (or other metrics) between groups using hypothesis testing (e.g., t-test, z-test).</li>
+<li>Check confidence intervals and p-values.</li>
+</ul></li>
+<li><p>Assess practical significance in addition to statistical significance.</p></li>
+</ul>
+<p><strong>8. Interpret and Recommend</strong></p>
+<ul>
+<li><p>If the new design significantly outperforms the old one:</p>
+<ul>
+<li>Roll it out more broadly.</li>
+</ul></li>
+<li><p>If not:</p>
+<ul>
+<li>Consider iterating on the design or testing further hypotheses.</li>
+</ul></li>
+</ul>
+<p>💬 <strong>Optional (Advanced): Handling Imperfections</strong></p>
+<p>You can mention if you’re asked:</p>
+<ul>
+<li><p>Use <strong>stratified randomization</strong> or <strong>covariate balancing</strong> to improve test validity.</p></li>
+<li><p>Address potential <strong>non-compliance</strong> or <strong>exposure leakage</strong> (e.g., users seeing both versions).</p></li>
+<li><p>Consider <strong>Bayesian methods</strong> or <strong>sequential testing</strong> as alternatives to fixed-horizon A/B tests.</p></li>
+</ul>
+</div>
+<div id="what-is-the-purpose-of-randomization" class="section level4 hasAnchor" number="12.0.2.6">
+<h4><span class="header-section-number">12.0.2.6</span> <strong>What is the purpose of randomization?</strong><a href="liveramp---sr.-data-scientist.html#what-is-the-purpose-of-randomization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Randomization ensures that the treatment and control groups are statistically equivalent on both observed and unobserved variables at the start of the experiment.</strong></p>
+<p>This allows us to:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Eliminate selection bias</strong>: Without randomization, differences in outcomes might be due to pre-existing differences between groups.</p></li>
+<li><p><strong>Ensure comparability</strong>: Any post-experiment difference in outcome can be attributed to the treatment itself, assuming all else is equal.</p></li>
+<li><p><strong>Enable causal inference</strong>: Randomization justifies treating the difference in outcomes between groups as the causal effect of the treatment (assuming proper execution).</p></li>
+<li><p><strong>Balance confounders</strong>: Both known and unknown confounding variables are, on average, evenly distributed across groups.</p></li>
+</ol>
+<p>🔍 <strong>Example (if you want to elaborate):</strong></p>
+<blockquote>
+<p>For instance, in a checkout page A/B test, if we didn’t randomize users, and one group ends up with more returning customers while the other has mostly new users, the outcome might be driven by user type, not the UI change. Randomization avoids this problem.</p>
+</blockquote>
+</div>
+<div id="during-ab-testing-how-do-you-remove-the-effect-of-confounding-factors" class="section level4 hasAnchor" number="12.0.2.7">
+<h4><span class="header-section-number">12.0.2.7</span> During A/B testing, how do you remove the effect of confounding factors?<a href="liveramp---sr.-data-scientist.html#during-ab-testing-how-do-you-remove-the-effect-of-confounding-factors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Primary approach:</strong></p>
+<ul>
+<li>✅ <strong>Randomization</strong> is the main defense. It ensures that both known and unknown confounders are balanced across treatment and control groups <em>on average</em>. This reduces systematic differences and makes the groups comparable.</li>
+</ul>
+<p><strong>But in practice:</strong></p>
+<ul>
+<li><p>📌 <strong>Stratified randomization</strong> may be used when you know certain confounders (e.g., device type, geography) are critical — this ensures balance <em>within</em> those subgroups.</p></li>
+<li><p>📊 <strong>Post-stratification or covariate adjustment</strong>: In analysis, you can use regression models to control for observed variables that might still differ slightly after randomization (especially with smaller samples).</p></li>
+<li><p>🧪 <strong>A/A testing</strong> before the A/B test can also help check for baseline imbalance, ensuring randomization worked correctly.</p></li>
+</ul>
+<p><strong>A/A testing</strong> is an experiment where <strong>both the control and treatment groups receive the same experience</strong> — meaning <strong>no actual change is being tested</strong>. It’s often used <strong>before</strong> running an A/B test.</p>
+<p><strong>Purpose of A/A Testing</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Check Randomization</strong></p>
+<ul>
+<li>Make sure the random assignment process splits users into comparable groups.</li>
+</ul></li>
+<li><p><strong>Validate Experiment Setup</strong></p>
+<ul>
+<li>Ensure the tracking, metric logging, and statistical analysis are working correctly.</li>
+</ul></li>
+<li><p><strong>Estimate Natural Variance / Noise</strong></p>
+<ul>
+<li>Understand the baseline variability in key metrics when no treatment effect exists.</li>
+</ul></li>
+</ol>
+<p>You want to test a new checkout flow, but before running A/B:</p>
+<ul>
+<li><p>Run an A/A test where <strong>both groups get the current flow</strong>.</p></li>
+<li><p>If your system reports a statistically significant difference, it’s a red flag — you might have:</p>
+<ul>
+<li><p>Instrumentation errors</p></li>
+<li><p>Biased sample splits</p></li>
+<li><p>Misconfigured metrics</p></li>
+</ul></li>
+</ul>
+<p><strong>Clean Answer for Interview:</strong></p>
+<blockquote>
+<p>“Randomization is our first line of defense — it balances both observed and unobserved confounders across groups. But if we’re concerned about imbalance in known variables, we can use stratified randomization or include covariates in a regression model to control for residual confounding during analysis.”</p>
+</blockquote>
+</div>
+<div id="what-if-the-control-group-is-much-smaller-than-the-treated-group-in-a-propensity-score-matching-setting" class="section level4 hasAnchor" number="12.0.2.8">
+<h4><span class="header-section-number">12.0.2.8</span> What if the control group is much smaller than the treated group in a propensity score matching setting?<a href="liveramp---sr.-data-scientist.html#what-if-the-control-group-is-much-smaller-than-the-treated-group-in-a-propensity-score-matching-setting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When the control group is much smaller than the treated group, <strong>finding good matches for all treated units becomes challenging</strong>, which can reduce the quality of the matching and the validity of causal estimates.</p>
+<p>Here are common approaches to handle this imbalance:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Use matching with replacement:</strong> This allows control units to be matched to multiple treated units, improving match quality but increasing dependence on fewer controls.</p></li>
+<li><p><strong>Caliper matching or nearest neighbor matching:</strong> Set a maximum allowable distance in propensity scores (caliper) to avoid poor matches; unmatched treated units may be discarded, improving validity but reducing sample size.</p></li>
+<li><p><strong>Weighting methods (e.g., inverse probability of treatment weighting - IPTW):</strong> Instead of matching, use weights based on propensity scores to balance groups, which can be more efficient when control samples are limited.</p></li>
+<li><p><strong>Consider alternative causal inference methods:</strong> Such as regression adjustment, stratification, or doubly robust estimators, which can better utilize all data even with imbalanced groups.</p></li>
+</ol>
+<p>Ultimately, when the control group is small, <strong>some treated units may remain unmatched or poorly matched</strong>, and it’s important to report this limitation transparently and consider sensitivity analyses.</p>
+</div>
+<div id="regression-adjustment-covariate-adjustment" class="section level4 hasAnchor" number="12.0.2.9">
+<h4><span class="header-section-number">12.0.2.9</span> Regression Adjustment (Covariate Adjustment)<a href="liveramp---sr.-data-scientist.html#regression-adjustment-covariate-adjustment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>You use a regression model (like linear regression, logistic regression, etc.) to model the <strong>outcome</strong> as a function of the <strong>treatment indicator</strong> and other <strong>covariates (confounders)</strong>.</p></li>
+<li><p>By including covariates in the model, you <strong>control for their effects</strong>, effectively adjusting for confounding.</p></li>
+<li><p>This helps estimate the <strong>treatment effect</strong> while holding other factors constant.</p></li>
+</ul>
+<div id="how-it-relates-to-propensity-score-methods" class="section level5 hasAnchor" number="12.0.2.9.1">
+<h5><span class="header-section-number">12.0.2.9.1</span> How it relates to propensity score methods<a href="liveramp---sr.-data-scientist.html#how-it-relates-to-propensity-score-methods" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><p>Both methods aim to adjust for confounding by balancing covariates between treated and control groups.</p></li>
+<li><p>Regression adjustment models the outcome directly, while propensity score methods focus on balancing covariates first.</p></li>
+<li><p>Sometimes, both are combined in a <strong>doubly robust</strong> approach for more robust causal estimates.</p></li>
+</ul>
+</div>
+</div>
+<div id="q-we-did-ab-testing-and-found-a-statistically-significant-result-low-p-value.-whats-the-next-step-would-you-suggest-launching-the-feature" class="section level4 hasAnchor" number="12.0.2.10">
+<h4><span class="header-section-number">12.0.2.10</span> Q: We did A/B testing and found a statistically significant result (low p-value). What’s the next step? Would you suggest launching the feature?<a href="liveramp---sr.-data-scientist.html#q-we-did-ab-testing-and-found-a-statistically-significant-result-low-p-value.-whats-the-next-step-would-you-suggest-launching-the-feature" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Answer:</strong></p>
+<p>A statistically significant p-value indicates there’s evidence the treatment effect is unlikely due to random chance. However, <strong>statistical significance alone is not sufficient to decide to launch</strong>. The next steps should include:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Assess Practical Significance:</strong></p>
+<p>Check if the effect size is meaningful from a business perspective. A tiny lift with a low p-value might not justify the cost or risk of launching.</p></li>
+<li><p><strong>Check for Robustness:</strong></p>
+<p>Validate the result by looking for consistency across segments, time periods, or secondary metrics. Look for any unexpected negative impacts.</p></li>
+<li><p><strong>Analyze Potential Risks:</strong></p>
+<p>Consider possible negative side effects on user experience, system performance, or downstream KPIs.</p></li>
+<li><p><strong>Consider Sample Size &amp; Power:</strong></p>
+<p>Confirm that the sample size was sufficient and the test was run long enough to avoid false positives.</p></li>
+<li><p><strong>Run Additional Tests if Needed:</strong></p>
+<p>If unsure, run a follow-up experiment or an extended test.</p></li>
+<li><p><strong>Business Alignment:</strong></p>
+<p>Align with product, marketing, and stakeholder teams to evaluate if the change fits strategic priorities.</p></li>
+</ol>
+<p>Only after these steps and cross-functional agreement, you should <strong>consider launching the feature</strong>.</p>
+</div>
+<div id="would-you-consider-the-novelty-effect" class="section level4 hasAnchor" number="12.0.2.11">
+<h4><span class="header-section-number">12.0.2.11</span> Would you consider the novelty effect?**<a href="liveramp---sr.-data-scientist.html#would-you-consider-the-novelty-effect" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Answer:</strong></p>
+<p>Yes, the novelty effect is important to consider in A/B testing. It refers to the temporary boost in user engagement or behavior simply because something is new or different, not necessarily because the change is truly better.</p>
+<p>To account for this, I would:</p>
+<ul>
+<li><p><strong>Analyze longer-term data:</strong> Run the experiment for a sufficient duration to see if the effect sustains over time beyond the initial excitement phase.</p></li>
+<li><p><strong>Monitor post-launch metrics:</strong> Continue monitoring after launch to detect if the effect diminishes as users get used to the change.</p></li>
+<li><p><strong>Segment analysis:</strong> Look at new vs. returning users to see if novelty impacts these groups differently.</p></li>
+<li><p><strong>Repeat tests if needed:</strong> Consider rerunning or running phased rollouts to validate the persistence of the effect.</p></li>
+</ul>
+<p>In summary, while a significant lift is promising, ensuring the impact is <strong>not just a temporary novelty effect</strong> is crucial for confident decision-making.</p>
+</div>
+<div id="how-do-you-decide-the-sample-size-for-an-ab-test" class="section level4 hasAnchor" number="12.0.2.12">
+<h4><span class="header-section-number">12.0.2.12</span> How do you decide the sample size for an A/B test?**<a href="liveramp---sr.-data-scientist.html#how-do-you-decide-the-sample-size-for-an-ab-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Answer:</strong></p>
+<p>Deciding the sample size depends on several factors to ensure the test has enough power to detect meaningful effects:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Minimum Detectable Effect (MDE):</strong> The smallest effect size you care about detecting (e.g., a 2% lift in conversion). Smaller MDEs require larger samples.</p></li>
+<li><p><strong>Statistical Significance Level (α):</strong> Typically set at 0.05, this controls the false positive rate.</p></li>
+<li><p><strong>Statistical Power (1-β):</strong> Usually set at 80% or 90%, this is the probability of detecting the effect if it truly exists.</p></li>
+<li><p><strong>Baseline Conversion Rate:</strong> The existing rate helps estimate variance.</p></li>
+<li><p><strong>Test Duration and Traffic:</strong> How much traffic you can allocate and for how long affects feasibility.</p></li>
+</ol>
+<p>Using these parameters, you can calculate the required sample size per group using formulas or tools like statistical calculators or libraries (e.g., statsmodels in Python).</p>
+</div>
+<div id="the-main-metrics-closely-related-to-sample-size-in-experiment-design-are" class="section level4 hasAnchor" number="12.0.2.13">
+<h4><span class="header-section-number">12.0.2.13</span> The main metrics closely related to sample size in experiment design are:<a href="liveramp---sr.-data-scientist.html#the-main-metrics-closely-related-to-sample-size-in-experiment-design-are" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Statistical Power</strong></p>
+<ul>
+<li>The probability of correctly rejecting the null hypothesis (detecting a true effect).</li>
+<li>Larger sample sizes increase power.</li>
+</ul></li>
+<li><p><strong>Significance Level (Alpha)</strong></p>
+<ul>
+<li>The threshold for Type I error (false positive rate), usually set at 0.05.</li>
+<li>Lower alpha requires larger sample size.</li>
+</ul></li>
+<li><p><strong>Effect Size</strong></p>
+<ul>
+<li>The minimum detectable difference or change you want to observe.</li>
+<li>Smaller effect sizes require larger samples to detect.</li>
+</ul></li>
+<li><p><strong>Variance (or Standard Deviation) of the Metric</strong></p>
+<ul>
+<li>More variability in the data means you need a larger sample to detect effects.</li>
+</ul></li>
+<li><p><strong>Confidence Interval Width</strong></p>
+<ul>
+<li>Smaller sample sizes lead to wider confidence intervals (less precise estimates).</li>
+</ul></li>
+</ol>
+<p><strong>In summary:</strong></p>
+<p>Sample size depends on the desired power, significance level, effect size you want to detect, and variability of the outcome metric.</p>
+</div>
+<div id="q-if-a-change-has-already-been-launched-to-part-of-the-users-without-an-ab-test-how-do-you-evaluate-the-impact-of-the-change" class="section level4 hasAnchor" number="12.0.2.14">
+<h4><span class="header-section-number">12.0.2.14</span> Q: If a change has already been launched to part of the users without an A/B test, how do you evaluate the impact of the change?**<a href="liveramp---sr.-data-scientist.html#q-if-a-change-has-already-been-launched-to-part-of-the-users-without-an-ab-test-how-do-you-evaluate-the-impact-of-the-change" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Observational impact analysis</strong></p>
+<p>When an experiment wasn’t set up beforehand, we can use <strong>observational causal inference methods</strong> to estimate the impact. Some approaches include:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Difference-in-Differences (DiD):</strong></p>
+<p>Compare the metric changes over time between the treated group (users who saw the change) and a comparable control group (users who didn’t), assuming parallel trends before the change.</p></li>
+<li><p><strong>Propensity Score Matching (PSM):</strong></p>
+<p>Match treated users with similar untreated users based on observed covariates to reduce confounding and mimic randomization.</p></li>
+<li><p><strong>Regression Adjustment / Covariate Adjustment:</strong>
+Use regression models controlling for user characteristics and time trends to estimate the effect of the change.</p></li>
+<li><p><strong>Synthetic Control Methods:</strong>
+Construct a weighted combination of control units to create a synthetic control group that closely matches the treated group before the intervention.</p></li>
+<li><p><strong>Instrumental Variables (if available):</strong>
+Use external variables that affect treatment assignment but not the outcome directly to isolate causal impact.</p></li>
+</ol>
+<p>These approaches rely on assumptions like no unobserved confounding and consistent data, so it’s important to validate these assumptions where possible.</p>
+<p>Great — this is a <strong>realistic scenario</strong> and a very common question in interviews when <strong>experimentation wasn’t done properly</strong>. Here’s how you can structure your cleaned-up and more polished response for your prep notebook:</p>
+</div>
+<div id="there-was-a-change-in-the-website-but-no-control-group-was-set-up.-can-you-evaluate-the-impact-of-the-change-follow-up-can-you-test-if-theres-a-significant-change-using-time-series" class="section level4 hasAnchor" number="12.0.2.15">
+<h4><span class="header-section-number">12.0.2.15</span> There was a change in the website, but no control group was set up. Can you evaluate the impact of the change? (Follow-up: Can you test if there’s a significant change using time series?)<a href="liveramp---sr.-data-scientist.html#there-was-a-change-in-the-website-but-no-control-group-was-set-up.-can-you-evaluate-the-impact-of-the-change-follow-up-can-you-test-if-theres-a-significant-change-using-time-series" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>1. Clarify the Timeline</strong></p>
+<ul>
+<li><p>Ask: <em>When exactly did the change go live?</em></p></li>
+<li><p>Identify a <strong>pre-change</strong> and <strong>post-change</strong> period.</p></li>
+</ul>
+<p><strong>2. Use Time Series Analysis</strong></p>
+<p>If you have access to historical data <strong>before and after the change</strong>, you can do:</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Interrupted Time Series (ITS) Analysis</strong></li>
+</ol>
+<ul>
+<li><p>A quasi-experimental method.</p></li>
+<li><p>Models the trend before the intervention (change) and tests whether:</p>
+<ul>
+<li><p>There’s an <strong>immediate level change</strong> at the intervention point.</p></li>
+<li><p>The <strong>slope or trend</strong> changes after the intervention.</p></li>
+</ul>
+<blockquote>
+<p><em>“This helps assess both short- and long-term impact.”</em></p>
+</blockquote></li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Statistical Significance in Time Series</strong></li>
+</ol>
+<p>To test for significance:</p>
+<ul>
+<li><p>Fit a regression model like:</p>
+<pre><code>metric ~ time + intervention_flag + time_after_intervention</code></pre>
+<p>where <code>intervention_flag = 1</code> after the change, and <code>0</code> before.</p></li>
+<li><p>Test if the coefficient for <code>intervention_flag</code> is statistically significant (i.e., the change caused a shift).</p></li>
+<li><p>Use confidence intervals, p-values, or bootstrapping to validate results.</p></li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><strong>Alternative: Causal Impact (Bayesian Structural Time Series)</strong></li>
+</ol>
+<ul>
+<li><p>Developed by Google.</p></li>
+<li><p>Compares observed post-intervention data to a <strong>counterfactual</strong> generated from the pre-period.</p></li>
+<li><p>Can also handle seasonality and auto-correlation.</p></li>
+</ul>
+<p>🧠 <strong>Bonus (if asked):</strong></p>
+<ul>
+<li><p>If data is very noisy, use <strong>moving averages</strong> or <strong>smoothing</strong>.</p></li>
+<li><p>If other external changes happened, call out <strong>confounding factors</strong>.</p></li>
+<li><p>If you have access to similar users/sites where the change wasn’t rolled out, use them as <strong>synthetic control</strong>.</p></li>
+</ul>
+<p>🔑 <strong>Key Point:</strong></p>
+<blockquote>
+<p>Even without a control group, <strong>time series methods like ITS or Causal Impact can help estimate causal effects</strong>, though results are more assumption-dependent than true A/B testing.</p>
+</blockquote>
+</div>
+<div id="comparing-pre--and-post-treatment-time-periods-using-a-single-difference-model-is-a-valid-and-simple-starting-point-for-measuring-impact-when-no-control-group-is-available." class="section level4 hasAnchor" number="12.0.2.16">
+<h4><span class="header-section-number">12.0.2.16</span> Comparing pre- and post-treatment time periods using a <strong>single difference model</strong> is a valid and simple starting point for measuring impact <strong>when no control group is available</strong>.<a href="liveramp---sr.-data-scientist.html#comparing-pre--and-post-treatment-time-periods-using-a-single-difference-model-is-a-valid-and-simple-starting-point-for-measuring-impact-when-no-control-group-is-available." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>✅ <strong>Single Difference Model (Pre/Post Comparison)</strong></p>
+<p>🧮 <strong>Basic Setup:</strong></p>
+<p>Assume you have a time series metric (e.g., conversion rate, average order value, bounce rate) measured <strong>daily or weekly</strong>.</p>
+<p>Let:</p>
+<ul>
+<li><p><span class="math inline">\(\bar{Y}_{\text{post}}\)</span>: average of the metric <strong>after</strong> the website change</p></li>
+<li><p><span class="math inline">\(\bar{Y}_{\text{pre}}\)</span>: average of the metric <strong>before</strong> the website change</p></li>
+</ul>
+<p>Then the <strong>single difference estimate</strong> is:</p>
+<p><span class="math display">\[
+\Delta Y = \bar{Y}_{\text{post}} - \bar{Y}_{\text{pre}}
+\]</span></p>
+<p>You can test whether this difference is statistically significant using a <strong>t-test</strong> if assumptions are met.</p>
+<p>❗ <strong>Limitations of Single Difference</strong></p>
+<ul>
+<li><p><strong>Confounding factors</strong>: Other changes (e.g., seasonality, campaigns, promotions) may also affect the metric during the same period.</p></li>
+<li><p><strong>Trend effects</strong>: If there is a natural upward or downward trend, simple pre-post difference can <strong>misattribute</strong> effects to the change.</p></li>
+</ul>
+<p>🧠 <strong>Better: Interrupted Time Series (ITS)</strong></p>
+<p>Instead of just comparing two averages, ITS fits a <strong>regression model</strong> over time, which accounts for the <strong>level and trend</strong>:</p>
+<p><span class="math display">\[
+Y_t = \beta_0 + \beta_1 \cdot \text{time}_t + \beta_2 \cdot \text{intervention}_t + \beta_3 \cdot \text{time\_after}_t + \varepsilon_t
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\text{intervention}_t = 1\)</span> after change, 0 before</li>
+<li><span class="math inline">\(\text{time\_after}_t\)</span>: time since the intervention</li>
+</ul>
+<p>Then:</p>
+<ul>
+<li><span class="math inline">\(\beta_2\)</span>: change in level (immediate effect)</li>
+<li><span class="math inline">\(\beta_3\)</span>: change in trend</li>
+</ul>
+<p>✅ <strong>When is single difference okay?</strong></p>
+<p>You may use single difference if:</p>
+<ul>
+<li><p>The <strong>metric is stable</strong> over time (no strong trend or seasonality)</p></li>
+<li><p>The <strong>time window is short</strong>, and no major other changes occurred</p></li>
+<li><p>You clearly <strong>observe a jump</strong> in the metric right after the intervention</p></li>
+</ul>
+<p>🧪 <strong>Example in words:</strong></p>
+<blockquote>
+<p>“We compared the average conversion rate in the 2 weeks before vs. 2 weeks after the change. The difference was 0.8%, which was statistically significant at the 5% level using a t-test. However, we acknowledge that this method does not control for trend or seasonality.”</p>
+</blockquote>
+</div>
+<div id="paired-matched-t-test-when-to-use" class="section level4 hasAnchor" number="12.0.2.17">
+<h4><span class="header-section-number">12.0.2.17</span> ✅<strong>Paired (Matched) t-test — When to Use</strong><a href="liveramp---sr.-data-scientist.html#paired-matched-t-test-when-to-use" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Use a <strong>paired t-test</strong> when:</p>
+<ul>
+<li><p>You’re measuring the <strong>same unit</strong> (e.g., users, sessions, products) <strong>before and after</strong> the change.</p></li>
+<li><p>You’re comparing <strong>within-unit change</strong>, not across different groups.</p></li>
+</ul>
+<p>Let’s say you tracked conversion rate <strong>per user</strong> before and after the checkout redesign for users who interacted with the site in both periods.</p>
+<p>This tests:</p>
+<p><span class="math display">\[
+H_0: \mu_{\text{post}} = \mu_{\text{pre}} \quad \text{vs} \quad H_1: \mu_{\text{post}} \neq \mu_{\text{pre}}
+\]</span></p>
+<p>✅ <strong>Benefits:</strong></p>
+<ul>
+<li><p><strong>Controls for user-level fixed effects</strong> (natural differences in behavior).</p></li>
+<li><p>More <strong>statistical power</strong>, since variation <strong>within users</strong> is usually smaller than across users.</p></li>
+</ul>
+<p>❗ <strong>Notes:</strong></p>
+<ul>
+<li><p>You need to <strong>match users correctly</strong> — only those who were active in both periods.</p></li>
+<li><p>Make sure your metric is meaningful per-user (e.g., average spend, conversion flag, time on site).</p></li>
+</ul>
+</div>
+<div id="compare-linear-models-and-tree-based-models" class="section level4 hasAnchor" number="12.0.2.18">
+<h4><span class="header-section-number">12.0.2.18</span> Compare <strong>linear models</strong> and <strong>tree-based models</strong>:<a href="liveramp---sr.-data-scientist.html#compare-linear-models-and-tree-based-models" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><strong>Model Structure</strong></li>
+</ol>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Linear Models</th>
+<th>Tree-Based Models</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model Type</td>
+<td>Parametric (assumes a linear form)</td>
+<td>Non-parametric (learns splits from data)</td>
+</tr>
+<tr class="even">
+<td>Functional Form</td>
+<td>Linear equation (e.g. y = βx + ε)</td>
+<td>Series of decision rules (splits)</td>
+</tr>
+<tr class="odd">
+<td>Interpretability</td>
+<td>High (easy to explain coefficients)</td>
+<td>Lower (complex decision paths, unless small trees)</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Data Assumptions</strong></li>
+</ol>
+<table>
+<colgroup>
+<col width="21%" />
+<col width="30%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Assumption</th>
+<th>Linear Models</th>
+<th>Tree-Based Models</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Linearity</td>
+<td>Assumes linear relationships</td>
+<td>Captures non-linear relationships naturally</td>
+</tr>
+<tr class="even">
+<td>Feature Interactions</td>
+<td>Must be manually specified</td>
+<td>Captures interactions automatically</td>
+</tr>
+<tr class="odd">
+<td>Feature Scaling</td>
+<td>Sensitive to feature scale</td>
+<td>Not sensitive to scale</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Performance &amp; Flexibility</strong></li>
+</ol>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="38%" />
+<col width="43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Area</th>
+<th>Linear Models</th>
+<th>Tree-Based Models</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Handling Complexity</td>
+<td>Not great with high complexity</td>
+<td>Great for complex patterns and nonlinearity</td>
+</tr>
+<tr class="even">
+<td>Overfitting Risk</td>
+<td>Lower (especially with regularization)</td>
+<td>Higher (especially with deep trees)</td>
+</tr>
+<tr class="odd">
+<td>Handling Outliers</td>
+<td>Sensitive to outliers</td>
+<td>More robust to outliers</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Use Cases</strong></li>
+</ol>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="20%" />
+<col width="53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Use Case</th>
+<th>Linear Models</th>
+<th>Tree-Based Models</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fast, interpretable baselines</td>
+<td>Yes</td>
+<td>No (unless using shallow trees)</td>
+</tr>
+<tr class="even">
+<td>High-dimensional sparse data</td>
+<td>Strong (e.g., with Lasso)</td>
+<td>Not ideal</td>
+</tr>
+<tr class="odd">
+<td>Tabular with complex interactions</td>
+<td>Weak</td>
+<td>Very strong (especially with ensembles like Random Forest, XGBoost)</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <strong>Summary (What to Say in an Interview)</strong></p>
+<blockquote>
+<p>“<strong>Linear models</strong> are simple, fast, and interpretable — best when relationships are roughly linear and you need explainability. <strong>Tree-based models</strong> are more powerful for capturing non-linear patterns, variable interactions, and are robust to outliers — especially when using ensembles like Random Forest or Gradient Boosting. However, they trade off some interpretability and may overfit if not tuned properly.”</p>
+</blockquote>
+</div>
+<div id="suppose-that-your-model-is-taking-too-long-to-run.-how-would-you-optimize-that-performance" class="section level4 hasAnchor" number="12.0.2.19">
+<h4><span class="header-section-number">12.0.2.19</span> Suppose that your model is taking too long to run. How would you optimize that performance?<a href="liveramp---sr.-data-scientist.html#suppose-that-your-model-is-taking-too-long-to-run.-how-would-you-optimize-that-performance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>1. Diagnose the Bottleneck</strong></p>
+<blockquote>
+<p>“First, I’d profile the pipeline to identify where the slowdown is — whether it’s in data loading, preprocessing, training, or prediction. Tools like <code>cProfile</code>, <code>line_profiler</code>, or Spark/PySpark logs (if on big data) can help here.”</p>
+</blockquote>
+<p><strong>2. Optimize Data Handling</strong></p>
+<ul>
+<li><p><strong>Reduce Dataset Size</strong>:</p>
+<ul>
+<li>Sample a representative subset for model prototyping.</li>
+<li>Use stratified sampling if class imbalance matters.</li>
+</ul></li>
+<li><p><strong>Efficient Data Structures</strong>:</p>
+<ul>
+<li>Use <code>numpy</code> arrays or <code>pandas</code> optimized types (<code>category</code>, <code>float32</code>).</li>
+</ul></li>
+<li><p><strong>Avoid Duplicates / Irrelevant Features</strong>:</p>
+<ul>
+<li>Drop highly correlated or low-variance features to reduce computation.</li>
+</ul></li>
+</ul>
+<p><strong>3. Improve Model Training Efficiency</strong></p>
+<ul>
+<li><p><strong>Simplify the Model</strong>:</p>
+<ul>
+<li>Use a simpler algorithm if accuracy-speed tradeoff is acceptable.</li>
+<li>For tree-based models: reduce depth, number of trees, or sample rate.</li>
+</ul></li>
+<li><p><strong>Use Regularization</strong>:</p>
+<ul>
+<li>Regularization can reduce overfitting and help convergence faster.</li>
+</ul></li>
+<li><p><strong>Tune Hyperparameters Intelligently</strong>:</p>
+<ul>
+<li>Use <code>RandomizedSearchCV</code> instead of <code>GridSearchCV</code>.</li>
+<li>Use early stopping for boosted trees or neural nets.</li>
+</ul></li>
+</ul>
+<p><strong>4. Use Efficient Libraries or Hardware</strong></p>
+<ul>
+<li><p><strong>Libraries</strong>:</p>
+<ul>
+<li>Switch to faster implementations (e.g., <code>lightgbm</code> over <code>xgboost</code>, or <code>scikit-learn</code> over custom loops).</li>
+</ul></li>
+<li><p><strong>Parallelization</strong>:</p>
+<ul>
+<li>Use multi-core training (<code>n_jobs</code>, <code>joblib</code>, Spark).</li>
+<li>Use GPU acceleration for deep learning models (e.g., PyTorch, TensorFlow with CUDA).</li>
+</ul></li>
+<li><p><strong>Batch Processing</strong>:</p>
+<ul>
+<li>If using deep learning, batch your data for faster GPU utilization.</li>
+</ul></li>
+</ul>
+<p><strong>5. Persist and Cache Intelligently</strong></p>
+<ul>
+<li><p><strong>Save intermediate results</strong>:</p>
+<ul>
+<li>Avoid redundant computations in data pipelines.</li>
+</ul></li>
+<li><p><strong>Use caching in Spark</strong>:</p>
+<ul>
+<li><code>df.cache()</code> or <code>persist()</code> to reuse expensive transformations.</li>
+</ul></li>
+</ul>
+<p><strong>6. Model Format and Deployment</strong></p>
+<ul>
+<li><p><strong>Model Compression</strong>:</p>
+<ul>
+<li>Use quantization or pruning for deployment.</li>
+</ul></li>
+<li><p><strong>Serialization</strong>:</p>
+<ul>
+<li>Use lightweight formats like <code>ONNX</code>, <code>joblib</code>, <code>pickle</code>, or <code>MLflow</code>.</li>
+</ul></li>
+</ul>
+<p>✅ <strong>Sample Interview Wrap-Up</strong></p>
+<blockquote>
+<p>“Ultimately, I treat performance tuning as a series of tradeoffs between speed, memory, and accuracy. My first step is always to profile the workflow, then make targeted improvements — whether it’s simplifying the model, batching efficiently, or tuning smarter. I also leverage the right tools, whether it’s Spark, LightGBM, or GPU acceleration.”</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="adp.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="experiences.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Behavioral Interview.pdf", "Behavioral Interview.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

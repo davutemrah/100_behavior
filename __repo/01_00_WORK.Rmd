@@ -1,19 +1,7 @@
 # Work Related
 
 
-## Tell me about a time where I could not meet deadline
-
-**Context:** "In my previous role as a Senior Data Scientist, I was working on a key market analysis report for a major client. The report was important for an upcoming presentation."
-
-**Challenge:** "Unexpected issues with data integration from different sources caused delays, and I realized I wouldn’t meet the initial deadline."
-
-**Action:** "I quickly informed my team about the delay and provided a new timeline. I worked with my team to focus on the most critical parts of the analysis and reallocated resources to deliver key insights on time. 
-
-**Outcome:** "While the report was delivered a bit late, the client valued our transparency and the quality of the analysis. This experience taught me the importance of early risk identification and proactive communication. I also enhanced my project management skills and adopted tools to improve efficiency.
-
-
-
-### Tell me about a time when you devised a simple solution to a complex problem.
+## Tell me about a time when you devised a simple solution to a complex problem.
 
 **Context:** At my current company, I worked with large datasets that needed to be balanced to ensure accurate analysis. We needed to create individual-level weights to represent the population properly.
 
@@ -22,35 +10,6 @@
 **Action:** I developed a SQL query using a post-stratification approach to calculate the individual-level weights. This method dynamically adjusted weights based on demographic variables, making the process simpler and much faster.
 
 **Outcome:** The new query significantly reduced processing time and improved the accuracy of our analysis. It allowed our team to generate more reliable insights and became the standard tool for similar tasks, demonstrating its effectiveness and efficiency.
-
-
-
-
-
-## Tell me about a time when you influenced the decision when there was disagreement.
-
-**Context:** In our team, we had datasets that were not random sample of US Population and thus does not represent the US population. I suggested using weights to correct for demographic bias in the data.
-
-**Challenge:** "Some team members disagreed with my suggestion, doubting its effectiveness and whether it was a valid approach."
-
-**Action:** I provided clear explanations and examples of how weights are commonly used to address bias in datasets. I shared research and case studies to support my approach and demonstrated how it could improve our analysis. 
-
-**Outcome:** After presenting the evidence, the team agreed to use the weights. This approach improved the representativeness of our datasets and led to more accurate analysis, which was well-received by stakeholders.
-
-
-
-
-## Tell me about a situation when you demonstrated leadership.
-
-**Context:** We needed to revamp our cluster analysis template to handle large datasets more effectively. I saw an opportunity to improve our approach.
-
-**Challenge:** There was no clear plan or team to tackle the task, and we needed a more flexible and scalable solution.
-
-**Action:** I took the initiative to form a team of three to work on this project. We divided the work and started meeting regularly to update each other on our progress. I led the coordination, ensured everyone was aligned, and managed the integration of our contributions.
-
-**Outcome:** We successfully developed a flexible template script that improved our cluster analysis on large datasets. The new template streamlined our process and enhanced our analysis capabilities, demonstrating effective leadership and teamwork.
-
-
 
 
 ## How do you resolve conflicts with colleagues?
@@ -62,17 +21,6 @@
 **Outcome:** This approach helps to address the conflict constructively and maintains a positive working relationship. By focusing on communication and collaboration, I’ve successfully resolved conflicts and worked together to achieve our common goals.
 
 
-
-## Tell me how you handled a difficult situation.
-
-
-**Context:** During a time series analysis project, I noticed an unexpected drop in sales for a specific period. This decline seemed unusual and raised concerns.
-
-**Challenge:** Upon investigating, I discovered that the issue wasn’t isolated to the product in question but was due to a general data loss in our feed that lasted for about two weeks.
-
-**Action:** I reported the issue to our data engineers to address the data feed problem. Meanwhile, to ensure the accuracy of our project, I quickly adapted by updating the script to use an alternative data source. I adjusted our analysis accordingly and delivered the results without compromising on quality.
-
-**Outcome:** By promptly addressing the data loss and using an alternative source, I was able to provide accurate analysis and meet the project deadlines. This approach not only resolved the immediate issue but also highlighted the importance of having backup data sources and being prepared for unexpected challenges.
 
 
 
